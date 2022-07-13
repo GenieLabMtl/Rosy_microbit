@@ -3,14 +3,20 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "radio": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
         "README.md",
-        "tutoriel_mbit.md"
+        "tutoriel_mbit.md",
+        "Rosy_Act1_IR.md",
+        "Rosy_Act2_Solaire_1.md",
+        "Rosy_Act2_Solaire_2.md",
+        "Rosy_Act3_Relais.md",
+        "Rosy_Act3_Solo.md",
+        "Rosy_Act3_Telescope.md",
+        "Rosy_Act3_Terre.md"
     ],
     "testFiles": [
         "test.ts"
