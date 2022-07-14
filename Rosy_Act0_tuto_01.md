@@ -2,9 +2,9 @@
 
 ## Objectif @showdialog
 
-Découvrons ensemble comment programmer le micro:bit. Au cours de ce tutoriel, nous allons faire afficher différentes image à l'écran en fonction de l'orientation et des boutons pressés sur l'appareil.
+Découvrons ensemble comment programmer le micro:bit. Au cours de ce tutoriel, nous allons faire afficher différentes images à l'écran en fonction de l'orientation et des boutons pressés sur l'appareil.
 
-Lorsque le micro:bit démarre, nous allons afficher un texte déroulant suivit d'une image. Ensuite, l'image affichée dépendra de nos actions.
+Lorsque le micro:bit démarre, nous allons afficher un texte déroulant suivi d'une image. Ensuite, l'image affichée dépendra de nos actions.
 
 
 ## Étape 1
@@ -13,7 +13,7 @@ Lorsque le micro:bit démarre, **affichons un texte déroulant**.
 
 > ***Astuce*** : En cliquant avec le bouton de droite sur un bloc et en choisissant "Aide", vous pouvez voir une rubrique d'aide qui explique son fonctionnement (en anglais seulement).
 
-> ***Astuce 2*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
+> ***Astuce 2*** : Si les instructions occupent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
 1. Trouver le bloc ``||basic:afficher texte||`` dans la section ``||basic:Base||``.
 2. Le glisser dans le crochet ``||basic:au démarrage||`` dans la surface de programmation.
@@ -61,13 +61,13 @@ Dans la boucle principale de notre programme, nous allons **mettre des condition
 ```blocks
 basic.forever(function () {
     if (true) {
-    	
+        
     } else if (false) {
-    	
+        
     } else if (false) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -93,11 +93,11 @@ basic.forever(function () {
             . . # . .
             `)
     } else if (false) {
-    	
+        
     } else if (false) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -140,9 +140,9 @@ basic.forever(function () {
             . # # # .
             `)
     } else if (false) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -186,7 +186,7 @@ basic.forever(function () {
     } else if (input.buttonIsPressed(Button.A)) {
         basic.showIcon(IconNames.Yes)
     } else {
-    	
+        
     }
 })
 ```
@@ -228,7 +228,7 @@ basic.forever(function () {
     } else if (input.buttonIsPressed(Button.A)) {
         basic.showIcon(IconNames.Yes)
     } else {
-    	basic.showIcon(IconNames.Asleep)
+        basic.showIcon(IconNames.Asleep)
     }
 })
 ```
@@ -250,8 +250,9 @@ Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **L
 
 Vous pouvez maintenant **faire réagir Rosy** à l'aide du programme que nous avons mis sur le micro:bit. Pour continuer de vous familiariser avec cet environnement de programmation, vous pouvez :
 
-1. Remplacer les conditions par d'autre types de manipulation.
+1. Remplacer les conditions par d'autres types de manipulation.
 2. Changer le type d'affichage.
 3. Explorer les différents types de capteurs embarqués sur le micro:bit dans la section ``||input:Entrée||``.
 
 Cliquez sur "Terminé à droite de cette barre pour avoir accès à tous les blocs de programmation.
+

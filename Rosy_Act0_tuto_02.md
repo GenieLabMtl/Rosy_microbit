@@ -8,24 +8,24 @@ Continuons de découvrir les différentes fonctionnalités du micro:bit. Au cour
 
 ## Étape 1
 
-Commençons par créer une fonction, qui est un bloc de code que l'on peut facilement réutiliser.
+Commençons par **créer une fonction**, qui est un bloc de code que l'on peut facilement réutiliser.
 
 1. Cliquer sur la section ``||advanced:Avancé||``.
-2. Dans la section ``||functions:Fonctions||``, cliquer sur "Créer une fonctions...".
-3. Dans le paneau qui apparait, cliquer sur "Nombres", puis nommer votre fonction "animationDEL".
+2. Dans la section ``||functions:Fonctions||``, cliquer sur "Créer une fonction...".
+3. Dans le panneau qui apparait, cliquer sur "Nombres", puis nommer votre fonction "animationDEL".
 4. Cliquer sur le bouton vert "Terminé".
 
 <!-- <img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_07.gif" width="80%"> -->
 
 ```blocks
 function animationDEL (num: number) {
-	
+    
 }
 ```
 
 ## Étape 2
 
-Créons une boucle pour faire afficher les DEL les unes après les autres.
+Créons une boucle pour faire afficher les DEL **les unes après les autres**.
 
 1. Dans la section ``||loops:Boucles||``, choisir ``||loops:pour index variant de 0 à 4 faire||`` et le glisser dans la fonction.
 2. Dans la section ``||led:LED||``, choisir ``||led:allumer x 0 y 0||`` et le glisser dans la boucle.
@@ -48,7 +48,7 @@ function animationDEL (num: number) {
 
 ## Étape 3
 
-La vitesse de défilement des DEL va varier en fonction de l'éclairage détecté par le micro:bit. Le niveau d'éclairage détecté est rapporté par le micro:bit comme un nombre entre 0 (noir complet) et 255 (très lumineux).
+La **vitesse de défilement** des DEL va varier en fonction de l'éclairage détecté par le micro:bit. Le niveau d'éclairage détecté est rapporté par le micro:bit comme un nombre entre 0 (noir complet) et 255 (très lumineux).
 
 1. Dans la section ``||logic:Logique||``, choisir ``||logic:si <vrai> alors ... sinon||`` et le glisser dans ``||basic:toujours||``.
 2. Toujours dans la section ``||logic:Logique||``, choisir ``||logic:<0> < <0>||`` (plus petit que) et le glisser à la place du ``||basic:vrai||``.
@@ -59,9 +59,9 @@ La vitesse de défilement des DEL va varier en fonction de l'éclairage détect�
 ```blocks
 basic.forever(function () {
     if (input.lightLevel() < 128) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -69,7 +69,7 @@ basic.forever(function () {
 
 ## Étape 4
 
-Utilisons notre fonction ``||functions:animationDEL||`` pour faire afficher les DEL en fonction de la luminosité.
+Utilisons notre fonction ``||functions:animationDEL||`` pour faire **afficher les DEL en fonction de la luminosité**.
 
 1. Dans la section ``||functions:Fonctions||``, choisir ``||functions:appel animationDEL 1||`` et le glisser dans la portion "si" de notre condition.
 2. Remplacer le "1" par "300" dans le cercle blanc de la ``||functions:fonction||``.
@@ -107,6 +107,6 @@ L'animation sur l'écran du micro:bit va changer de vitesse en fonction de la lu
 1. Modifier les valeurs du seuil de luminosité et de vitesse d'affichage dans nos conditions.
 2. Faire varier l'animation en modifiant où la ``||variable:variable index||`` de la boucle est placée.
 3. Ajouter d'autres conditions au bloc ``||logic:si ... sinon||`` pour ajouter plus de variété.
-4. Combiner les différents senseurs et bouton dans les condition avec le bloc ``||logic:<> et <>||``.
+4. Combiner les différents senseurs et boutons dans les conditions avec le bloc ``||logic:<> et <>||``.
 
 Cliquez sur "Terminé à droite de cette barre pour avoir accès à tous les blocs de programmation.
