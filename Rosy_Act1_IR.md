@@ -71,6 +71,8 @@ Commençons par **définir une variable** pour stocker la température de l'obje
 
 > ***Rappel 2*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
+> ***Rappel 3*** : En cliquant sur l'ampoule dans le cercle bleu à droite de ce texte, vous pouvez voir le résultat de l'étape en cours.
+
 Aller dans la section ``||variables:Variables||`` et créer la variable "source".
 Ensuite, glisser le bloc ``||variables:définir||`` dans le crochet ``||basic:Toujours||``
 

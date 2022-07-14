@@ -15,6 +15,9 @@ Lorsque le micro:bit démarre, **affichons un texte déroulant**.
 
 > ***Astuce 2*** : Si les instructions occupent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
+> ***Astuce 3*** : En cliquant sur l'ampoule dans le cercle bleu à droite de ce texte, vous pouvez voir le résultat de l'étape en cours.
+
+
 1. Trouver le bloc ``||basic:afficher texte||`` dans la section ``||basic:Base||``.
 2. Le glisser dans le crochet ``||basic:au démarrage||`` dans la surface de programmation.
 3. Dans le cercle blanc du bloc ``||basic:afficher texte||``, écrire "Rosy!".
