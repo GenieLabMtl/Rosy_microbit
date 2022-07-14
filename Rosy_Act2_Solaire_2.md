@@ -1,4 +1,4 @@
-# Rosy, Activité 2b : Gestion de l'énergie
+# Rosy, Activité 2.2 : Gestion de l'énergie
 
 
 ## Étape 1 @showdialog
