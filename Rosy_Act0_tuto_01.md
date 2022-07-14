@@ -1,4 +1,4 @@
-# Rosy, Activité préparatoire : Premiers pas avec le micro:bit 1
+# Rosy, Activité préparatoire : Premiers pas avec le micro:bit – 1
 
 ## Objectif @showdialog
 
