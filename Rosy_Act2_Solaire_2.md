@@ -351,7 +351,7 @@ basic.forever(function () {
 
 Il ne reste qu'à **téléverser** le code sur le micro:bit, et vous êtes prêt·e.
 
-Si vous avez besoin de vous rafraîchir la mémoire, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
+Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
 
 ## Étape 16

@@ -67,9 +67,9 @@ Voilà! Le circuit est aussi simple que ça! **Maintenant, allons programmer** l
 
 Commençons par **définir une variable** pour stocker la température de l'objet dans le champ de vision du capteur.
 
-> ***Astuce*** : En cliquant avec le bouton de droite sur un bloc et en choisissant "Aide", vous pouvez voir une rubrique d'aide qui explique son fonctionnement (en anglais seulement).
+> ***Rappel*** : En cliquant avec le bouton de droite sur un bloc et en choisissant "Aide", vous pouvez voir une rubrique d'aide qui explique son fonctionnement (en anglais seulement).
 
-> ***Astuce 2*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
+> ***Rappel 2*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
 Aller dans la section ``||variables:Variables||`` et créer la variable "source".
 Ensuite, glisser le bloc ``||variables:définir||`` dans le crochet ``||basic:Toujours||``
@@ -256,7 +256,7 @@ Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **L
 
 1. **Connecter le micro:bit** à votre ordinateur avec le câble USB fourni dans la trousse.
 2. **Télécharger votre code** avec le bouton Télécharger en bas à gauche de l'écran.
-3. Dans le gestionnaire de fichiers de votre ordinateur, **glisser le fichier téléchargé** vers le micro:bit
+3. Dans le gestionnaire de fichiers de votre ordinateur, **glisser le fichier téléchargé** vers le micro:bit.
 4. Durant le transfert, la DEL orange au dos du micro:bit va clignoter rapidement. Une fois que c'est terminé, **votre code est sur l'appareil**.
 
 [Voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
