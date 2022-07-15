@@ -31,30 +31,6 @@ basic.showString("Rosy!")
 
 ## Étape 2
 
-Ensuite, **affichons une image pendant 2 secondes** avant de continuer le programme.
-
-1. Trouver le bloc ``||basic:montrer LEDs||`` dans la section ``||basic:Base||``.
-2. Le glisser sous le bloc ``||basic:afficher texte||`` de l'étape précédente.
-3. Y dessiner le visage de Rosy qui sourit en cliquant dans les cases de ``||basic:montrer LEDs||``.
-4. Trouver ``||basic:pause (ms)||`` dans la section ``||basic:Base||``.
-5. Le glisser à la suite du bloc ``||basic:montrer LEDs||``.
-6. Cliquer sur le cercle blanc où il est inscrit "100", et choisir "2 secondes".
-
-```blocks
-basic.showString("Rosy!")
-basic.showLeds(`
-    . # . # .
-    . # . # .
-    . . . . .
-    # . . . #
-    . # # # .
-    `)
-basic.pause(2000)
-```
-
-
-## Étape 3
-
 Dans la boucle principale de notre programme, nous allons **mettre des conditions**.
 
 1. Trouver le bloc ``||logic:si <vrai> alors||`` dans la section ``||logic:Logique||``.
@@ -76,14 +52,35 @@ basic.forever(function () {
 ```
 
 
-## Étape 4
+## Étape 3
 
 La première condition ve être déclenchée si le micro:bit est **secoué**.
 
 1. Trouver le bloc ``||input:geste secouer est actif||`` dans la section ``||input:Entrée||``.
 2. Le glisser à la place du premier ``||logic:vrai||``.
-3. Dans cette première condition, ajouter un bloc ``||basic:montrer LEDs||``.
-4. Y dessiner un visage surpris.
+
+```blocks
+basic.forever(function () {
+    if (input.isGesture(Gesture.Shake)) {
+
+    } else if (false) {
+        
+    } else if (false) {
+        
+    } else {
+        
+    }
+})
+```
+
+
+## Étape 4
+
+Affichons un visage surpris pour la condition que nous venons de créer.
+
+1. Dans la section ``||basic:Base||``, trouver le bloc ``||basic:montrer LEDs||``
+2. Le glisser dans la condition que nous venons de créer.
+3. Y dessiner un visage surpris.
 
 ```blocks
 basic.forever(function () {
@@ -108,13 +105,41 @@ basic.forever(function () {
 
 ## Étape 5
 
-La deuxième condition ve être déclenchée si le micro:bit **incliné vers la droite**.
+La deuxième condition ve être déclenchée si le micro:bit est **incliné vers la droite**.
 
 1. Faire clique droit sur ``||input:geste secouer est actif||`` de la première condition et cliquer sur "Dupliquer".
 2. Glisser le bloc ``||input:geste secouer est actif||`` qui vient d'apparaitre à la prochaine condition ``||logic:sinon si <> alors||``.
-3. Ajouter un bloc ``||basic:montrer LEDs||`` dans cette condition, et y dessiner un visage souriant.
-4. Ajouter un bloc ``||basic:pause (ms)||`` à la suite, et lui attribuer la valeur "200".
-5. Mettre un bloc ``||basic:montrer LEDs||`` sous ``||basic:pause (ms)||``, et y dessiner un visage regardant à droite.
+3. Changer l'action ``||input:secouer||`` pour ``||input:incliné à droite||``.
+
+```blocks
+basic.forever(function () {
+    if (input.isGesture(Gesture.Shake)) {
+        basic.showLeds(`
+            # . . . #
+            . . . . .
+            . . # . .
+            . # . # .
+            . . # . .
+            `)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+
+    } else if (false) {
+        
+    } else {
+        
+    }
+})
+```
+
+
+## Étape 6
+
+Afficher une animation lorsque le micro:bit est **incliné vers la droite**.
+
+1. Ajouter un bloc ``||basic:montrer LEDs||`` dans cette 2e condition, et y dessiner un visage surpris.
+2. Dans la section ``||basic:Base||``, trouver le bloc ``||basic:pause (ms)||`` et le glisser à la suite.
+3. Attribuer la valeur "200" au bloc ``||basic:pause (ms)||``.
+3. Mettre un autre bloc ``||basic:montrer LEDs||`` sous ``||basic:pause (ms)||``, et y dessiner un visage regardant à droite.
 
 ```blocks
 basic.forever(function () {
@@ -151,12 +176,52 @@ basic.forever(function () {
 ```
 
 
-## Étape 6
+## Étape 7
 
 La troisième condition ve être déclenchée lorsque le **bouton A est pressé**.
 
 1. Trouver le bloc ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
 2. Le glisser à la troisième condition.
+
+```blocks
+basic.forever(function () {
+    if (input.isGesture(Gesture.Shake)) {
+        basic.showLeds(`
+            # . . . #
+            . . . . .
+            . . # . .
+            . # . # .
+            . . # . .
+            `)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+        basic.pause(200)
+        basic.showLeds(`
+            . . . . .
+            . . # . #
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+    } else if (input.buttonIsPressed(Button.A)) {
+
+    } else {
+        
+    }
+})
+```
+
+
+## Étape 8
+
+Afficher une image prédéfinie quand le **bouton A est pressé**.
+
 3. Trouver ``||basic:montrer l'icône||`` dans ``||basic:Base||`` et le mettre dans cette condition.
 4. Choisir l'image du crochet.
 
@@ -195,7 +260,7 @@ basic.forever(function () {
 ```
 
 
-## Étape 7
+## Étape 9
 
 La dernière condition est toujours déclenchée lorsqu'**aucune des conditions précédentes** n'est remplie.
 
@@ -237,7 +302,7 @@ basic.forever(function () {
 ```
 
 
-## Étape 8 @showdialog
+## Étape 10 @showdialog
 
 Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **Les instructions pour la suite sont à la prochaine étape de l'activité**.
 
@@ -249,7 +314,7 @@ Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **L
 [Voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
 
-## Étape 9 @showdialog
+## Étape 11 @showdialog
 
 Vous pouvez maintenant **faire réagir Rosy** à l'aide du programme que nous avons mis sur le micro:bit. Pour continuer de vous familiariser avec cet environnement de programmation, vous pouvez :
 
@@ -258,4 +323,3 @@ Vous pouvez maintenant **faire réagir Rosy** à l'aide du programme que nous av
 3. Explorer les différents types de capteurs embarqués sur le micro:bit dans la section ``||input:Entrée||``.
 
 Cliquez sur "Terminé à droite de cette barre pour avoir accès à tous les blocs de programmation.
-
