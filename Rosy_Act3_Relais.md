@@ -18,8 +18,8 @@ Votre rôle dans cette mission est de recevoir des messages provenant du télesc
 Pour réussir votre mission, vous devrez :
 
 1. ***Choisir en équipe un numéro de groupe entre 0 et 255*** qui sera unique à votre équipe. Assurez-vous que les autres équipes de la classe ne prennent pas le même numéro.
-2. ***Concevoir en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et 2. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Pour ce faire, vous devrez discuter de vos codes micro:bit respectifs afin de voir ce que chacun·e peut recevoir, envoyer et voir.
-3. ***Recevoir les messages du satellite-télescope***, qui peuvent être 0, 1 ou 2.
+2. ***Concevoir en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et -1. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Pour ce faire, vous devrez discuter de vos codes micro:bit respectifs afin de voir ce que chacun·e peut recevoir, envoyer et voir.
+3. ***Recevoir les messages du satellite-télescope***, qui peuvent être 0, 1 ou -1.
 4. ***Retransmettre ces données vers la Terre*** sans faire d'erreurs. Si le message n'est pas bien reçu par la Terre, les coordonnées de l'étoile d'où provient le signal extraterrestre ne seront pas connues et cette découverte n'aura jamais lieu! Les détails du défi se trouvent à la dernière étape de cette activité.
 
 Les détails du défi se trouvent à la dernière étape de cette activité.
@@ -98,7 +98,7 @@ radio.onReceivedValue(function (name, value) {
 
 ## Étape 5
 
-Une fois que les données sont reçues, il faut les retransmettre à la Terre. Puisque nous pouvons recevoir et envoyer 3 types de caractères (0,1 et 2), il faudra faire 3 groupes de blocs similaires.
+Une fois que les données sont reçues, il faut les retransmettre à la Terre. Puisque nous pouvons recevoir et envoyer 3 types de caractères (0,1 et -1), il faudra faire 3 groupes de blocs similaires.
 
 1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||``.
 2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
@@ -156,19 +156,19 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 8 @showhint
 
-Refaire la même chose que pour l'étape précédente, mais cette fois pour le "2".
+Refaire la même chose que pour l'étape précédente, mais cette fois pour le "-1".
 
 1. Sur le bloc ``||input:lorsque le bouton A est pressé||``, faire clic droit, puis Dupliquer.
 2. Changer le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
-3. Changer le 0 pour 2 aux deux endroits où il apparait.
+3. Changer le 0 pour -1 aux deux endroits où il apparait.
 
 <img alt="Activité 3 Relais Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_08.gif" width="80%">
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {
-    radio.sendValue("terre", 2)
+    radio.sendValue("terre", -1)
     basic.clearScreen()
-    basic.showNumber(2)
+    basic.showNumber(-1)
     basic.pause(100)
     basic.clearScreen()
 })
@@ -187,9 +187,9 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
 })
 input.onButtonPressed(Button.AB, function () {
-    radio.sendValue("terre", 2)
+    radio.sendValue("terre", -1)
     basic.clearScreen()
-    basic.showNumber(2)
+    basic.showNumber(-1)
     basic.pause(100)
     basic.clearScreen()
 })
@@ -222,20 +222,26 @@ Lorsque vos coéquipiers et coéquipières seront prêtes, vous pourrez commence
 En attendant, vous pouvez :
 
 1. Vous pratiquer pour maitriser les boutons.
-2. Élaborer un protocole de communication pour l'équipe. En effet, comment transmettre des messages comme "oui", "non", etc. avec seulement les caractères 0, 1 et 2?
+2. Élaborer un protocole de communication pour l'équipe. En effet, comment transmettre des messages comme "oui", "non", etc. avec seulement les caractères 0, 1 et -1?
 3. Pouvez-vous trouver une façon d'améliorer l'affichage à l'écran du micro:bit?
 
 Lorsque tout le monde est prêt, aller à la prochaine étape.
 
 ## Étape 12 @showdialog
 
-Voici votre défi : guider l'équipe sur Terre pour qu'elle trouve la bonne étoile d'où provient le message, à l'aide de la carte suivante.
+Votre défi : guider l'équipe sur Terre pour qu'elle trouve la bonne étoile d'où provient le message, à l'aide de la carte suivante.
 
-Il est maintenant temps de revenir à votre protocole de communication. Maintenant que vous et vos deux coéquipiers et coéquipières êtes prêtes à commencer la communication, il faut vous entendre sur ce que veulent dire vos messages. Comment donner des directions précises avec des moyens de communication limités? Par exemple, vous pouvez vous inspirer du [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), qui utilise seulement les deux symboles "." et "-" pour épeler toutes les lettres de l'alphabet, ou encore du [code binaire](https://fr.wikipedia.org/wiki/Code_binaire), qui n'utilise que des 1 et de 0.
+Voici le protocole de communication :
 
-1. Vous entendre sur un protocole de communication en équipe.
-2. La personne qui joue le rôle du satellite-relais (vous) doit retransmettre à la Terre les informations que vous recevez du télescope spatial... sans faire d'erreurs!
-3. En partant du centre de l'image, la Terre devra correctement identifier l'étoile, que seul le télescope spatial connait.
+A) -1 veut dire une case vers la gauche
+B) 1 veut dire une case vers la droite
+C) Quand 0 est envoyé, ça veut dire que le déplacement horizontal est terminé, et qu'on commence le déplacement vertical
+D) -1 veut alors dire une case vers le bas
+E) 1 veut alors dire une case vers le haut
+F) Pour vous assurer que les informations sont bien reçues, la Terre envoie un message de confirmation à chaque fois qu'elle reçoit un message : N pour vers le haut, S pour vers le bas, O pour vers la gauche, et E pour vers la droite.
+
+1. La personne qui joue le rôle du satellite-relais (vous) doit retransmettre à la Terre les informations que vous recevez du télescope spatial... sans faire d'erreurs!
+2. En partant du centre de l'image, la Terre devra correctement identifier l'étoile, que seul le télescope spatial connait.
 
 Bonne chance!
 

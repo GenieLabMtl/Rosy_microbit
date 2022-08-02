@@ -18,7 +18,7 @@ Pour réussir votre mission, vous devrez :
 
 1. ***Choisir en équipe un numéro de groupe entre 0 et 255*** qui sera unique à votre équipe. Assurez-vous que les autres équipes de la classe ne prennent pas le même numéro.
 
-2. ***Concevoir en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et 2. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Pour ce faire, vous devrez discuter de vos codes micro:bit respectifs afin de voir ce que chacun·e peut recevoir, envoyer et voir.
+2. ***Concevoir en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et -1. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Pour ce faire, vous devrez discuter de vos codes micro:bit respectifs afin de voir ce que chacun·e peut recevoir, envoyer et voir.
 3. ***Recevoir les données*** du satellite-relais, et ***envoyer des données de confirmation***.
 4. ***Trouver l'étoile*** d'où provient le signal extra-terrestre. Les détails du défi se trouvent à la dernière étape de cette activité.
 
@@ -62,7 +62,7 @@ radio.onReceivedValue(function (name, value) {
 
 ## Étape 3
 
-Il faut afficher la bonne image selon les données reçues, qui peuvent être 0, 1 ou 2. Commençons par recevoir les bons messages, qui sont sous forme de [chaînes de caractères](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res).
+Il faut afficher la bonne image selon les données reçues, qui peuvent être 0, 1 ou -1. Commençons par recevoir les bons messages, qui sont sous forme de [chaînes de caractères](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res).
 
 1. Aller dans la section ``||logic:logique||``, y trouver ``||logic: " " = " "||``, et le glisser à la place de ``||logic:<vrai>||``.
 2. Dans le cercle de gauche, glisser la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
@@ -307,13 +307,19 @@ Lorsque tout le monde est prêt, aller à l'étape suivante.
 
 ## Étape 14 @showdialog
 
-Voici votre défi : l'équipe du satellite-télescope va vous guider, en passant par le satellite-relais, pour trouver l'étoile d'où provient le message, à l'aide du plan suivant.
+Votre défi : l'équipe du satellite-télescope va vous guider, en passant par le satellite-relais, pour trouver l'étoile d'où provient le message, à l'aide du plan suivant.
 
-Il est maintenant temps de revenir à votre protocole de communication. Maintenant que vous et vos deux coéquipiers et coéquipières êtes prêtes à commencer la communication, il faut vous entendre sur ce que veulent dire vos messages. Comment donner des directions précises avec des moyens de communication limités? Par exemple, vous pouvez vous inspirer du [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), qui utilise seulement les deux symboles "." et "-" pour épeler toutes les lettres de l'alphabet, ou encore du [code binaire](https://fr.wikipedia.org/wiki/Code_binaire), qui n'utilise que des 1 et de 0.
+Voici le protocole de communication :
 
-1. Vous entendre sur un protocole de communication en équipe.
-2. Recevoir les informations de l'équipe satellite-relais et les interpréter selon le protocole établi.
-3. En utilisant l'étoile Polaire (le centre de l'image) comme point de référence, suivre les indications reçues pour trouver la bonne étoile.
+A) -1 veut dire une case vers la gauche
+B) 1 veut dire une case vers la droite
+C) Quand 0 est envoyé, ça veut dire que le déplacement horizontal est terminé, et qu'on commence le déplacement vertical
+D) -1 veut alors dire une case vers le bas
+E) 1 veut alors dire une case vers le haut
+F) Pour vous assurer que les informations sont bien reçues, la Terre envoie un message de confirmation à chaque fois qu'elle reçoit un message : N pour vers le haut, S pour vers le bas, O pour vers la gauche, et E pour vers la droite.
+
+1. Recevoir les informations de l'équipe satellite-relais et les interpréter selon le protocole établi.
+2. En utilisant l'étoile Polaire (le centre de l'image) comme point de référence, suivre les indications reçues pour trouver la bonne étoile.
 
 Une excellente communication entre toutes les équipes sera essentielle à la réussite de cette mission. Bonne chance!
 

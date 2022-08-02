@@ -18,7 +18,7 @@ Votre rôle dans cette mission est de transmettre les données brutes au satelli
 Pour réussir votre mission, vous devrez :
 
 1. ***Choisir en équipe un numéro de groupe entre 0 et 255*** qui sera unique à votre équipe. Assurez-vous que les autres équipes de la classe ne prennent pas le même numéro.
-2. ***Concevoir en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et 2. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Pour ce faire, vous devrez discuter de vos codes micro:bit respectifs afin de voir ce que chacun·e peut recevoir, envoyer et voir.
+2. ***Respecter en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et -1. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Le protocole sera expliqué après la partie programmation de l'activité.
 3. ***Envoyer des données*** au satellite-relais.
 4. ***Visualiser les données de confirmation*** envoyées par le centre de commandement sur Terre quand ils reçoivent vos données pour s'assurer qu'ils ont reçu les bonnes informations.
 
@@ -175,7 +175,7 @@ radio.onReceivedString(function (receivedString) {
 
 ## Étape 7
 
-Il faut maintenant pouvoir transmettre des données qui seront retransmises par le satellite-relais. Puisque nous pouvons envoyer trois types de caractères (0,1 et 2), il faudra faire trois groupes de blocs similaires. Voici comment faire le premier :
+Il faut maintenant pouvoir transmettre des données qui seront retransmises par le satellite-relais. Puisque nous pouvons envoyer trois types de caractères (0,1 et -1), il faudra faire trois groupes de blocs similaires. Voici comment faire le premier :
 
 1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||``.
 2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
@@ -237,18 +237,18 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 10
 
-Refaire encore la même chose, mais cette fois pour le "2".
+Refaire encore la même chose, mais cette fois pour le "-1".
 
 1. Sur le bloc ``||input:lorsque le bouton A est pressé||``, faire clic droit, puis Dupliquer.
 2. Changer le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
-3. Changer le 0 pour 2 aux deux endroits où il apparait.
+3. Changer le 0 pour -1 aux deux endroits où il apparait.
 
 <img alt="Activité 3 Télescope Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_10.gif" width="80%">
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {
-    radio.sendValue("relais", 2)
-    basic.showNumber(2)
+    radio.sendValue("relais", -1)
+    basic.showNumber(-1)
     basic.pause(100)
     basic.clearScreen()
 })
@@ -267,8 +267,8 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
 })
 input.onButtonPressed(Button.AB, function () {
-    radio.sendValue("relais", 2)
-    basic.showNumber(2)
+    radio.sendValue("relais", -1)
+    basic.showNumber(-1)
     basic.pause(100)
     basic.clearScreen()
 })
@@ -315,13 +315,20 @@ Lorsque tout le monde est prêt, aller à la prochaine étape.
 
 ## Étape 14 @showdialog
 
-Voici votre défi : guider l'équipe sur Terre pour qu'elle trouve la bonne étoile d'où provient le message, à l'aide de la carte suivante.
+Votre défi : guider l'équipe sur Terre pour qu'elle trouve la bonne étoile d'où provient le message, à l'aide de la carte suivante.
 
-Il est maintenant temps de revenir à votre protocole de communication. Maintenant que vous et vos deux coéquipiers et coéquipières êtes prêtes à commencer la communication, il faut vous entendre sur ce que veulent dire vos messages. Comment donner des directions précises avec des moyens de communication limités? Par exemple, vous pouvez vous inspirer du [code Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), qui utilise seulement les deux symboles "." et "-" pour épeler toutes les lettres de l'alphabet, ou encore du [code binaire](https://fr.wikipedia.org/wiki/Code_binaire), qui n'utilise que des 1 et de 0.
+Voici le protocole de communication :
 
-1. Vous entendre sur un protocole de communication en équipe.
-2. La personne qui joue le rôle du télescope spatial (vous) choisit secrètement une étoile sur la carte.
-3. En utilisant le l'étoile Polaire (centre de l'image) comme point de départ, donner des instructions pour que la Terre puisse correctement identifier cette étoile.
+A) -1 veut dire une case vers la gauche
+B) 1 veut dire une case vers la droite
+C) Quand 0 est envoyé, ça veut dire que le déplacement horizontal est terminé, et qu'on commence le déplacement vertical
+D) -1 veut alors dire une case vers le bas
+E) 1 veut alors dire une case vers le haut
+F) Pour vous assurer que les informations sont bien reçues, la Terre envoie un message de confirmation à chaque fois qu'elle reçoit un message : N pour vers le haut, S pour vers le bas, O pour vers la gauche, et E pour vers la droite.
+
+
+1. La personne qui joue le rôle du télescope spatial (vous) choisit secrètement une étoile sur la carte.
+2. En utilisant le l'étoile Polaire (centre de l'image) comme point de départ, donner des instructions pour que la Terre puisse correctement identifier cette étoile secrète.
 
 Bonne chance!
 
