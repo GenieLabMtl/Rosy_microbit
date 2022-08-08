@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "mlx90614-microbit": "github:GenieLabMtl/pxt-mlx90614-microbit#c00ebfae7590e0327fc848f36fbc86bcd7d8860a"
     },
     "files": [
         "main.blocks",
