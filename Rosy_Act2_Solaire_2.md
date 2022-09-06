@@ -224,7 +224,7 @@ basic.forever(function () {
 
 Pour la plage **plus grand que 2.1 volts**, nous allons faire allumer la DEL verte et nous assurer que la DEL rouge est éteinte.
 
-1. Dans le crochet directement sous ``||logic:si||``, mettre 2 fois ``||broches:écrire sur la broche||``.
+1. Dans le crochet directement sous ``||logic:si||``, mettre 2 fois ``||pins:écrire sur la broche||``qui se trouve dans la section ``||pins:Broches||`` du menu "Avancé".
 2. Dans le premier, choisir la broche P8, et inscrire le nombre 1.
 3. Dans le second, choisir la broche P2, et inscrire le nombre 0.
 
@@ -241,8 +241,8 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.digitalWritePin(AnalogPin.P8, 1)
-        pins.digitalWritePin(AnalogPin.P2, 0)
+        pins.analogWritePin(AnalogPin.P8, 1)
+        pins.analogWritePin(AnalogPin.P2, 0)
     } else {
 
     }
@@ -273,8 +273,8 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.digitalWritePin(AnalogPin.P8, 1)
-        pins.digitalWritePin(AnalogPin.P2, 0)
+        pins.analogWritePin(AnalogPin.P8, 1)
+        pins.analogWritePin(AnalogPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
 
     } else {
@@ -287,7 +287,7 @@ basic.forever(function () {
 
 Si la tension électrique détectée est entre 2.1v et 1.2v, seule la DEL rouge s'allumera
 
-1. Dans le crochet directement sous "si", mettre 2 fois ``||broches:écrire sur la broche||``.
+1. Dans le crochet directement sous "si", mettre 2 fois ``||pins:écrire sur la broche||``.
 2. Dans le premier, choisir la broche P8, et inscrire le nombre 0.
 3. Dans le second, choisir la broche P2, et inscrire le nombre 1.
 
@@ -304,11 +304,11 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.digitalWritePin(AnalogPin.P8, 1)
-        pins.digitalWritePin(AnalogPin.P2, 0)
+        pins.analogWritePin(AnalogPin.P8, 1)
+        pins.analogWritePin(AnalogPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
-        pins.digitalWritePin(AnalogPin.P2, 1)
-        pins.digitalWritePin(AnalogPin.P8, 0)
+        pins.analogWritePin(AnalogPin.P2, 1)
+        pins.analogWritePin(AnalogPin.P8, 0)
     } else {
 
     }
@@ -317,7 +317,7 @@ basic.forever(function () {
 
 ## Étape 14
 
-Finalement, dans le crochet ``||logic:sinon||``, mettre 2 fois ``||broches:écrire sur la broche||``.
+Finalement, dans le crochet ``||logic:sinon||``, mettre 2 fois ``||pins:écrire sur la broche||``.
 
 1. Dans le premier, choisir la broche P8, et inscrire le nombre 0.
 2. Dans le second, choisir la broche P2, et inscrire le nombre 0.
@@ -335,14 +335,14 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.digitalWritePin(AnalogPin.P8, 1)
-        pins.digitalWritePin(AnalogPin.P2, 0)
+        pins.analogWritePin(AnalogPin.P8, 1)
+        pins.analogWritePin(AnalogPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
-        pins.digitalWritePin(AnalogPin.P2, 1)
-        pins.digitalWritePin(AnalogPin.P8, 0)
+        pins.analogWritePin(AnalogPin.P2, 1)
+        pins.analogWritePin(AnalogPin.P8, 0)
     } else {
-        pins.digitalWritePin(AnalogPin.P8, 0)
-        pins.digitalWritePin(AnalogPin.P2, 0)
+        pins.analogWritePin(AnalogPin.P8, 0)
+        pins.analogWritePin(AnalogPin.P2, 0)
     }
 })
 ```
