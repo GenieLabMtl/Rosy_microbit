@@ -90,7 +90,7 @@ Le courant sortant de l'émetteur est égal à la somme des courants au collecte
 
 >**Attention! Il ne faut jamais connecter directement la base du transistor avec les broches 3V du micro:bit. Trop de courant sera fourni, ce qui fera chauffer le transistor à une très haute température presque immédiatement!**
 
-<img alt="Les transistors peuvent être représentés dans un diagramme sous forme de cercle avec 3 tiges en sortant." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Émetteur_graphique.png" width="80%">
+<img alt="Les transistors peuvent être représentés dans un diagramme sous forme de cercle avec 3 tiges en sortant." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/%C3%89metteur_graphique.png" width="80%">
 
 
 ## Étape 5b @showdialog
