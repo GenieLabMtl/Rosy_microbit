@@ -1,4 +1,4 @@
-# Rosy, Activité 1 : télescope infrarouge
+# Rosy, Activité 1 : télescope infrarouge v2
 
 ## Objectif @showdialog
 
