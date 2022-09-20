@@ -1,5 +1,4 @@
-# Rosy_Act2_Solaire_2_V2
-
+# Rosy, Activité 2.2 : Gestion de l'énergie V2
 
 ## Étape 1 @showdialog
 
