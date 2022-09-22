@@ -252,7 +252,7 @@ basic.forever(function () {
 ```
 
 
-## Étape 15 @showdialog
+## Étape 15 
 
 Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **Les instructions** de notre simulateur de télescope **sont à la prochaine étape**.
 

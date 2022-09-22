@@ -11,35 +11,30 @@ Selon l'énergie générée par le panneau solaire, nous pourrons faire **allume
 <img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire, et les DESs s'activent selon la tension." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gifactivite2_b.gif" width="60%">
 
 
-## Étape 2 
-//changer le texte et l'images
-
-Matériel dont vous allez avoir besoin :
-- microcontrôleur micro:bit
-- câble USB
-- carte de développement micro:bit
-- planchette de prototypage
-- panneau solaire 3V
-- DEL rouge
-- DEL verte
-- 1 résistance 10 000 ohms
-- 2 résistances 220 ohms
-- 2 transistors BC337
-- 6 fils de raccordement mâle-femelle
-- 1 fils de raccordement mâle-mâle
-
-<img alt="microcontrôleur micro:bit, câble USB, carte de développement micro:bit, planchette de prototypage, panneau solaire 3V, DEL rouge, DEL verte, 1 résistance 10 000 ohms, 2 résistances 220 ohms, 2 transistors BC337, 6 fils de raccordement mâle-femelle, 1 fils de raccordement mâle-mâle" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/RA2P3.jpg" width="80%">
-
-
 ## Étape 3
 
-Maintenant que le circuit est complet, il ne reste qu'à **programmer** le micro:bit.
+Il ne reste qu'à **programmer** le micro:bit.
 
 Nous voulons faire **allumer** les DEL en fonction de la **lumière reçue** par le panneau solaire :
 
 - Très peu de lumière : **aucune** lumière d'allumée
 - Peu de lumière : lumière **rouge** allumée
 - Beaucoup de lumière : lumière **verte** allumée
+
+Nous allons repatir du code précédent :
+
+```blocks
+let solaire = 0
+let volts = 0
+basic.forever(function () {
+    solaire = pins.analogReadPin(AnalogPin.P1)
+    volts = solaire / 1023 * 3
+    led.plotBarGraph(
+    volts,
+    3.3
+    )
+    )
+```
 
 
 ## Étape 4
@@ -74,7 +69,7 @@ basic.forever(function () {
 
 Nous voulons que le programme agisse différemment **selon la tension électrique** détectée.
 
-1. Remplacer ``||logic:<vrai>||`` par un bloc ``||logic: > (plus grand que) ||``. 
+1. Remplacer ``||logic:<vrai>||`` par un bloc ``||logic: > || `` (plus grand que) . 
 2. Dans sa case de gauche, mettre la variable ``||variables:volts||``.
 3. Dans la case de droite, écrire le nombre "2.1".
 
@@ -106,6 +101,8 @@ Pour la plage **plus grand que 2.1 volts**, nous allons faire allumer la DEL ver
 2. Dans le premier, choisir la broche P8, et inscrire le nombre 1.
 3. Dans le second, choisir la broche P2, et inscrire le nombre 0.
 
+//changer le gif
+
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 11." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_08.gif" width="80%">
 
 ```blocks
@@ -135,8 +132,8 @@ Nous voulons maintenant **déterminer** ce qui va se passer si le courant est pl
 
 1. Cliquer sur le symbole ``||logic:+||`` en bas du bloc ``||logic:si < >...sinon||`` pour ajouter un ``||logic:sinon...si||``.
 2. Y mettre un bloc ``||logic:<> et <>||``.
-3. Dans sa case de gauche mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:≤ (plus petit ou égal)||``, dans la case de droite, écrire le nombre "2.1".
-4. Dans sa case de droite mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:> (plus grand que)||``, dans la case de droite, écrire le nombre "1.2".
+3. Dans sa case de gauche mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:≤||`` (plus petit ou égal), dans la case de droite, écrire le nombre "2.1".
+4. Dans sa case de droite mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:>||`` (plus grand que), dans la case de droite, écrire le nombre "1.2".
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_09.gif" width="80%">
 
