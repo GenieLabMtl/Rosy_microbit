@@ -23,7 +23,10 @@
         "Rosy_Act3_Terre.md",
         "Rosy_Act2_Solaire_2_V2.md",
         "Rosy_Act2_Solaire_1_V2.md",
-        "Rosy_Act3_Solo_V2.md"
+        "Rosy_Act3_Solo_V2.md",
+        "Rosy_Act3_Relais_V2.md",
+        "Rosy_Act3_Telescope_V2.md",
+        "Rosy_Act3_Terre_V2.md"
     ],
     "testFiles": [
         "test.ts"
