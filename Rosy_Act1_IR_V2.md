@@ -6,56 +6,37 @@ Dans ce premier défi, nous allons créer un **modèle réduit de télescope à 
 
 Nous serons en mesure de **détecter la présence d'une source de chaleur** dans l'axe du télescope, et de représenter visuellement la température observée afin de **détecter la présence d'exoplanètes**.
 
-//Changer le gif
-
-<img alt="Résultat attendu de l'activité : le micro:bit affiche la valeur lue par le capteur infrarouge." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/gifactivite1.gif" width="60%">
+<img alt="Résultat attendu de l'activité : le micro:bit affiche la valeur lue par le capteur infrarouge." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/gifactivite1_v3.gif" width="60%">
 
 
 ## Matériel 
 
 Voici le matériel dont nous aurons besoin :
 
-//changer l'image
-
-<img alt="microcontrôleur micro:bit, câble USB, platine de prototypage, carte de développement micro:bit, capteur infrarouge MLX90614, 4 fils de raccordement mâle-mâle" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict1R1_v2_1024px.jpg" width="80%">
+<img alt="microcontrôleur micro:bit, câble USB, circuit imprimé, capteur infrarouge MLX90614, 4 fils de raccordement mâle-mâle" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/matos" width="80%">
 
 
 ## Étape 1
-insérer le capteurs infrarouge
-
-//changer le texte
-
-La **carte de développement** permet d'utiliser facilement le micro:bit avec des composantes externes. Elle est indispensable pour **faire du prototypage** puisque les broches sur le micro:bit sont trop petites pour être toutes utilisées avec des pinces alligators.
-
-Commencer par insérer le micro:bit dans la carte de développement.//voir pour inverser les deux premieres etsapes, microbit et capteurs
-
-//image ne fonctionne pas 
-<img alt="Le micro:bit s'insère dans la carte de développement de façon à ce que les boutons A et B du micro:bit soient du même côté que les connecteurs de la carte." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict3R4_600px.png" width="80%">
-
-
-## Étape 2 
-insérer le microbit dans son emplacement
-
-//chnager le texte
-
-La [platine de prototypage](https://fr.wikipedia.org/wiki/Platine_d%27exp%C3%A9rimentation) est aussi un élément indispensable du **prototypage électronique**. Composée de 4 colonnes extérieures et de plusieurs dizaines de rangées au centre, elle permet de concevoir des circuits électroniques sans soudure. 
 
 Le capteur infrarouge [MLX90614](https://www.melexis.com/en/product/mlx90614/digital-plug-play-infrared-thermometer-to-can) permet de **lire la température** ambiante et la température d'un objet en face du capteur. La version que nous utilisons a **une portée utile d'environ 30 cm**.
 
 Insérer les 4 pattes du capteur infrarouge MLX90614 dans 4 rangées numérotées différentes de la platine de prototypage.
 
-//chnager l'image
+<img alt="Le micro:bit s'insère dans la carte de développement de façon à ce que les boutons A et B du micro:bit soient du même côté que les connecteurs de la carte." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1pict3IR_v2_600px.jpg" width="80%">
 
-<img alt="Les pattes du capteur s'insèrent dans la platine de prototypage de sorte à ce que le capteur soit du côté extérieure de la platine, dégageant ainsi les autres trous des 4 rangées où il est connecté." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict4R1_v2_1024px.jpg" width="80%">
+
+## Étape 2 
+
+Insérer le micro:bit dans la carte de développement.
+//changer ça 
+<img alt="Les pattes du capteur s'insèrent dans la platine de prototypage de sorte à ce que le capteur soit du côté extérieure de la platine, dégageant ainsi les autres trous des 4 rangées où il est connecté." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict4IR_v2.jpg" width="80%">
 
 
 ## Étape 5 
 
 Voilà! Le circuit est aussi simple que ça! **Maintenant, allons programmer** le micro:bit pour qu'il puisse communiquer avec le capteur.
 
-//changer l'images
-
-<img alt="Les connexions entre le capteur infrarouge et la carte de développement complète ce circuit simple." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict7R1_v2_1024px.jpg" width="80%">
+<img alt="Les connexions entre le capteur infrarouge et la carte de développement complète ce circuit simple." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict5IR_v2.jpg" width="80%">
 
 
 ## Étape 6
