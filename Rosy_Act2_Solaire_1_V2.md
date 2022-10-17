@@ -4,23 +4,30 @@
 
 Dans cette activité, nous allons **apprendre à mesurer** la [tension électrique](https://fr.wikipedia.org/wiki/Tension_%C3%A9lectrique) produite par le **panneau solaire**.
 
-//changer le gif
 
-<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gifactivite2_a.gif" width="60%">
+<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gifactivite2a_v2.gif" width="60%">
+
+### Matériels
+
+Dans cette activité nous avons besoin de :
+    - Le circuit imprimé
+    - un panneau solaire
+    - un micro:bit
+    - un cable usb
+
+<img alt="Le circuit imprimé, un panneua solaire, un microbit, un cable USB." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict3_v2.jpg" width="80%">
 
 
 ### Étape 3 
 
-Commencer par **connecter** le panneau solaire au micro:bit :
+Commencer par **connecter** le panneau solaire au circuit imprimé :
 
-1. Insérer le micro:bit dans la carte de développement.
-2. À l'aide des fils femelle-femelle :
-    - Connecter le fil rouge (positif) du panneau solaire avec la broche 1 du micro:bit.
-    - Connecter le fil noir (négatif) du panneau solaire avec la broche GND du micro:bit.
+1. Insérer le micro:bit dans le ciruit imprimé.
+2. À l'aide des fils du panneau solaire :
+    - Connecter le fil rouge (positif) du panneau solaire au circuit imprimé.
+    - Connecter le fil noir (négatif) du panneau solaire avec la broche GND du circuit imprimé.
 
-//changer l'image
-
-<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et la carte de développement." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/RA2P2.jpg" width="80%">
+<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et la carte de développement." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict3_v2.jpg" width="80%">
 
 
 ### Étape 4
