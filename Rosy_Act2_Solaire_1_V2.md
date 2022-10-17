@@ -5,7 +5,7 @@
 Dans cette activité, nous allons **apprendre à mesurer** la [tension électrique](https://fr.wikipedia.org/wiki/Tension_%C3%A9lectrique) produite par le **panneau solaire**.
 
 
-<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Part1.gif" width="60%">
+<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Part1.gif" width="300px">
 
 ### Matériels
 
@@ -15,7 +15,7 @@ Dans cette activité nous avons besoin de :
     - un micro:bit.
     - un cable usb.
 
-<img alt="Le circuit imprimé, un panneua solaire, un microbit, un cable USB." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict3_v3.jpg" width="80%">
+<img alt="Le circuit imprimé, un panneua solaire, un microbit, un cable USB." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict3_v3.jpg" width="300px">
 
 
 ### Étape 3 
