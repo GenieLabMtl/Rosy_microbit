@@ -6,9 +6,7 @@ Dans cette activité, nous allons découvrir comment **diriger** l'électricité
 
 Selon l'énergie générée par le panneau solaire, nous pourrons faire **allumer** différentes lumières qui seront alimentées directement par le panneau solaire.
 
-//changer l'image
-
-<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire, et les DESs s'activent selon la tension." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gifactivite2_b.gif" width="60%">
+<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gifactivite2a_v3.gif" width="60%">
 
 
 ## Étape 3

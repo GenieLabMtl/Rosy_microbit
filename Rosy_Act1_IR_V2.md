@@ -13,10 +13,11 @@ Nous serons en mesure de **détecter la présence d'une source de chaleur** dans
 
 Voici le matériel dont nous aurons besoin :
 
-<img alt="microcontrôleur micro:bit, câble USB, circuit imprimé, capteur infrarouge MLX90614, 4 fils de raccordement mâle-mâle" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/matos" width="80%">
+<img alt="microcontrôleur micro:bit, câble USB, circuit imprimé, capteur infrarouge MLX90614, 4 fils de raccordement mâle-mâle" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1PictMatos.jpg" width="80%">
 
 
 ## Étape 1
+
 
 Le capteur infrarouge [MLX90614](https://www.melexis.com/en/product/mlx90614/digital-plug-play-infrared-thermometer-to-can) permet de **lire la température** ambiante et la température d'un objet en face du capteur. La version que nous utilisons a **une portée utile d'environ 30 cm**.
 
@@ -28,8 +29,8 @@ Insérer les 4 pattes du capteur infrarouge MLX90614 dans 4 rangées numérotée
 ## Étape 2 
 
 Insérer le micro:bit dans la carte de développement.
-//changer ça 
-<img alt="Les pattes du capteur s'insèrent dans la platine de prototypage de sorte à ce que le capteur soit du côté extérieure de la platine, dégageant ainsi les autres trous des 4 rangées où il est connecté." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict4IR_v2.jpg" width="80%">
+
+<img alt="Les pattes du capteur s'insèrent dans la platine de prototypage de sorte à ce que le capteur soit du côté extérieure de la platine, dégageant ainsi les autres trous des 4 rangées où il est connecté." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict2IR_v3.jpg" width="80%">
 
 
 ## Étape 5 
