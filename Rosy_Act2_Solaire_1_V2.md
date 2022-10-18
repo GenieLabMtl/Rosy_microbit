@@ -39,7 +39,7 @@ Il faut maintenant **programmer** le micro:bit. Commencer par aller dans la sect
 1. solaire
 2. volts
 
-<img alt="Animation de la création des variables de l'étape 4." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_01.gif" width="300px">
+<img alt="Animation de la création des variables de l'étape 4." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_01.gif" width="80%">
 
 
 ### Étape 5
@@ -47,7 +47,7 @@ Il faut maintenant **programmer** le micro:bit. Commencer par aller dans la sect
 1. Glisser le bloc ``||variables: définir||`` de la section ``||Variables||`` et le mettre dans ``||basic:toujours||``.
 2. Lui attribuer la variable ``||variables:solaire||`` si ce n'est pas déjà fait.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 5." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_02.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 5." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_02.gif" width="80%">
 
 
 ```blocks
@@ -64,7 +64,7 @@ Nous allons **lire la tension électrique** avec la broche 1 du micro:bit.
 1. Assigner à la variable ``||variables:solaire||`` la lecture de la broche avec ``||pins:lire la broche analogique 1||`` qui se trouve dans la section ``||Broches||`` du menu "Avancé".
 2. Assigner la broche *P1* dans ``||pins:lire la broche analogique 0||``.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 6." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_03.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 6." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_03.gif" width="80%">
 
 ```blocks
 let solaire = 0
@@ -91,7 +91,7 @@ Puisque le panneau solaire génère jusqu'à 3 volts d'électricité, il faut **
 5. Puis prendre un bloc ``||math:multiplication||`` et multiplier le bloc division que nous venons de créer par 3.
 Mettre le tout dans la case à droite dans le bloc de définition de "volts".
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 7." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_04.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 7." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_04.gif" width="80%">
 
 ```blocks
 let solaire = 0
@@ -109,7 +109,7 @@ Finalement, il ne reste qu'à **afficher** la valeur :
 2. Y assigner la variable "volts" comme minimum.
 3. Assigner la valeur 3.3 comme maximum.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_05.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_05.gif" width="80%">
 
 ```blocks
 let solaire = 0

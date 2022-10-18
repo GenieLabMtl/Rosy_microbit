@@ -53,7 +53,7 @@ Commençons par **définir une variable** pour stocker la température de l'obje
 Aller dans la section ``||variables:Variables||`` et créer la variable "source".
 Ensuite, glisser le bloc ``||variables:définir||`` dans le crochet ``||basic:Toujours||``
 
-<img alt="Animation de la création d'une variable et de l'assemblage des blocs de programmation de l'étape 6." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_01.gif" width="300px">
+<img alt="Animation de la création d'une variable et de l'assemblage des blocs de programmation de l'étape 6." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_01.gif" width="80%">
 
 ```blocks
 let source = 0
@@ -71,7 +71,7 @@ Ensuite, nous allons **lire le capteur** au moyen d'une [librairie sur mesure](h
 
 > ***Astuce*** *: Au fil des étapes, vous pouvez cliquer sur l'ampoule bleue à droite de cette case pour voir le résultat de l'étape en cours, ainsi qu'une animation de ce qu'il faut faire.*
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 7." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_02.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 7." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_02.gif" width="80%">
 
 
 ## Étape 8
@@ -83,7 +83,7 @@ La valeur minimale de lecture est la température ambiante de la salle où vous 
 2. Glisser ``||Control:mesure temperature||`` dans le premier cercle de ``||Math:projeter||`` et lui attribuer "Object" avec le menu déroulant.
 3. Glisser l'autre ``||Control:mesure temperature||`` dans le second cercle de ``||Math:projeter||`` et lui attribuer "Ambient" avec le menu déroulant.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_03.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_03.gif" width="80%">
 
 
 ## Étape 9
@@ -95,14 +95,14 @@ Pour illuminer l'écran du micro:bit, les valeurs de **0 à 50 nous donneront un
 2. Dans le quatrième cercle, inscrire le nombre 0.
 3. Dans le dernier cercle, inscrire le nombre 50.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_04.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_04.gif" width="80%">
 
 
 ## Étape 10
 
 Nous pouvons maintenant mettre ``||Math:projeter||`` dans le bloc ``||variables:définir||``.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_05.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_05.gif" width="80%">
 
 ```blocks
 let source = 0
@@ -124,7 +124,7 @@ Nous avons donc besoin d'un bloc conditionnel pour détecter **si le bouton est 
 
 > ***Astuce*** *: Si vous manquez de place pour avoir une bonne vue d'ensemble de votre code, vous pouvez appuyer sur le bouton "-" en bas à droite de l'écran pour dézoomer.*
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 11." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_06.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 11." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_06.gif" width="80%">
 
 ```blocks
 let source = 0
@@ -149,7 +149,7 @@ basic.forever(function () {
 4. La mettre dans le premier cercle du bloc ``||led:tracer le graphe||``.
 5. Inscrire le nombre 50 dans l'autre cercle.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_07.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_07.gif" width="80%">
 
 ```blocks
 let source = 0
@@ -176,7 +176,7 @@ Nous voulons **afficher** une image de planète **seulement quand une source de 
 3. À gauche du symbole "<", inscrire le nombre 1.
 4. À droite du symbole, mettre la ``||variables:variable||`` "Source".
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 13." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_08.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 13." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_08.gif" width="80%">
 
 ```blocks
 let source = 0
@@ -206,7 +206,7 @@ Affichons une image de planète **lorsque de la chaleur est détectée**.
 2. Dessiner l'image qui vous convient dans la matrice.
 3. Dans le crochet "sinon", insérer le bloc ``||basic:effacer l'écran||`` de la section ``||basic:Base||``.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_09.gif" width="300px">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_09.gif" width="80%">
 
 ```blocks
 let source = 0
