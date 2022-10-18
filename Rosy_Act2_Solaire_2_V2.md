@@ -6,7 +6,7 @@ Dans cette activité, nous allons découvrir comment **diriger** l'électricité
 
 Selon l'énergie générée par le panneau solaire, nous pourrons faire **allumer** différentes lumières qui seront alimentées directement par le panneau solaire.
 
-<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gifactivite2a_v3.gif" width="60%">
+<img alt="Résultat attendu de l'activité : le micro:bit affiche le niveau de tension électrique généré par le panneau solaire." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gifactivite2a_v3.gif" width="300px">
 
 
 ## Étape 3
@@ -43,7 +43,7 @@ Ajouter au code existant un bloc ``||logic:si <vrai>...sinon||`` de la section `
 
 > ***Astuce 2*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_06.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_06.gif" width="300px">
 
 ```blocks
 let solaire = 0
@@ -71,7 +71,7 @@ Nous voulons que le programme agisse différemment **selon la tension électriqu
 2. Dans sa case de gauche, mettre la variable ``||variables:volts||``.
 3. Dans la case de droite, écrire le nombre "2.1".
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_07.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_07.gif" width="300px">
 
 ```blocks
 let solaire = 0
@@ -101,7 +101,7 @@ Pour la plage **plus grand que 2.1 volts**, nous allons faire allumer la DEL ver
 
 //changer le gif
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 11." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_08.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 11." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_08.gif" width="300px">
 
 ```blocks
 let solaire = 0
@@ -133,7 +133,7 @@ Nous voulons maintenant **déterminer** ce qui va se passer si le courant est pl
 3. Dans sa case de gauche mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:≤||`` (plus petit ou égal), dans la case de droite, écrire le nombre "2.1".
 4. Dans sa case de droite mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:>||`` (plus grand que), dans la case de droite, écrire le nombre "1.2".
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_09.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_09.gif" width="300px">
 
 ```blocks
 let solaire = 0
@@ -164,7 +164,7 @@ Si la tension électrique détectée est entre 2.1v et 1.2v, seule la DEL rouge 
 2. Dans le premier, choisir la broche P8, et inscrire le nombre 0.
 3. Dans le second, choisir la broche P2, et inscrire le nombre 1.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 13." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_10.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 13." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_10.gif" width="300px">
 
 ```blocks
 let solaire = 0
@@ -195,7 +195,7 @@ Finalement, dans le crochet ``||logic:sinon||``, mettre 2 fois ``||pins:écrire 
 1. Dans le premier, choisir la broche P8, et inscrire le nombre 0.
 2. Dans le second, choisir la broche P2, et inscrire le nombre 0.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_11.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_11.gif" width="300px">
 
 ```blocks
 let solaire = 0

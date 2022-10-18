@@ -37,7 +37,7 @@ La première chose à faire est d'initialiser la radio.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer.**
 
-<img alt="Activité 3 Relais Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_01.gif" width="80%">
+<img alt="Activité 3 Relais Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_01.gif" width="300px">
 
 ```blocks
 radio.setGroup(0)
@@ -50,7 +50,7 @@ Lorsqu'une donnée est reçue du satellite-télescope, nous voulons la voir affi
 1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio name value||`` et le glisser dans la page de programmation.
 2. Ensuite, aller dans ``||logic:logique||`` pour trouver le bloc ``||logic:si <vrai> alors||``, et le mettre dans le bloc radio que l'on vient de prendre.
 
-<img alt="Activité 3 Relais Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_02.gif" width="80%">
+<img alt="Activité 3 Relais Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_02.gif" width="300px">
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -67,7 +67,7 @@ Nous voulons seulement voir les données qui nous sont adressées. Nous devons d
 2. Dans le cercle de gauche, glisser la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
 3. Dans le cercle de droite, inscrire "relais".
 
-<img alt="Activité 3 Relais Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_03.gif" width="80%">
+<img alt="Activité 3 Relais Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_03.gif" width="300px">
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -85,7 +85,7 @@ Maintenant, affichons ces données et un point en haut de l'écran du micro:bit 
 3. Aller dans la section ``||led:LED||``, prendre ``||led:allumer x y||`` et le mettre sous ``||basic:montrer nombre||``.
 4. Y inscrire le chiffre 4 dans le cercle à côté de "x".
 
-<img alt="Activité 3 Relais Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_04.gif" width="80%">
+<img alt="Activité 3 Relais Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_04.gif" width="300px">
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -104,7 +104,7 @@ Une fois que les données sont reçues, il faut les retransmettre à la Terre. P
 2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
 3. Inscrire "terre" à gauche du "=", et laisser le chiffre à 0.
 
-<img alt="Activité 3 Relais Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_05.gif" width="80%">
+<img alt="Activité 3 Relais Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_05.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -122,7 +122,7 @@ Dans la section ``||basic:base||`` :
 3. Trouver le bloc ``||basic:pause (ms)||``, le mettre à la suite, et y inscrire le nombre 100.
 4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
 
-<img alt="Activité 3 Relais Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_06.gif" width="80%">
+<img alt="Activité 3 Relais Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_06.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -142,7 +142,7 @@ Refaire la même chose que pour l'étape précédente, mais cette fois pour le "
 2. Changer le ``||input:bouton A||`` pour le ``||input:bouton B||``.
 3. Changer le 0 pour 1 aux deux endroits où il apparait.
 
-<img alt="Activité 3 Relais Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_07.gif" width="80%">
+<img alt="Activité 3 Relais Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_07.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.B, function () {
@@ -162,7 +162,7 @@ Refaire la même chose que pour l'étape précédente, mais cette fois pour le "
 2. Changer le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
 3. Changer le 0 pour -1 aux deux endroits où il apparait.
 
-<img alt="Activité 3 Relais Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_08.gif" width="80%">
+<img alt="Activité 3 Relais Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_08.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {

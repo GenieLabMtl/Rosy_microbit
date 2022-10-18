@@ -44,7 +44,7 @@ Pour commencer, nous allons créer une fonction. Les fonctions servent à encaps
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer. 😄**
 
-<img alt="Activité 3 Solo Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_01.gif" width="80%">
+<img alt="Activité 3 Solo Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_01.gif" width="300px">
 
 ```blocks
 function TrouverUneEtoile () {
@@ -61,7 +61,7 @@ Nous allons maintenant avoir besoin de deux variables pour garder en mémoire le
 3. Glisser 2 fois le bloc ``||variables:définir [nom de la variable] à 0||`` dans le bloc de notre fonction.
 4. Assurez-vous qu'un des bloc de ``||variables:variables||`` indique "coord_x", et l'autre "coord_y".
 
-<img alt="Activité 3 Solo Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_02.gif" width="80%">
+<img alt="Activité 3 Solo Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_02.gif" width="300px">
 
 ```blocks
 function TrouverUneEtoile () {
@@ -78,7 +78,7 @@ Les valeurs à choisir devront se trouver entre les valeurs minimales et maximal
 1. Dans la section ``||Math:Maths||``, trouver le bloc ``||Math:choisir au hasard de 0 à 10||``, et le mettre à la place du 0 dans les 2 blocs ``||variables:définir||``.
 2. Inscrire "-1023" dans le cercle de gauche des blocs  ``||Math:choisir au hasard||``, et "1023" dans le cercle de droite.
 
-<img alt="Activité 3 Solo Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_03.gif" width="80%">
+<img alt="Activité 3 Solo Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_03.gif" width="300px">
 
 ```blocks
 function TrouverUneEtoile () {
@@ -95,7 +95,7 @@ Maintenant que notre fonction est prête, nous voulons que des coordonnées soie
 
 C'est tout! Les 2 variables auront des chiffres aléatoires attribués quand notre programme sera lancé.
 
-<img alt="Activité 3 Solo Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_04.gif" width="80%">
+<img alt="Activité 3 Solo Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_04.gif" width="300px">
 
 ```blocks
 TrouverUneEtoile()
@@ -109,7 +109,7 @@ Il est maintenant temps d'écrire le programme comme tel. Nous voulons d'abord e
 2. Trouver le bloc ``||serial:série écrire ligne ""||`` et le glisser dans le bloc ``||basic:toujours||``.
 3. Dans le cercle où il est indiqué "", écrire "Nouvelle lecture".
 
-<img alt="Activité 3 Solo Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_05.gif" width="80%">
+<img alt="Activité 3 Solo Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_05.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -126,7 +126,7 @@ Commençons par l'axe des X (de gauche à droite).
 1. Dans la section ``||serial:Communication Série||``, glisser le bloc ``||serial:série écrire valeur "x" = 0||`` dans notre code sous ``||serial:série écrire ligne||``.
 2. Dans la section ``||input:Entrée||``, glisser le bloc ``||input:accélération (mg) x||`` à la place du 0.
 
-<img alt="Activité 3 Solo Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_06.gif" width="80%">
+<img alt="Activité 3 Solo Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_06.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -145,7 +145,7 @@ En vérifiant si notre valeur X est à plus ou moins 200 de la valeur de la coor
 3. Prendre 2 fois le bloc logique ``||logic:0 < 0||`` et les mettre dans chacun des hexagones du bloc précédent.
 4. Dans la section ``||Math:Maths||``, prendre 2 fois le bloc ``||math:0 - 0||`` et le mettre dans le cercle de droite de chacun des blocs ``||logic:0 < 0||``.
 
-<img alt="Activité 3 Solo Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_07.gif" width="80%">
+<img alt="Activité 3 Solo Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_07.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -173,7 +173,7 @@ Nous allons maintenant comparer la lecture du gyroscope en X avec la variable co
 6. Dans le bloc logique à la gauche du "et", changer le symbole "<" pour un ">".
 7. Dans le bloc logique à la droite du "et", changer le symbole "-" pour "+".
 
-<img alt="Activité 3 Solo Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_08.gif" width="80%">
+<img alt="Activité 3 Solo Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_08.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -197,7 +197,7 @@ Nous allons avoir besoin de nouvelles variables pour garder en mémoire le résu
 4. À partir de ``||logic:Logique||``, glisser le bloc ``||logic:<vrai>||`` dans le ``||variables:définir etoile_x à 0||`` du haut.
 5. Glisser le bloc ``||logic:<faux>||`` dans le ``||variables:définir etoile_x à 0||`` du bas.
 
-<img alt="Activité 3 Solo Étape 9" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_09.gif" width="80%">
+<img alt="Activité 3 Solo Étape 9" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_09.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -223,7 +223,7 @@ Maintenant que nous pouvons vérifier si nous avons trouvé la valeur en X des c
 3. Dupliquer le bloc ``||logic:si...alors...sinon||``. Si vous le faites à partir du bon bloc, tous les blocs inclus dedans devraient également être dupliqués. Le mettre à la suite du code.
 4. Changer les 2 "x" pour "y", les 2 "coord_x" pour "coord_y", et les 2 "etoile_x" pour "etoile_y".
 
-<img alt="Activité 3 Solo Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_10.gif" width="80%">
+<img alt="Activité 3 Solo Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_10.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -254,7 +254,7 @@ Finalement, si les 2 conditions (X et Y) sont vraies, nous pourrons envoyer un m
 4. Dans chacun des cercles à gauche des symboles "=", mettre les variables "etoile_x" et "etoile_y", que vous pouvez trouver dans la section ``||variables:Variables||``.
 5. Dans les cercles de droite, mettre ``||logic:<vrai>||``, qui se trouve dans la section ``||logic:Logique||``.
 
-<img alt="Activité 3 Solo Étape 11" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_11.gif" width="80%">
+<img alt="Activité 3 Solo Étape 11" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_11.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -292,7 +292,7 @@ Si effectivement nous avons trouvé l'étoile, envoyons un message qui annonce l
 
 > ***Astuce*** *: N'oubliez pas les espaces avant et après les lettres/signes de ponctuation tels qu'ils sont indiqués dans les instructions. Votre message sera ainsi plus facilement lisible.*
 
-<img alt="Activité 3 Solo Étape 12" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_12.gif" width="80%">
+<img alt="Activité 3 Solo Étape 12" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_12.gif" width="300px">
 
 ```blocks
 basic.forever(function () {
@@ -325,7 +325,7 @@ Finalement, après 5 secondes, assignons de nouvelles coordonnées aléatoires p
 
 Ce dernier bloc sert à ralentir légèrement la vitesse d'affichage des données pour les rendre plus facilement lisibles.
 
-<img alt="Activité 3 Solo Étape 13" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_13.gif" width="80%">
+<img alt="Activité 3 Solo Étape 13" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_13.gif" width="300px">
 
 ```blocks
 basic.forever(function () {

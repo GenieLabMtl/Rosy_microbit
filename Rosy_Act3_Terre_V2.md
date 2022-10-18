@@ -38,7 +38,7 @@ La première chose à faire est d'initialiser la radio.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème! Il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer.**
 
-<img alt="Activité 3 Terre Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_01.gif" width="80%">
+<img alt="Activité 3 Terre Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_01.gif" width="300px">
 
 ```blocks
 radio.setGroup(0)
@@ -51,7 +51,7 @@ Lorsqu'une donnée est reçue du satellite-relais, nous voulons la voir affiché
 1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio name value||`` et le glisser dans la page de programmation.
 2. Aller dans ``||logic:logique||`` pour trouver le bloc ``||logic:si <vrai> alors||`` et le mettre dans le bloc radio que l'on vient de prendre.
 
-<img alt="Activité 3 Terre Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_02.gif" width="80%">
+<img alt="Activité 3 Terre Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_02.gif" width="300px">
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -68,7 +68,7 @@ Il faut afficher la bonne image selon les données reçues, qui peuvent être 0,
 2. Dans le cercle de gauche, glisser la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
 3. Dans le cercle de droite, inscrire "terre".
 
-<img alt="Activité 3 Terre Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_03.gif" width="80%">
+<img alt="Activité 3 Terre Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_03.gif" width="300px">
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -87,7 +87,7 @@ Affichons maintenant les données reçues, puis nettoyons ensuite l'écran.
 3. Dans la section ``||basic:base||``, trouver le bloc ``||basic:pause (ms)||`` et le mettre à la suite.
 4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
 
-<img alt="Activité 3 Terre Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_04.gif" width="80%">
+<img alt="Activité 3 Terre Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_04.gif" width="300px">
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -110,7 +110,7 @@ Pour sélectionner le message à envoyer, nous allons utiliser l'[accéléromèt
 3. Aller dans la section ``||logic:logique||``, y trouver l'hexagone ``||logic:plus petit que||``, et le glisser dans le premier ``||logic:si <vrai> alors||``.
 4. Dans la section ``||input:entrée||``, trouver ``||input:accélération (mg)||`` et le mettre dans le cercle à gauche du ``||logic:plus petit que||``.
 
-<img alt="Activité 3 Terre Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_05.gif" width="80%">
+<img alt="Activité 3 Terre Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_05.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -132,7 +132,7 @@ Lorsque le micro:bit penche vers la gauche et que l'on appuie sur le ``||input:b
 3. Trouver le bloc ``||basic:pause (ms)||`` et le mettre à la suite, puis y inscrire le nombre 100.
 4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
 
-<img alt="Activité 3 Terre Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_06.gif" width="80%">
+<img alt="Activité 3 Terre Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_06.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -156,7 +156,7 @@ Dans la section ``||logic:sinon||``, refaire la même chose, mais pour envoyer "
 3. Trouver le bloc ``||basic:pause (ms)||`` et le mettre à la suite, puis y inscrire le nombre 100.
 4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
 
-<img alt="Activité 3 Terre Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_07.gif" width="80%">
+<img alt="Activité 3 Terre Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_07.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -184,7 +184,7 @@ Refaire la même chose qu'aux étapes 5 à 7, mais pour "Nord" et "Sud". La fonc
 4. Changer "o" pour "n", et "Ouest" pour "Nord".
 5. Changer "e" pour "s", et "Est" pour "Sud".
 
-<img alt="Activité 3 Terre Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_08.gif" width="80%">
+<img alt="Activité 3 Terre Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_08.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.B, function () {
@@ -211,7 +211,7 @@ Pour se faire, ajoutons un troisième bloc ``||input:lorsque le bouton A est pre
 1. Créer un nouveau ``||input:lorsque le bouton A est pressé||`` et changer le ``||input:bouton A||`` pour ``||input:bouton A+B||``.
 2. Y insérer le bloc ``||radio:envoyer la chaîne "" par radio||`` de la section ``||radio:radio||``, et y inscrire "ok".
 
-<img alt="Activité 3 Terre Étape 9" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_09.gif" width="80%">
+<img alt="Activité 3 Terre Étape 9" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_09.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {
@@ -228,7 +228,7 @@ Lorsque le message de confirmation est envoyé, affichons aussi une confirmation
 3. Trouver le bloc ``||basic:pause (ms)||``, le mettre à la suite et y inscrire le nombre 100.
 4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
 
-<img alt="Activité 3 Terre Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_10.gif" width="80%">
+<img alt="Activité 3 Terre Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_10.gif" width="300px">
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {
