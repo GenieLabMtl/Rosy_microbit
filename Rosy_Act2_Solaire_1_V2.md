@@ -24,7 +24,7 @@ Commencer par **connecter** le panneau solaire au circuit imprimé :
 
 1. Insérer le micro:bit dans le ciruit imprimé.
 2. À l'aide des fils du panneau solaire :
-    - Connecter le fil rouge (positif) du panneau solaire au circuit imprimé.
+    - Connecter le fil rouge (positif) du panneau solaire avec la broche VCC.
     - Connecter le fil noir (négatif) du panneau solaire avec la broche GND du circuit imprimé.
 
 <img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et la carte de développement." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict4V2.jpg" width="300px">
@@ -106,7 +106,7 @@ basic.forever(function () {
 
 Finalement, il ne reste qu'à **afficher** la valeur :
 1. Glisser ``||led:tracer le graphe de||`` de la section ``||led:LED||``.
-2. Y assigner la variable "volts" comme minimum.
+2. Y assigner la variable ``||variables:volts||`` comme minimum.
 3. Assigner la valeur 3.3 comme maximum.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_05.gif" width="80%">

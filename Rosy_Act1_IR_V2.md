@@ -12,8 +12,11 @@ Nous serons en mesure de **détecter la présence d'une source de chaleur** dans
 ## Matériel 
 
 Voici le matériel dont nous aurons besoin :
-
-<img alt="microcontrôleur micro:bit, câble USB, circuit imprimé, capteur infrarouge MLX90614, 4 fils de raccordement mâle-mâle" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1PictMatos.jpg" width="300px">
+    - Un micro:bit
+    - Un câble USB
+    - Le circuit imprimé
+    - Le capteur infrarouge MLX90614
+<img alt="microcontrôleur micro:bit, câble USB, circuit imprimé, capteur infrarouge MLX90614" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1PictMatos.jpg" width="300px">
 
 
 ## Étape 1

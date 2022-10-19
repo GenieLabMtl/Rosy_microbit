@@ -19,7 +19,8 @@ Nous voulons faire **allumer** les DEL en fonction de la **lumière reçue** par
 - Peu de lumière : lumière **rouge** allumée
 - Beaucoup de lumière : lumière **verte** allumée
 
-Nous allons repatir du code précédent :
+Nous allons repatir du code précédent.
+Vous pouvez le revoir en cliquant sur l'indice.
 
 ```blocks
 let solaire = 0
