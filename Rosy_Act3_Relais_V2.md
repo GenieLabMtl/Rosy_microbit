@@ -1,4 +1,4 @@
-# Rosy, Activité 3 : Communication Radio : Relais V2
+# Rosy, Activité 3 : Communication Radio : Relais
 
 ## Présentation 1 @showdialog
 
@@ -13,11 +13,11 @@ Le problème est que le télescope a terminé sa mission il y a maintenant quelq
 
 ## Présentation 2 @showdialog
 
-Votre rôle dans cette mission est de recevoir des messages provenant du télescope spatial et les transmettre au centre de commandement sur Terre. C'est une tâche en apparence simple, mais absolument critique à la réussite de la mission.
+Votre rôle dans cette mission est de **recevoir des messages** provenant du télescope spatial et de **les transmettre** au centre de commandement sur Terre. C'est une tâche en apparence simple, mais absolument critique à la réussite de la mission.
 
 Pour réussir votre mission, vous devrez :
 
-1. ***Choisir en équipe un numéro de groupe entre 0 et 255*** qui sera unique à votre équipe. Assurez-vous que les autres équipes de la classe ne prennent pas le même numéro.
+1. ***Choisir en équipe un numéro de groupe entre 0 et 255*** qui sera unique à votre équipe*. Assurez-vous que les autres équipes de la classe ne prennent pas le même numéro.
 2. ***Concevoir en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et -1. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Pour ce faire, vous devrez discuter de vos codes micro:bit respectifs afin de voir ce que chacun·e peut recevoir, envoyer et voir.
 3. ***Recevoir les messages du satellite-télescope***, qui peuvent être 0, 1 ou -1.
 4. ***Retransmettre ces données vers la Terre*** sans faire d'erreurs. Si le message n'est pas bien reçu par la Terre, les coordonnées de l'étoile d'où provient le signal extraterrestre ne seront pas connues et cette découverte n'aura jamais lieu! Les détails du défi se trouvent à la dernière étape de cette activité.
@@ -30,10 +30,10 @@ Bonne chance!
 
 > ***Astuce*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
-La première chose à faire est d'initialiser la radio.
+La première chose à faire est d'**initialiser la radio**.
 
-1. Aller dans la section ``||radio:radio||`` pour trouver le bloc ``||radio:définir groupe||``, puis le mettre dans le bloc ``||basic:au démarrage||``.
-2. Attribuer la valeur de votre numéro de groupe au bloc ``||radio:définir groupe||``. Si une autre équipe a la même valeur de groupe, vos messages seront mélangés, ce qui va nuire à votre mission.
+1. Aller dans la section ``||radio:radio||`` pour **trouver** le bloc ``||radio:définir groupe||``, puis **ajouter** le dans le bloc ``||basic:au démarrage||``.
+2. **Attribuer** la valeur de votre numéro de groupe au bloc ``||radio:définir groupe||``. Si une autre équipe a la même valeur de groupe, vos messages seront mélangés, ce qui va nuire à votre mission.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer.**
 
@@ -47,8 +47,8 @@ radio.setGroup(0)
 
 Lorsqu'une donnée est reçue du satellite-télescope, nous voulons la voir affichée.
 
-1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio name value||`` et le glisser dans la page de programmation.
-2. Ensuite, aller dans ``||logic:logique||`` pour trouver le bloc ``||logic:si <vrai> alors||``, et le mettre dans le bloc radio que l'on vient de prendre.
+1. Toujours dans la section ``||radio:radio||``, **trouver** le bloc ``||radio:quand une donnée est reçue par radio name value||`` et le **glisser** dans la page de programmation.
+2. Ensuite, aller dans ``||logic:logique||`` pour **trouver** le bloc ``||logic:si <vrai> alors||``, et **l'ajouter** dans le bloc radio que l'on vient d'ajouter.
 
 <img alt="Activité 3 Relais Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_02.gif" width="80%">
 
@@ -63,9 +63,9 @@ radio.onReceivedValue(function (name, value) {
 
 Nous voulons seulement voir les données qui nous sont adressées. Nous devons donc vérifier que la [chaîne de caractères](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res) que nous recevons est bien "relais".
 
-1. Aller dans la section ``||logic:logique||``, y trouver ``||logic:" " = " "||``, et le glisser à la place de ``||logic:<vrai>||``.
-2. Dans le cercle de gauche, glisser la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
-3. Dans le cercle de droite, inscrire "relais".
+1. Aller dans la section ``||logic:logique||``, **trouver** ``||logic:" " = " "||``, et le **glisser** à la place de ``||logic:<vrai>||``.
+2. Dans le cercle de gauche, **glisser** la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
+3. Dans le cercle de droite, **inscrire** "**relais**".
 
 <img alt="Activité 3 Relais Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_03.gif" width="80%">
 
@@ -80,10 +80,10 @@ radio.onReceivedValue(function (name, value) {
 
 Maintenant, affichons ces données et un point en haut de l'écran du micro:bit pour indiquer que nous n'avons pas encore agi après les avoir reçus.
 
-1. Dans la section ``||basic:base||``, trouver ``||basic:montrer nombre||``, le mettre dans le bloc ``||logic:si <vrai> alors||``.
-2. Glisser la variable ``||variables:value||`` de ``||radio:quand une donnée est reçue par radio||`` et la mettre dans le cercle de cet objet.
-3. Aller dans la section ``||led:LED||``, prendre ``||led:allumer x y||`` et le mettre sous ``||basic:montrer nombre||``.
-4. Y inscrire le chiffre 4 dans le cercle à côté de "x".
+1. Dans la section ``||basic:base||``, **trouver** ``||basic:montrer nombre||``, **l'ajouter** dans le bloc ``||logic:si <vrai> alors||``.
+2. **Glisser** la variable ``||variables:value||`` de ``||radio:quand une donnée est reçue par radio||`` et **l'ajouter** dans le cercle de cet objet.
+3. Aller dans la section ``||led:LED||``, **prendre** ``||led:allumer x y||`` et **l'ajouter** sous ``||basic:montrer nombre||``.
+4. **Inscrire** le chiffre **4** dans le cercle à côté de ``||led:x||``.
 
 <img alt="Activité 3 Relais Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_04.gif" width="80%">
 
@@ -100,9 +100,9 @@ radio.onReceivedValue(function (name, value) {
 
 Une fois que les données sont reçues, il faut les retransmettre à la Terre. Puisque nous pouvons recevoir et envoyer 3 types de caractères (0,1 et -1), il faudra faire 3 groupes de blocs similaires.
 
-1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||``.
-2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
-3. Inscrire "terre" à gauche du "=", et laisser le chiffre à 0.
+1. **Ajouter** le bloc ``||input:lorsque le bouton A est pressé||`` qui se trouve dans la section ``||input:entrée||``.
+2. **Y insérer** le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
+3. **Inscrire** "**terre**" à gauche du "=", et laisser le chiffre à **0**.
 
 <img alt="Activité 3 Relais Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_05.gif" width="80%">
 
@@ -117,10 +117,10 @@ input.onButtonPressed(Button.A, function () {
 Quand nous envoyons une donnée, elle est affichée à l'écran, puis l'écran est nettoyé. Commençons par "0".
 
 Dans la section ``||basic:base||`` :
-1. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre sous ``||radio:envoyer la valeur||``.
-2. Trouver le bloc ``||basic:montrer nombre 0||`` et le mettre à la suite.
-3. Trouver le bloc ``||basic:pause (ms)||``, le mettre à la suite, et y inscrire le nombre 100.
-4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+1. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** sous ``||radio:envoyer la valeur||``.
+2. **Trouver** le bloc ``||basic:montrer nombre 0||`` et **l'ajouter** à la suite.
+3. **Trouver** le bloc ``||basic:pause (ms)||``, **l'ajouter** à la suite, et y **inscrire** le nombre **100**.
+4. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** à la suite.
 
 <img alt="Activité 3 Relais Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_06.gif" width="80%">
 
@@ -136,11 +136,11 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 7
 
-Refaire la même chose que pour l'étape précédente, mais cette fois pour le "1". La fonction *Dupliquer* va nous aider.
+Refaire la même chose que pour l'étape précédente, mais cette fois pour le "**1**". La fonction *Dupliquer* va nous aider.
 
-1. Sur le bloc ``||input:lorsque le bouton A est pressé||`` que nous avons créé, faire clic droit, puis Dupliquer.
-2. Changer le ``||input:bouton A||`` pour le ``||input:bouton B||``.
-3. Changer le 0 pour 1 aux deux endroits où il apparait.
+1. Sur le bloc ``||input:lorsque le bouton A est pressé||`` que nous avons créé, faire clic droit, puis **Dupliquer**.
+2. **Changer** le ``||input:bouton A||`` pour le ``||input:bouton B||``.
+3. **Changer** le **0** pour **1** aux deux endroits où il apparait.
 
 <img alt="Activité 3 Relais Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_07.gif" width="80%">
 
@@ -156,11 +156,11 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 8 @showhint
 
-Refaire la même chose que pour l'étape précédente, mais cette fois pour le "-1".
+Refaire la même chose que pour l'étape précédente, mais cette fois pour le "**-1**".
 
-1. Sur le bloc ``||input:lorsque le bouton A est pressé||``, faire clic droit, puis Dupliquer.
-2. Changer le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
-3. Changer le 0 pour -1 aux deux endroits où il apparait.
+1. Sur le bloc ``||input:lorsque le bouton A est pressé||``, faire clic droit, puis **Dupliquer**.
+2. **Changer** le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
+3. **Changer** le **0** pour **-1** aux deux endroits où il apparait.
 
 <img alt="Activité 3 Relais Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_08.gif" width="80%">
 

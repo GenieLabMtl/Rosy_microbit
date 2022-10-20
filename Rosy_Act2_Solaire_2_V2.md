@@ -1,4 +1,4 @@
-# Rosy, Activité 2.2 : Gestion de l'énergie V2
+# Rosy, Activité 2.2 : Gestion de l'énergie
 
 ## Étape 1 @showdialog
 
@@ -20,7 +20,7 @@ Nous voulons faire **allumer** les DEL en fonction de la **lumière reçue** par
 - Beaucoup de lumière : lumière **verte** allumée
 
 Nous allons repatir du code précédent.
-Vous pouvez le revoir en cliquant sur l'indice.
+Vous pouvez le revoir **en cliquant** sur **l'ampoule** dans le cercle bleu.
 
 ```blocks
 let solaire = 0
@@ -38,9 +38,9 @@ basic.forever(function () {
 
 ## Étape 4
 
-Ajouter au code existant un bloc ``||logic:si <vrai>...sinon||`` de la section ``||logic:Logique||``.
+**Ajouter** au code existant un bloc ``||logic:si <vrai>...sinon||`` de la section ``||logic:Logique||``.
 
-> ***Astuce*** *: N'hésitez pas à déplacer les blocs sur la surface de programmation pour mieux voir votre code.*
+> ***Astuce 1*** *: N'hésitez pas à déplacer les blocs sur la surface de programmation pour mieux voir votre code.*
 
 > ***Astuce 2*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
@@ -68,9 +68,9 @@ basic.forever(function () {
 
 Nous voulons que le programme agisse différemment **selon la tension électrique** détectée.
 
-1. Remplacer ``||logic:<vrai>||`` par un bloc ``||logic: > || `` (plus grand que) . 
-2. Dans sa case de gauche, mettre la variable ``||variables:volts||``.
-3. Dans la case de droite, écrire le nombre "2.1".
+1. **Remplacer** ``||logic:<vrai>||`` par un bloc ``||logic: > || `` (plus grand que) . 
+2. Dans sa case de gauche, **ajouter** la variable ``||variables:volts||``.
+3. Dans la case de droite, **écrire** le nombre "2.1".
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_07.gif" width="80%">
 
@@ -96,9 +96,9 @@ basic.forever(function () {
 
 Pour la plage **plus grand que 2.1 volts**, nous allons faire allumer la DEL verte et nous assurer que la DEL rouge est éteinte.
 
-1. Dans le crochet directement sous ``||logic:si||``, mettre 2 fois ``||pins:écrire sur la broche||``qui se trouve dans la section ``||pins:Broches||`` du menu "Avancé".
-2. Dans le premier, choisir la broche P8, et inscrire le nombre 1.
-3. Dans le second, choisir la broche P2, et inscrire le nombre 0.
+1. Dans le crochet directement sous ``||logic:si||``, **Ajouter** 2 fois ``||pins:écrire sur la broche||``qui se trouve dans la section ``||pins:Broches||`` du menu "**Avancé**".
+2. Dans le premier, **choisir** la broche ``||pins:P8||``, et **inscrire** le nombre **1**.
+3. Dans le second, **choisir** la broche ``||pins:P2||``, et **inscrire** le nombre **0**.
 
 //changer le gif
 
@@ -115,8 +115,8 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.analogWritePin(AnalogPin.P8, 1)
-        pins.analogWritePin(AnalogPin.P2, 0)
+        pins.digitalWritePin(digitalPin.P8, 1)
+        pins.digitalWritePin(digitalPin.P2, 0)
     } else {
 
     }
@@ -127,12 +127,12 @@ basic.forever(function () {
 
 Nous voulons maintenant **déterminer** ce qui va se passer si le courant est plus petit ou égale à 2.1v, mais plus grand que 1.2v.
 
-> ***Astuce*** *: Faire clic droit sur un bloc et sélectionner Dupliquer permet de gagner beaucoup de temps!*
+> ***Astuce*** *: Faire clic droit sur un bloc et sélectionner **Dupliquer** permet de gagner beaucoup de temps!*
 
-1. Cliquer sur le symbole ``||logic:+||`` en bas du bloc ``||logic:si < >...sinon||`` pour ajouter un ``||logic:sinon...si||``.
-2. Y mettre un bloc ``||logic:<> et <>||``.
-3. Dans sa case de gauche mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:≤||`` (plus petit ou égal), dans la case de droite, écrire le nombre "2.1".
-4. Dans sa case de droite mettre un bloc de ``||logic:Logique||`` avec la variable "volts" à gauche, le symbole ``||logic:>||`` (plus grand que), dans la case de droite, écrire le nombre "1.2".
+1. **Cliquer** sur le symbole ``||logic:+||`` en bas du bloc ``||logic:si < >...sinon||`` pour ajouter un ``||logic:sinon...si||``.
+2. **Lui ajouter** un bloc ``||logic:<> et <>||``.
+3. Dans sa case de gauche, **ajouter** un bloc de ``||logic:Logique||`` avec la variable ``||variables:volts||`` à gauche, le symbole ``||logic:≤||`` (plus petit ou égal), dans la case de droite, **écrire** le nombre "**2.1**".
+4. Dans sa case de droite, **ajouter** un bloc de ``||logic:Logique||`` avec la variable ``||variables:volts||`` à gauche, le symbole ``||logic:>||`` (plus grand que), dans la case de droite, **écrire** le nombre "**1.2**".
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_09.gif" width="80%">
 
@@ -147,8 +147,8 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.analogWritePin(AnalogPin.P8, 1)
-        pins.analogWritePin(AnalogPin.P2, 0)
+        pins.digitalWritePin(digitalPin.P8, 1)
+        pins.digitalWritePin(digitalPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
 
     } else {
@@ -161,9 +161,9 @@ basic.forever(function () {
 
 Si la tension électrique détectée est entre 2.1v et 1.2v, seule la DEL rouge s'allumera
 
-1. Dans le crochet directement sous "si", mettre 2 fois ``||pins:écrire sur la broche||``.
-2. Dans le premier, choisir la broche P8, et inscrire le nombre 0.
-3. Dans le second, choisir la broche P2, et inscrire le nombre 1.
+1. Dans le crochet directement sous ``||logic:si||``, **ajouter** 2 fois ``||pins:écrire sur la broche||``.
+2. Dans le premier, **choisir** la broche ``||pins:P8||``, et **inscrire** le nombre **0**.
+3. Dans le second, **choisir** la broche ``||pins:P2||``, et **inscrire** le nombre **1**.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 13." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_10.gif" width="80%">
 
@@ -178,11 +178,11 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.analogWritePin(AnalogPin.P8, 1)
-        pins.analogWritePin(AnalogPin.P2, 0)
+        pins.digitalWritePin(digitalPin.P8, 1)
+        pins.digitalWritePin(digitalPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
-        pins.analogWritePin(AnalogPin.P2, 1)
-        pins.analogWritePin(AnalogPin.P8, 0)
+        pins.digitalWritePin(digitalPin.P2, 1)
+        pins.digitalWritePin(digitalPin.P8, 0)
     } else {
 
     }
@@ -193,8 +193,8 @@ basic.forever(function () {
 
 Finalement, dans le crochet ``||logic:sinon||``, mettre 2 fois ``||pins:écrire sur la broche||``.
 
-1. Dans le premier, choisir la broche P8, et inscrire le nombre 0.
-2. Dans le second, choisir la broche P2, et inscrire le nombre 0.
+1. Dans le premier, **choisir** la broche ``||pins:P8||``, et **inscrire** le nombre **0**.
+2. Dans le second, **choisir** la broche ``||pins:P2||``, et **inscrire** le nombre **0**.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_11.gif" width="80%">
 
@@ -209,14 +209,14 @@ basic.forever(function () {
     3.3
     )
     if (volts > 2.1) {
-        pins.analogWritePin(AnalogPin.P8, 1)
-        pins.analogWritePin(AnalogPin.P2, 0)
+        pins.adigitalWritePin(digitalPin.P8, 1)
+        pins.digitalWritePin(digitalPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
-        pins.analogWritePin(AnalogPin.P2, 1)
-        pins.analogWritePin(AnalogPin.P8, 0)
+        pins.digitalWritePin(digitalPin.P2, 1)
+        pins.digitalWritePin(digitalPin.P8, 0)
     } else {
-        pins.analogWritePin(AnalogPin.P8, 0)
-        pins.analogWritePin(AnalogPin.P2, 0)
+        pins.digitalWritePin(digitalPin.P8, 0)
+        pins.digitalWritePin(digitalPin.P2, 0)
     }
 })
 ```

@@ -9,11 +9,11 @@ Continuons de découvrir les différentes fonctionnalités du micro:bit. Au cour
 
 Commençons par **créer une fonction**, qui est un bloc de code que l'on peut facilement réutiliser.
 
-1. Cliquer sur la section ``||advanced:Avancé||``.
-2. Dans la section ``||functions:Fonctions||``, cliquer sur "Créer une fonction...".
-3. Dans le panneau qui apparait, nommer votre fonction "animationDEL".
-4. Cliquer sur "Nombres".
-5. Cliquer sur le bouton vert "Terminé".
+1. **Cliquer** sur la section **Avancé**.
+2. Dans la section ``||functions:Fonctions||``, **cliquer** sur "**Créer une fonction...**".
+3. Dans le panneau qui apparait, **nommer** votre fonction "**animationDEL**".
+4. **Cliquer** sur "**Nombres**".
+5. **Cliquer** sur le bouton vert "**Terminé**".
 
 <!-- <img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_07.gif" width="80%"> -->
 
@@ -28,7 +28,7 @@ function animationDEL (num: number) {
 
 Créons une boucle pour faire afficher les DEL **les unes après les autres**.
 
-1. Dans la section ``||loops:Boucles||``, choisir ``||loops:pour index variant de 0 à 4 faire||`` et le glisser dans la fonction.
+1. Dans la section ``||loops:Boucles||``, **choisir** ``||loops:pour index variant de 0 à 4 faire||`` et le **glisser** dans la fonction.
 
 
 ```blocks
@@ -44,9 +44,9 @@ function animationDEL (num: number) {
 
 Affichons une DEL pour un certain temps avant de l'effacer.
 
-1. Dans la section ``||led:LED||``, choisir ``||led:allumer x 0 y 0||`` et le glisser dans la boucle.
-2. Dans la section ``||basic:Base||``, trouver ``||basic:pause (ms)||`` et le glisser à la suite.
-3. Toujours dans la section ``||basic:Base||``, trouver ``||basic:effacer l'écran||`` et le glisser sous ``||basic:pause (ms)||``.
+1. Dans la section ``||led:LED||``, **choisir** ``||led:allumer x 0 y 0||`` et le **glisser** dans la boucle.
+2. Dans la section ``||basic:Base||``, **trouver** ``||basic:pause (ms)||`` et le **glisser** à la suite.
+3. Toujours dans la section ``||basic:Base||``, **trouver** ``||basic:effacer l'écran||`` et le **glisser** sous ``||basic:pause (ms)||``.
 
 
 ```blocks
@@ -64,8 +64,8 @@ function animationDEL (num: number) {
 
 À chaque boucle, changer de DEL à illuminer. Aussi, faire en sorte qu'on peut controller le temps entre chaque cycle de la boucle. 
 
-1. Cliquer-glisser la ``||variable:variable index||`` de la boucle et la mettre dans la case "x" du bloc ``||basic:allumer x 0 y 0||``.
-2. Cliquer-glisser la ``||variable:variable num||`` de la fonction et la mettre dans le bloc ``||basic:pause (ms)||``.
+1. **glisser** la variable ``||variable:index||`` de la boucle et **l'ajouter** dans la case `"x" du bloc ``||basic:allumer x 0 y 0||``.
+2. **glisser** la variable ``||variable:num||`` de la fonction et **l'ajouter** dans le bloc ``||basic:pause (ms)||``.
 
 
 ```blocks
@@ -83,10 +83,10 @@ function animationDEL (num: number) {
 
 La **vitesse de défilement** des DEL va varier en fonction de l'éclairage détecté par le micro:bit. Le niveau d'éclairage détecté est rapporté par le micro:bit comme un nombre entre 0 (noir complet) et 255 (très lumineux).
 
-1. Dans la section ``||logic:Logique||``, choisir ``||logic:si <vrai> alors ... sinon||`` et le glisser dans ``||basic:toujours||``.
-2. Toujours dans la section ``||logic:Logique||``, choisir ``||logic:<0> < <0>||`` (plus petit que) et le glisser à la place du ``||basic:vrai||``.
-3. Dans ``||input:Entrée||``, trouver ``||input:niveau d'intensité lumineuse||`` et le mettre à la gauche sur symbole < (plus petit que).
-4. À la droite du symbole <, inscrire 128.
+1. Dans la section ``||logic:Logique||``, **choisir** ``||logic:si <vrai> alors ... sinon||`` et le **glisser** dans ``||basic:toujours||``.
+2. Toujours dans la section ``||logic:Logique||``, **choisir** ``||logic:<0> < <0>||`` (plus petit que) et le **glisser** à la place du ``||basic:vrai||``.
+3. Dans ``||input:Entrée||``, **trouver** ``||input:niveau d'intensité lumineuse||`` et **l'ajouter** à la gauche sur symbole ``||logic:<||`` (plus petit que).
+4. À la droite du symbole ``||logic:<||``, **inscrire 128**.
 
 
 ```blocks
@@ -104,10 +104,10 @@ basic.forever(function () {
 
 Utilisons notre fonction ``||functions:animationDEL||`` pour faire **afficher les DEL en fonction de la luminosité**.
 
-1. Dans la section ``||functions:Fonctions||``, choisir ``||functions:appel animationDEL 1||`` et le glisser dans la portion "si" de notre condition.
-2. Remplacer le "1" par "300" dans le cercle blanc de la ``||functions:fonction||``.
-3. Dupliquer la ``||functions:fonction||``, et la mettre dans la portion "sinon".
-4. Remplacer le "300" par "50" dans le cercle blanc.
+1. Dans la section ``||functions:Fonctions||``, **choisir** ``||functions:appel animationDEL 1||`` et le **glisser** dans la portion ``||logic:si||`` de notre condition.
+2. **Remplacer** le "1" par "300" dans le cercle blanc de la ``||functions:fonction||``.
+3. **Dupliquer** la ``||functions:fonction||``, et **l'ajouter** dans la portion ``|logic:sinon||``.
+4. **Remplacer** le "300" par "50" dans le cercle blanc.
 
 
 ```blocks

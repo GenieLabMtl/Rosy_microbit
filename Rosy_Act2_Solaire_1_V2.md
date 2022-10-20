@@ -1,4 +1,4 @@
-# Rosy, Activité 2a : Panneau solaire V2
+# Rosy, Activité 2a : Panneau solaire
 
 ### Étape 1 @showdialog
 
@@ -22,30 +22,30 @@ Dans cette activité nous avons besoin de :
 
 Commencer par **connecter** le panneau solaire au circuit imprimé :
 
-1. Insérer le micro:bit dans le ciruit imprimé.
+1. **Insérer** le micro:bit dans le ciruit imprimé.
 2. À l'aide des fils du panneau solaire :
-    - Connecter le fil rouge (positif) du panneau solaire avec la broche VCC.
-    - Connecter le fil noir (négatif) du panneau solaire avec la broche GND du circuit imprimé.
+    - Connecter le fil **rouge** (positif) du panneau solaire avec la broche **VCC**.
+    - Connecter le fil **noir** (négatif) du panneau solaire avec la broche **GND** du circuit imprimé.
 
-<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et la carte de développement." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict4V2.jpg" width="300px">
+<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et le circuit imprimé." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict4V2.jpg" width="300px">
 
 
 ### Étape 4
 
 > ***Astuce*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
-Il faut maintenant **programmer** le micro:bit. Commencer par aller dans la section ``||Variables||`` et **créer deux variables** :
+Il faut maintenant **programmer** le micro:bit. Commencer par aller dans la section ``||variables:Variables||`` et **créer deux variables** :
 
-1. solaire
-2. volts
+1. ``||variables:solaire||``
+2. ``||variables:volts||``
 
 <img alt="Animation de la création des variables de l'étape 4." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_01.gif" width="80%">
 
 
 ### Étape 5
 
-1. Glisser le bloc ``||variables: définir||`` de la section ``||Variables||`` et le mettre dans ``||basic:toujours||``.
-2. Lui attribuer la variable ``||variables:solaire||`` si ce n'est pas déjà fait.
+1. **Ajouter** le bloc ``||variables: définir||`` de la section ``||Variables:Variables||`` et **l'ajouter** à ``||basic:toujours||``.
+2. **Lui attribuer** la variable ``||variables:solaire||``.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 5." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_02.gif" width="80%">
 
@@ -59,10 +59,10 @@ basic.forever(function () {
 
 ### Étape 6
 
-Nous allons **lire la tension électrique** avec la broche 1 du micro:bit.
+Nous allons **lire la tension électrique** avec la broche **1** du micro:bit.
 
-1. Assigner à la variable ``||variables:solaire||`` la lecture de la broche avec ``||pins:lire la broche analogique 1||`` qui se trouve dans la section ``||Broches||`` du menu "Avancé".
-2. Assigner la broche *P1* dans ``||pins:lire la broche analogique 0||``.
+1. **Assigner à la variable** ``||variables:solaire||`` la lecture de la broche avec ``||pins:lire la broche analogique 1||`` qui se trouve dans la section ``||pins:Broches||`` du menu **Avancé**.
+2. **Assigner** la broche ``||pins:P1||`` dans ``||pins:lire la broche analogique P0||``.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 6." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_03.gif" width="80%">
 
@@ -79,17 +79,17 @@ basic.forever(function () {
 **Transformer** des valeurs numériques **en volts** :
 
 Les **broches analogiques** du micro:bit peuvent lire des valeurs allant jusqu'à 3.3 volts et les représentent avec **des valeurs allant de 0 à 1023**.
-Puisque le panneau solaire génère jusqu'à 3 volts d'électricité, il faut **diviser par 1023** la valeur lue, puis la **multiplier par 3**.
+Puisque le panneau solaire génère jusqu'à 3 volts d'électricité, il faut **diviser par 1023** la valeur lue, puis la **multiplier par 3**. 
+Ou plus simplement **diviser par 303**.
 
 
 ### Étape 7b
 
-1. Glisser un autre bloc ``||variables:définir||`` à partir de ``||variables:Variables||`` dans ``||basic:toujours||``.
-2. Y attribuer la variable "volts".
-3. Prendre un bloc de ``||math:division||`` dans la section ``||math:Maths||``.
-4. Diviser "solaire" par 1023.
-5. Puis prendre un bloc ``||math:multiplication||`` et multiplier le bloc division que nous venons de créer par 3.
-Mettre le tout dans la case à droite dans le bloc de définition de "volts".
+1. **Ajouter** un autre bloc ``||variables:définir||`` à partir de ``||variables:Variables||`` dans ``||basic:toujours||``.
+2. **Lui attribuer** la variable ``||variables:volts||``.
+3. **Prendre le bloc** ``||math:<0> ÷ <0>||`` dans la section ``||math:Maths||``.
+4. **Diviser** ``||variables:solaire||`` par ``||math:303||``.
+5. **Ajouter le tout** dans la case à droite dans le bloc ``||variables:définir volts à <0>||``.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 7." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_04.gif" width="80%">
 
@@ -97,17 +97,17 @@ Mettre le tout dans la case à droite dans le bloc de définition de "volts".
 let solaire = 0
 let volts = 0
 basic.forever(function () {
-    solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    solaire = pins.analogReadPin(AnalogPin.P1)  
+    volts = solaire / 303
     )
 ```
 
 ### Étape 8
 
 Finalement, il ne reste qu'à **afficher** la valeur :
-1. Glisser ``||led:tracer le graphe de||`` de la section ``||led:LED||``.
-2. Y assigner la variable ``||variables:volts||`` comme minimum.
-3. Assigner la valeur 3.3 comme maximum.
+1. **Ajouter** ``||led:tracer le graphe de 'MIN à 'MAX'||`` de la section ``||led:LED||``.
+2. **Assigner** la variable ``||variables:volts||`` comme **minimum**.
+3. **Assigner** la valeur 3.3 comme **maximum**.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_05.gif" width="80%">
 
@@ -116,7 +116,7 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3

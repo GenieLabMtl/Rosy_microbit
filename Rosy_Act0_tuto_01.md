@@ -18,9 +18,9 @@ Lorsque le micro:bit démarre, **affichons un texte déroulant**.
 > ***Astuce 3*** : En cliquant sur l'ampoule dans le cercle bleu à droite de ce texte, vous pouvez voir le résultat de l'étape en cours.
 
 
-1. Trouver le bloc ``||basic:afficher texte||`` dans la section ``||basic:Base||``.
-2. Le glisser dans le crochet ``||basic:au démarrage||`` dans la surface de programmation.
-3. Dans le cercle blanc du bloc ``||basic:afficher texte||``, écrire "Rosy!".
+1. **Trouver** le bloc ``||basic:afficher texte||`` dans la section ``||basic:Base||``.
+2. Le **glisser** dans le crochet ``||basic:au démarrage||`` dans la surface de programmation.
+3. Dans le cercle blanc du bloc ``||basic:afficher texte||``, **écrire** "Rosy!".
 
 <!-- <img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_07.gif" width="80%"> -->
 
@@ -33,9 +33,9 @@ basic.showString("Rosy!")
 
 Dans la boucle principale de notre programme, nous allons **mettre des conditions**.
 
-1. Trouver le bloc ``||logic:si <vrai> alors||`` dans la section ``||logic:Logique||``.
-2. Le glisser dans le crochet ``||basic:toujours||`` dans la surface de programmation.
-3. Cliquer 3 fois sur le symbole "+" au bas de ``||logic:si <vrai> alors||``.
+1. **Trouver** le bloc ``||logic:si <vrai> alors||`` dans la section ``||logic:Logique||``.
+2. Le **glisser** dans le crochet ``||basic:toujours||`` dans la surface de programmation.
+3. **Cliquer 3 fois** sur le symbole ``||logic:+||`` au bas de ``||logic:si <vrai> alors||``.
 
 ```blocks
 basic.forever(function () {
@@ -56,8 +56,8 @@ basic.forever(function () {
 
 La première condition ve être déclenchée si le micro:bit est **secoué**.
 
-1. Trouver le bloc ``||input:geste secouer est actif||`` dans la section ``||input:Entrée||``.
-2. Le glisser à la place du premier ``||logic:vrai||``.
+1. **Trouver** le bloc ``||input:geste secouer est actif||`` dans la section ``||input:Entrée||``.
+2. Le **glisser** à la place du premier ``||logic:vrai||``.
 
 ```blocks
 basic.forever(function () {
@@ -78,9 +78,9 @@ basic.forever(function () {
 
 Affichons un visage surpris pour la condition que nous venons de créer.
 
-1. Dans la section ``||basic:Base||``, trouver le bloc ``||basic:montrer LEDs||``
-2. Le glisser dans la condition que nous venons de créer.
-3. Y dessiner un visage surpris.
+1. **Trouver** le bloc ``||basic:montrer LEDs||``, dans la section ``||basic:Base||``.
+2. Le **glisser** dans la condition que nous venons de créer.
+3. **Y dessiner** un visage surpris.
 
 ```blocks
 basic.forever(function () {
@@ -105,11 +105,11 @@ basic.forever(function () {
 
 ## Étape 5
 
-La deuxième condition ve être déclenchée si le micro:bit est **incliné vers la droite**.
+La deuxième condition va être déclenchée si le micro:bit est **incliné vers la droite**.
 
-1. Faire clique droit sur ``||input:geste secouer est actif||`` de la première condition et cliquer sur "Dupliquer".
-2. Glisser le bloc ``||input:geste secouer est actif||`` qui vient d'apparaitre à la prochaine condition ``||logic:sinon si <> alors||``.
-3. Changer l'action ``||input:secouer||`` pour ``||input:incliné à droite||``.
+1. Faire **clique droit** sur ``||input:geste secouer est actif||`` de la première condition et cliquer sur "**Dupliquer**".
+2. **Glisser** le nouveau bloc ``||input:geste secouer est actif||`` dans la prochaine condition ``||logic:sinon si <> alors||``.
+3. **Changer l'action** ``||input:secouer||`` pour ``||input:incliné à droite||``.
 
 ```blocks
 basic.forever(function () {
@@ -136,10 +136,10 @@ basic.forever(function () {
 
 Afficher une animation lorsque le micro:bit est **incliné vers la droite**.
 
-1. Ajouter un bloc ``||basic:montrer LEDs||`` dans cette 2e condition, et y dessiner un visage surpris.
-2. Dans la section ``||basic:Base||``, trouver le bloc ``||basic:pause (ms)||`` et le glisser à la suite.
-3. Attribuer la valeur "200" au bloc ``||basic:pause (ms)||``.
-3. Mettre un autre bloc ``||basic:montrer LEDs||`` sous ``||basic:pause (ms)||``, et y dessiner un visage regardant à droite.
+1. **Ajouter** un bloc ``||basic:montrer LEDs||`` dans cette 2e condition, et **y dessiner** un visage surpris.
+2. Dans la section ``||basic:Base||``, **trouver** le bloc ``||basic:pause (ms)||`` et le **glisser** à la suite.
+3. **Attribuer** la valeur ``||basic:200||`` au bloc ``||basic:pause (ms)||``.
+3. **Ajouter** un autre bloc ``||basic:montrer LEDs||`` sous ``||basic:pause (ms)||``, et **y dessiner** un visage regardant à droite.
 
 ```blocks
 basic.forever(function () {
@@ -180,8 +180,8 @@ basic.forever(function () {
 
 La troisième condition ve être déclenchée lorsque le **bouton A est pressé**.
 
-1. Trouver le bloc ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
-2. Le glisser à la troisième condition.
+1. **Trouver** le bloc ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
+2. **Glisser** le bloc à la troisième condition.
 
 ```blocks
 basic.forever(function () {
@@ -222,8 +222,8 @@ basic.forever(function () {
 
 Afficher une image prédéfinie quand le **bouton A est pressé**.
 
-3. Trouver ``||basic:montrer l'icône||`` dans ``||basic:Base||`` et le mettre dans cette condition.
-4. Choisir l'image du crochet.
+3. **Trouver** ``||basic:montrer l'icône||`` dans ``||basic:Base||`` et le mettre dans cette condition.
+4. **Choisir** l'image du crochet.
 
 ```blocks
 basic.forever(function () {
@@ -264,8 +264,8 @@ basic.forever(function () {
 
 La dernière condition est toujours déclenchée lorsqu'**aucune des conditions précédentes** n'est remplie.
 
-1. Dupliquer le bloc ``||basic:montrer l'icône||`` et le mettre sous ``||logic:sinon||``.
-2. Choisir l'image du du visage endormi.
+1. **Dupliquer** le bloc ``||basic:montrer l'icône||`` et le déplacer sous ``||logic:sinon||``.
+2. **Choisir** l'image du du visage endormi.
 
 ```blocks
 basic.forever(function () {
