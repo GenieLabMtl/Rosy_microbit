@@ -38,8 +38,8 @@ Bonne chance!
 
 Pour commencer, nous allons créer une fonction. Les fonctions servent à encapsuler du code qui va être utilisé plusieurs fois dans notre programme.
 
-1. Ouvrir le menu déroulant de la section ``||advanced:Avancé||`` au bas de la liste des catégories, puis aller dans la section ``||functions:Fonctions||``.
-2. Cliquer sur le bouton "Créer une fonction...". Dans la fenêtre qui va s'ouvrir, cliquer sur le texte "faireQuelqueChose" dans le bloc ``||functions:fonction||``, et le renommer "TrouverUneEtoile".
+1. **Ouvrir** le menu déroulant de la section ``||advanced:Avancé||`` au bas de la liste des catégories, puis aller dans la section ``||functions:Fonctions||``.
+2. **Cliquer** sur le bouton "**Créer une fonction...**". Dans la fenêtre qui va s'ouvrir, **cliquer** sur le texte "**faireQuelqueChose**" dans le bloc ``||functions:fonction||``, et le **renommer** "TrouverUneEtoile".
 3. Votre fonction devrait maintenant apparaitre dans la surface de programmation.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer. 😄**
@@ -56,10 +56,10 @@ function TrouverUneEtoile () {
 
 Nous allons maintenant avoir besoin de deux variables pour garder en mémoire les coordonnées de l'étoile inconnue.
 
-1. Dans la section ``||variables:Variables||``, cliquer sur le bouton "Créer une variable...". Nommer-là "coord_x", pour *coordonnée X*.
-2. Cliquer à nouveau sur le bouton "Créer une variable...", et cette fois la nommer "coord_y", pour *coordonnée Y*.
-3. Glisser 2 fois le bloc ``||variables:définir [nom de la variable] à 0||`` dans le bloc de notre fonction.
-4. Assurez-vous qu'un des bloc de ``||variables:variables||`` indique "coord_x", et l'autre "coord_y".
+1. Dans la section ``||variables:Variables||``, **cliquer** sur le bouton "**Créer une variable...**". Nommer-là "**coord_x**", pour *coordonnée X*.
+2. **Cliquer** à nouveau sur le bouton "**Créer une variable...**", et cette fois la nommer "**coord_y**", pour *coordonnée Y*.
+3. **Glisser 2 fois** le bloc ``||variables:définir [nom de la variable] à 0||`` dans le bloc de notre fonction.
+4. Assurez-vous qu'un des bloc de ``||variables:variables||`` indique "**coord_x**", et l'autre "**coord_y**".
 
 <img alt="Activité 3 Solo Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_02.gif" width="80%">
 
@@ -75,8 +75,8 @@ function TrouverUneEtoile () {
 En attribuant une valeur aléatoire – c'est-à-dire au hasard – à nos coordonnées, une nouvelle étoile sera générée à chaque utilisation de notre programme.
 Les valeurs à choisir devront se trouver entre les valeurs minimales et maximales de lecture du gyroscope du micro:bit : -1023 et 1023.
 
-1. Dans la section ``||Math:Maths||``, trouver le bloc ``||Math:choisir au hasard de 0 à 10||``, et le mettre à la place du 0 dans les 2 blocs ``||variables:définir||``.
-2. Inscrire "-1023" dans le cercle de gauche des blocs  ``||Math:choisir au hasard||``, et "1023" dans le cercle de droite.
+1. Dans la section ``||Math:Maths||``, **trouver** le bloc ``||Math:choisir au hasard de 0 à 10||``, et **l'ajouter** à la place du **0** dans les 2 blocs ``||variables:définir||``.
+2. Inscrire "**-1023**" dans le cercle de gauche des blocs  ``||Math:choisir au hasard||``, et "**1023**" dans le cercle de droite.
 
 <img alt="Activité 3 Solo Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_03.gif" width="80%">
 
@@ -91,7 +91,7 @@ function TrouverUneEtoile () {
 
 Maintenant que notre fonction est prête, nous voulons que des coordonnées soient choisies chaque fois que le programme est lancé.
 
-1. Dans la section ``||functions:Fonctions||`` – qui se trouve toujours sous ``||advanced:Avancé||`` –, prendre le bloc ``||functions:appel TrouverUneEtoile||`` et le glisser dans le bloc ``||basic:au démarrage||``.
+1. Dans la section ``||functions:Fonctions||`` – qui se trouve toujours sous **Avancé** –, **glisser** le bloc ``||functions:appel TrouverUneEtoile||`` dans le bloc ``||basic:au démarrage||``.
 
 C'est tout! Les 2 variables auront des chiffres aléatoires attribués quand notre programme sera lancé.
 
@@ -105,9 +105,9 @@ TrouverUneEtoile()
 
 Il est maintenant temps d'écrire le programme comme tel. Nous voulons d'abord envoyer un message indiquant qu'une nouvelle lecture du gyroscope a lieu.
 
-1. Sous ``||advanced:Avancé||``, aller dans la section ``||serial:Communication Série||``.
-2. Trouver le bloc ``||serial:série écrire ligne ""||`` et le glisser dans le bloc ``||basic:toujours||``.
-3. Dans le cercle où il est indiqué "", écrire "Nouvelle lecture".
+1. Sous **Avancé**, aller dans la section ``||serial:Communication Série||``.
+2. **Trouver** le bloc ``||serial:série écrire ligne ""||`` et **l'ajouter** dans le bloc ``||basic:toujours||``.
+3. Dans le cercle où il est indiqué "", écrire "**Nouvelle lecture**".
 
 <img alt="Activité 3 Solo Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_05.gif" width="80%">
 
@@ -123,8 +123,8 @@ Il peut être utile de voir quelle valeur est lue par le gyroscope avant de l'é
 
 Commençons par l'axe des X (de gauche à droite).
 
-1. Dans la section ``||serial:Communication Série||``, glisser le bloc ``||serial:série écrire valeur "x" = 0||`` dans notre code sous ``||serial:série écrire ligne||``.
-2. Dans la section ``||input:Entrée||``, glisser le bloc ``||input:accélération (mg) x||`` à la place du 0.
+1. Dans la section ``||serial:Communication Série||``, **glisser** le bloc ``||serial:série écrire valeur "x" = 0||`` dans notre code sous ``||serial:série écrire ligne||``.
+2. Dans la section ``||input:Entrée||``, **glisser** le bloc ``||input:accélération (mg) x||`` à la place du **0**.
 
 <img alt="Activité 3 Solo Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_06.gif" width="80%">
 
@@ -140,10 +140,10 @@ basic.forever(function () {
 Il faut maintenant déterminer si notre valeur X est proche de celle de la coordonnée que nous recherchons. Puisqu'il est difficile et très long de tester toutes les 2047 valeurs allant de -1023 à 1023 et répéter ça 2047 fois pour chaque valeur de Y (pour un total de plus de 4.1 millions de possibilités!), vous allons utiliser une plage plus large.
 En vérifiant si notre valeur X est à plus ou moins 200 de la valeur de la coordonnée mystère, on pourra la trouver beaucoup plus rapidement.
 
-1. Prendre un bloc ``||logic:si <vrai> alors...sinon||`` de la section ``||logic:Logique||``, et le mettre à la suite de notre code.
-2. Prendre le bloc logique ``||logic:<> et <>||`` et le mettre à la place du "vrai" de notre bloc conditionnel.
-3. Prendre 2 fois le bloc logique ``||logic:0 < 0||`` et les mettre dans chacun des hexagones du bloc précédent.
-4. Dans la section ``||Math:Maths||``, prendre 2 fois le bloc ``||math:0 - 0||`` et le mettre dans le cercle de droite de chacun des blocs ``||logic:0 < 0||``.
+1. **Glisser** un bloc ``||logic:si <vrai> alors...sinon||`` de la section ``||logic:Logique||``, et **l'ajouter** à la suite de notre code.
+2. **Glisser** le bloc logique ``||logic:<> et <>||`` et **l'ajouter** à la place du ``||logic:vrai||`` de notre bloc conditionnel.
+3. **Glisser** 2 fois le bloc logique ``||logic:0 < 0||`` et **les ajouter** dans chacun des hexagones du bloc précédent.
+4. Dans la section ``||Math:Maths||``, **glisser 2 fois le bloc ``||math:0 - 0||`` et **l'ajouter** dans le cercle de droite de chacun des blocs ``||logic:0 < 0||``.
 
 <img alt="Activité 3 Solo Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_07.gif" width="80%">
 
@@ -165,8 +165,8 @@ Nous allons maintenant comparer la lecture du gyroscope en X avec la variable co
 
 >**Attention! Lorsqu'il y a beaucoup de blocs l'un dans l'autre, il est facile de se tromper et de mettre un bloc au mauvais endroit. Il y a une fonction "revenir en arrière" fort utile, située en bas à droite de l'écran, que l'on peut utiliser en appuyant sur la flèche courbée vers la gauche.**
 
-1. Faire un clic droit sur ``||input:accélération (mg) X||`` et sélectionner Dupliquer. (Si vous ne pouvez pas faire de clic droit, aller le retrouver dans le menu comme à l'étape précédente).
-2. Glisser ce nouveau bloc dans le cercle de gauche du premier ``||logic:0 < 0||``.
+1. Faire un **clic droit** sur ``||input:accélération (mg) X||`` et sélectionner **Dupliquer**. (Si vous ne pouvez pas faire de clic droit, aller le retrouver dans le menu comme à l'étape précédente).
+2. **Glisser** ce nouveau bloc dans le cercle de gauche du premier ``||logic:0 < 0||``.
 3. Répéter cette manoeuvre pour mettre un autre bloc ``||input:accélération (mg) X||`` dans le cercle de gauche du second ``||logic:0 < 0||``.
 4. Dans le cercle de gauche de chacun des blocs ``||math:0 - 0||``, mettre la variable "coord_x", que vous pouvez trouver dans la section ``||variables:Variables||``.
 5. Inscrire "200" à la place des deux "0" restants.
