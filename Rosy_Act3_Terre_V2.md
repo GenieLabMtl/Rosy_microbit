@@ -151,10 +151,10 @@ input.onButtonPressed(Button.A, function () {
 
 Dans la section ``||logic:sinon||``, refaire la même chose, mais pour envoyer "e" pour Est.
 
-1. Insérer le bloc ``||radio:envoyer la chaîne "" par radio||`` de la section ``||radio:radio||`` sous le ``||logic:sinon||``, et inscrire la lettre "e" dans ce bloc.
-2. Dans la section ``||basic:base||``, trouver le bloc ``||basic:montrer la flèche||``, la mettre dans ce bloc et choisir "Est".
-3. Trouver le bloc ``||basic:pause (ms)||`` et le mettre à la suite, puis y inscrire le nombre 100.
-4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+1. **Insérer** le bloc ``||radio:envoyer la chaîne "" par radio||`` de la section ``||radio:radio||`` sous le ``||logic:sinon||``, et **inscrire** la lettre "**e**" dans ce bloc.
+2. Dans la section ``||basic:base||``, trouver le bloc ``||basic:montrer la flèche||``, **l'ajouter** dans ce bloc et choisir "**Est**".
+3. **Trouver** le bloc ``||basic:pause (ms)||`` et **l'ajouter** à la suite, puis y inscrire le nombre **100**.
+4. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** à la suite.
 
 <img alt="Activité 3 Terre Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_07.gif" width="80%">
 
@@ -178,11 +178,11 @@ input.onButtonPressed(Button.A, function () {
 
 Refaire la même chose qu'aux étapes 5 à 7, mais pour "Nord" et "Sud". La fonction *Dupliquer* va nous aider.
 
-1. Sur le bloc ``||input:lorsque le bouton A est pressé||`` que nous avons créé à l'étape précédente, faire clic droit, puis Dupliquer.
-2. Changer le ``||input:bouton A||`` pour le ``||input:bouton B||``.
-3. Assigner "Y" à ``||input:accélération (mg)||``.
-4. Changer "o" pour "n", et "Ouest" pour "Nord".
-5. Changer "e" pour "s", et "Est" pour "Sud".
+1. Sur le bloc ``||input:lorsque le bouton A est pressé||`` que nous avons créé à l'étape précédente, faire clic droit, puis **Dupliquer**.
+2. **Changer** le ``||input:bouton A||`` pour le ``||input:bouton B||``.
+3. **Assigner** "Y" à ``||input:accélération (mg)||``.
+4. **Changer** "o" pour "n", et "**Ouest**" pour "**Nord**".
+5. **Changer** "e" pour "s", et "**Est**" pour "**Sud**".
 
 <img alt="Activité 3 Terre Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_08.gif" width="80%">
 
@@ -208,8 +208,8 @@ Pour aider à la communication, il est pratique d'envoyer un message de validati
 
 Pour se faire, ajoutons un troisième bloc ``||input:lorsque le bouton A est pressé||``.
 
-1. Créer un nouveau ``||input:lorsque le bouton A est pressé||`` et changer le ``||input:bouton A||`` pour ``||input:bouton A+B||``.
-2. Y insérer le bloc ``||radio:envoyer la chaîne "" par radio||`` de la section ``||radio:radio||``, et y inscrire "ok".
+1. **Créer** un nouveau ``||input:lorsque le bouton A est pressé||`` et **changer** le ``||input:bouton A||`` pour ``||input:bouton A+B||``.
+2. **Y insérer** le bloc ``||radio:envoyer la chaîne "" par radio||`` de la section ``||radio:radio||``, et **y inscrire** "ok".
 
 <img alt="Activité 3 Terre Étape 9" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_09.gif" width="80%">
 
@@ -223,10 +223,10 @@ input.onButtonPressed(Button.AB, function () {
 
 Lorsque le message de confirmation est envoyé, affichons aussi une confirmation visuelle à notre écran.
 
-1. Dans la section ``||basic:base||``, trouver le bloc ``||basic:montrer l'icône||`` et le mettre à la suite de ``||radio:envoyer la chaîne "ok" par radio||``.
-2. Choisir l'image du crochet de validation dans le bloc ``||basic:montrer l'icône||``.
-3. Trouver le bloc ``||basic:pause (ms)||``, le mettre à la suite et y inscrire le nombre 100.
-4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+1. Dans la section ``||basic:base||``, **trouver** le bloc ``||basic:montrer l'icône||`` et **l'ajouter** à la suite de ``||radio:envoyer la chaîne "ok" par radio||``.
+2. **Choisir** l'image du crochet de validation dans le bloc ``||basic:montrer l'icône||``.
+3. **Trouver** le bloc ``||basic:pause (ms)||``, **l'ajouter** à la suite et **y inscrire** le nombre **100**.
+4. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** à la suite.
 
 <img alt="Activité 3 Terre Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_10.gif" width="80%">
 
