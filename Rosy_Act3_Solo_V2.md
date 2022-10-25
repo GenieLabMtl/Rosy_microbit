@@ -143,7 +143,7 @@ En vérifiant si notre valeur X est à plus ou moins 200 de la valeur de la coor
 1. **Glisser** un bloc ``||logic:si <vrai> alors...sinon||`` de la section ``||logic:Logique||``, et **l'ajouter** à la suite de notre code.
 2. **Glisser** le bloc logique ``||logic:<> et <>||`` et **l'ajouter** à la place du ``||logic:vrai||`` de notre bloc conditionnel.
 3. **Glisser** 2 fois le bloc logique ``||logic:0 < 0||`` et **les ajouter** dans chacun des hexagones du bloc précédent.
-4. Dans la section ``||Math:Maths||``, **glisser 2 fois le bloc ``||math:0 - 0||`` et **l'ajouter** dans le cercle de droite de chacun des blocs ``||logic:0 < 0||``.
+4. Dans la section ``||Math:Maths||``, **glisser** 2 fois le bloc ``||math:0 - 0||`` et **l'ajouter** dans le cercle de droite de chacun des blocs ``||logic:0 < 0||``.
 
 <img alt="Activité 3 Solo Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_07.gif" width="80%">
 
@@ -167,11 +167,11 @@ Nous allons maintenant comparer la lecture du gyroscope en X avec la variable co
 
 1. Faire un **clic droit** sur ``||input:accélération (mg) X||`` et sélectionner **Dupliquer**. (Si vous ne pouvez pas faire de clic droit, aller le retrouver dans le menu comme à l'étape précédente).
 2. **Glisser** ce nouveau bloc dans le cercle de gauche du premier ``||logic:0 < 0||``.
-3. Répéter cette manoeuvre pour mettre un autre bloc ``||input:accélération (mg) X||`` dans le cercle de gauche du second ``||logic:0 < 0||``.
-4. Dans le cercle de gauche de chacun des blocs ``||math:0 - 0||``, mettre la variable "coord_x", que vous pouvez trouver dans la section ``||variables:Variables||``.
-5. Inscrire "200" à la place des deux "0" restants.
-6. Dans le bloc logique à la gauche du "et", changer le symbole "<" pour un ">".
-7. Dans le bloc logique à la droite du "et", changer le symbole "-" pour "+".
+3. **Répéter cette manoeuvre** pour mettre un autre bloc ``||input:accélération (mg) X||`` dans le cercle de gauche du second ``||logic:0 < 0||``.
+4. Dans le cercle de gauche de chacun des blocs ``||math:0 - 0||``, **ajouter** la variable ``||variables:coord_x||``, que vous pouvez trouver dans la section ``||variables:Variables||``.
+5. **Inscrire** "200" à la place des deux "0" restants.
+6. Dans le bloc logique à la gauche du ``||logic:et||``, changer le symbole ``||logic:<||`` pour un ``||logic:>||``.
+7. Dans le bloc logique à la droite du ``||logic:et||``, changer le symbole ``||logic:-||`` pour ``||logic:+||``.
 
 <img alt="Activité 3 Solo Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_08.gif" width="80%">
 
@@ -191,11 +191,11 @@ basic.forever(function () {
 
 Nous allons avoir besoin de nouvelles variables pour garder en mémoire le résultat de notre comparaison logique pour l'axe des X.
 
-1. Dans la section ``||variables:Variables||``, cliquer sur le bouton "Créer une variable...". La nommer "etoile_x".
-2. Cliquer à nouveau sur le bouton "Créer une variable...", et cette fois la nommer "etoile_y".
-3. Glisser le bloc ``||variables:définir [nom de la variable] à 0||`` 2 fois, un dans chacune des sections du bloc ``||logic:si <> alors...sinon||``. Assurez-vous que la variable indiquée est bien "etoile_x".
-4. À partir de ``||logic:Logique||``, glisser le bloc ``||logic:<vrai>||`` dans le ``||variables:définir etoile_x à 0||`` du haut.
-5. Glisser le bloc ``||logic:<faux>||`` dans le ``||variables:définir etoile_x à 0||`` du bas.
+1. Dans la section ``||variables:Variables||``, **cliquer** sur le bouton "Créer une variable...". La nommer "**etoile_x**".
+2. **Cliquer** à nouveau sur le bouton "Créer une variable...", et cette fois la nommer "**etoile_y**".
+3. **Glisser** le bloc ``||variables:définir [nom de la variable] à 0||`` 2 fois, un dans chacune des sections du bloc ``||logic:si <> alors...sinon||``. Assurez-vous que la variable indiquée est bien "**etoile_x**".
+4. À partir de ``||logic:Logique||``, **glisser** le bloc ``||logic:<vrai>||`` dans le ``||variables:définir etoile_x à 0||`` du haut.
+5. **Glisser** le bloc ``||logic:<faux>||`` dans le ``||variables:définir etoile_x à 0||`` du bas.
 
 <img alt="Activité 3 Solo Étape 9" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_09.gif" width="80%">
 
@@ -218,10 +218,10 @@ Maintenant que nous pouvons vérifier si nous avons trouvé la valeur en X des c
 
 > ***Astuce*** *: Si vous pouvez vous en servir, utiliser clic droit->Dupliquer sur les blocs dans l'espace de programmation va vous sauver beaucoup de temps. Sinon, refaire les 6 à 9 en remplaçant toutes les mentions de "X" par "Y".*
 
-1. Dupliquer le bloc ``||serial:série écrire valeur "x"||`` et mettre le nouveau à la suite de notre bloc ``||logic:si...alors...sinon||``.
-2. Changer dans ce bloc les 2 mentions de "x" pour "y".
-3. Dupliquer le bloc ``||logic:si...alors...sinon||``. Si vous le faites à partir du bon bloc, tous les blocs inclus dedans devraient également être dupliqués. Le mettre à la suite du code.
-4. Changer les 2 "x" pour "y", les 2 "coord_x" pour "coord_y", et les 2 "etoile_x" pour "etoile_y".
+1. **Dupliquer** le bloc ``||serial:série écrire valeur "x"||`` et mettre le nouveau à la suite de notre bloc ``||logic:si...alors...sinon||``.
+2. **Changer** dans ce bloc les 2 mentions de "**x**" pour "**y**".
+3. **Dupliquer** le bloc ``||logic:si...alors...sinon||``. Si vous le faites à partir du bon bloc, tous les blocs inclus dedans devraient également être dupliqués. Le mettre à la suite du code.
+4. Changer les 2 "**x**" pour "**y**", les 2 "**coord_x**" pour "**coord_y**", et les 2 "**etoile_x**" pour "**etoile_y**".
 
 <img alt="Activité 3 Solo Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_10.gif" width="80%">
 
@@ -248,11 +248,11 @@ basic.forever(function () {
 
 Finalement, si les 2 conditions (X et Y) sont vraies, nous pourrons envoyer un message comme quoi l'étoile a été découverte.
 
-1. Prendre un bloc ``||logic:si <vrai> alors||`` de la section ``||logic:Logique||`` et le placer à la suite du code.
-2. Prendre le bloc logique ``||logic:<> et <>||`` et le mettre à la place du "vrai" de notre bloc conditionnel.
-3. Prendre 2 fois le bloc logique ``||logic:0 = 0||`` et les mettre dans chacun des hexagones du bloc précédent.
-4. Dans chacun des cercles à gauche des symboles "=", mettre les variables "etoile_x" et "etoile_y", que vous pouvez trouver dans la section ``||variables:Variables||``.
-5. Dans les cercles de droite, mettre ``||logic:<vrai>||``, qui se trouve dans la section ``||logic:Logique||``.
+1. **Prendre** un bloc ``||logic:si <vrai> alors||`` de la section ``||logic:Logique||`` et **le placer** à la suite du code.
+2. **Prendre** le bloc logique ``||logic:<> et <>||`` et **l'ajouter** à la place du "**vrai**" de notre bloc conditionnel.
+3. **Prendre** 2 fois le bloc logique ``||logic:0 = 0||`` et **les ajouter** dans chacun des hexagones du bloc précédent.
+4. Dans chacun des cercles à gauche des symboles "=", **ajouter** les variables "**etoile_x**" et "**etoile_y**", que vous pouvez trouver dans la section ``||variables:Variables||``.
+5. Dans les cercles de droite, **Ajouter** ``||logic:<vrai>||``, qui se trouve dans la section ``||logic:Logique||``.
 
 <img alt="Activité 3 Solo Étape 11" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_11.gif" width="80%">
 
@@ -281,14 +281,14 @@ basic.forever(function () {
 
 Si effectivement nous avons trouvé l'étoile, envoyons un message qui annonce la découverte et ses coordonnées.
 
-1. Sous ``||advanced:Avancé||``, aller dans la section ``||serial:Communication Série||`` puis glisser ``||serial:série écrire ligne ""||`` dans le bloc ``||logic:si...alors||``.
-2. Encore sous ``||advanced:Avancé||``, aller dans la section ``||text:Texte||`` et trouver ``||text:concaténation "Bonjour" "Monde"||``. Le mettre dans le bloc ``||serial:série écrire ligne ""||``.
-3. Cliquer 3 fois sur le symbole + de ce bloc pour avoir un total de 5 cercles.
-4. Dans le premier, inscrire : "Étoile trouvée! "
-5. Dans le 2e, " X : "
-6. Dans le 3e, insérer ``||input:accélération (mg) x||``.
-7. Dans le 4e, ", Y : "
-8. Dans le dernier, insérer ``||input:accélération (mg) y||``.
+1. Sous ``||advanced:Avancé||``, aller dans la section ``||serial:Communication Série||`` puis **glisser** ``||serial:série écrire ligne ""||`` dans le bloc ``||logic:si...alors||``.
+2. Encore sous ``||advanced:Avancé||``, aller dans la section ``||text:Texte||`` et **trouver** ``||text:concaténation "Bonjour" "Monde"||``. **L'ajouter** dans le bloc ``||serial:série écrire ligne ""||``.
+3. **Cliquer** 3 fois sur le symbole + de ce bloc pour avoir un total de 5 cercles.
+4. Dans le premier, **inscrire** : "**Étoile trouvée!**"
+5. Dans le 2e, **inscrire** : " X : "
+6. Dans le 3e, **insérer** ``||input:accélération (mg) x||``.
+7. Dans le 4e, **inscrire** : ", Y : "
+8. Dans le dernier, **insérer** ``||input:accélération (mg) y||``.
 
 > ***Astuce*** *: N'oubliez pas les espaces avant et après les lettres/signes de ponctuation tels qu'ils sont indiqués dans les instructions. Votre message sera ainsi plus facilement lisible.*
 
@@ -319,9 +319,9 @@ basic.forever(function () {
 
 Finalement, après 5 secondes, assignons de nouvelles coordonnées aléatoires pour recommencer.
 
-1. Dans ``||basic:Base||``, prendre ``||basic:pause (ms) 100||`` et le mettre à la suite de ``||serial:série écrire ligne ||``. Changer le nombre pour 5000 millisecondes, soit 5 secondes.
-2. Dans ``||functions:Fonctions||``, trouver ``||functions:appel TrouverUneEtoile||`` et le mettre à la suite.
-3. Dupliquer ``||basic:pause (ms) 5000||``, le mettre à la toute fin du code, sous le bloc ``||logic:si ... alors||``, et mettre 100 millisecondes.
+1. Dans ``||basic:Base||``, **prendre** ``||basic:pause (ms) 100||`` et **l'ajouter** à la suite de ``||serial:série écrire ligne ||``. **Changer** le nombre pour 5000 millisecondes, soit 5 secondes.
+2. Dans ``||functions:Fonctions||``, **trouver** ``||functions:appel TrouverUneEtoile||`` et **l'ajouter** à la suite.
+3. **Dupliquer** ``||basic:pause (ms) 5000||``, **l'ajouter** à la toute fin du code, sous le bloc ``||logic:si ... alors||``, et **inscrire** 100 millisecondes.
 
 Ce dernier bloc sert à ralentir légèrement la vitesse d'affichage des données pour les rendre plus facilement lisibles.
 

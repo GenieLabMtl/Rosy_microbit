@@ -64,7 +64,7 @@ function animationDEL (num: number) {
 
 À chaque boucle, changer de DEL à illuminer. Aussi, faire en sorte qu'on peut controller le temps entre chaque cycle de la boucle. 
 
-1. **glisser** la variable ``||variable:index||`` de la boucle et **l'ajouter** dans la case `"x" du bloc ``||basic:allumer x 0 y 0||``.
+1. **glisser** la variable ``||variable:index||`` de la boucle et **l'ajouter** dans la case `"x" du bloc ``||led:allumer x 0 y 0||``.
 2. **glisser** la variable ``||variable:num||`` de la fonction et **l'ajouter** dans le bloc ``||basic:pause (ms)||``.
 
 
@@ -84,7 +84,7 @@ function animationDEL (num: number) {
 La **vitesse de défilement** des DEL va varier en fonction de l'éclairage détecté par le micro:bit. Le niveau d'éclairage détecté est rapporté par le micro:bit comme un nombre entre 0 (noir complet) et 255 (très lumineux).
 
 1. Dans la section ``||logic:Logique||``, **choisir** ``||logic:si <vrai> alors ... sinon||`` et le **glisser** dans ``||basic:toujours||``.
-2. Toujours dans la section ``||logic:Logique||``, **choisir** ``||logic:<0> < <0>||`` (plus petit que) et le **glisser** à la place du ``||basic:vrai||``.
+2. Toujours dans la section ``||logic:Logique||``, **choisir** ``||logic:<0> < <0>||`` (plus petit que) et le **glisser** à la place du ``||logic:vrai||``.
 3. Dans ``||input:Entrée||``, **trouver** ``||input:niveau d'intensité lumineuse||`` et **l'ajouter** à la gauche sur symbole ``||logic:<||`` (plus petit que).
 4. À la droite du symbole ``||logic:<||``, **inscrire 128**.
 

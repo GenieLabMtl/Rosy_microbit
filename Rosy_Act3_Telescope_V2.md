@@ -48,9 +48,9 @@ radio.setGroup(0)
 
 Lorsqu'une donnée est reçue du centre de contrôle sur la Terre, nous voulons la voir affichée. 
 
-1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio receivedString||`` et le glisser dans la page de programmation.
-2. Ensuite, aller dans ``||logic:logique||`` pour trouver le bloc ``||logic:si <vrai> alors||`` et le mettre dans le bloc radio qu'on vient de prendre.
-3. Cliquer sur le "+" pour ajouter 4 autres sections "sinon" dans ce bloc.
+1. Toujours dans la section ``||radio:radio||``, **trouver** le bloc ``||radio:quand une donnée est reçue par radio receivedString||`` et **l'ajouter** dans la page de programmation.
+2. Ensuite, aller dans ``||logic:logique||`` pour **trouver** le bloc ``||logic:si <vrai> alors||`` et **l'ajouter** dans le bloc radio qu'on vient de prendre.
+3. **Cliquer** sur le ``||logic:+||`` pour ajouter 4 autres sections ``||logic:sinon||`` dans ce bloc.
 
 <img alt="Activité 3 Télescope Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_02.gif" width="80%">
 
@@ -74,11 +74,11 @@ radio.onReceivedString(function (receivedString) {
 
 Les données qui seront reçues peuvent être "n" pour Nord, "e" pour Est, "s" pour Sud, "o" pour Ouest, et "v" pour Valider. Lorsque nous recevrons ces lettres – qui sont appelées [chaînes de caractères](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res) en programmation –, nous voudrons afficher sur le micro:bit une image qui lui correspond. Commençons par "n".
 
-1. Aller dans la section ``||logic:logique||``, y trouver ``||logic:" " = " "||``, et le glisser à la place du premier ``||logic:<vrai>||``.
-2. Dans le cercle de gauche, glisser la variable ``||variables:receivedString||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
-3. Dans le cercle de droite, inscrire "n".
-4. Dans la section ``||basic:base||``, trouver le bloc ``||basic:montrer la flèche||`` et la mettre dans ce bloc.
-5. Choisir "Nord" dans ce bloc.
+1. Aller dans la section ``||logic:logique||``, y **trouver** ``||logic:" " = " "||``, et **l'ajouter** à la place du premier ``||logic:<vrai>||``.
+2. Dans le cercle de gauche, **glisser** la variable ``||variables:receivedString||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
+3. Dans le cercle de droite, **inscrire** "n".
+4. Dans la section ``||basic:base||``, **trouver** le bloc ``||basic:montrer la flèche||`` et **l'ajouter** dans ce bloc.
+5. **Choisir** "Nord" dans ce bloc.
 
 <img alt="Activité 3 Télescope Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_03.gif" width="80%">
 
@@ -100,7 +100,7 @@ radio.onReceivedString(function (receivedString) {
 
 ## Étape 4
 
-Refaire la même chose pour les autres lettres "e" Est, "s" Sud, et "o" Ouest.
+**Refaire** la même chose pour les autres lettres "e" Est, "s" Sud, et "o" Ouest.
 
 <img alt="Activité 3 Télescope Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_04.gif" width="80%">
 
@@ -125,8 +125,8 @@ radio.onReceivedString(function (receivedString) {
 
 Si ce que nous recevons n'est pas une de ces quatre lettres, faisons afficher un symbole de validation.
 
-1. Dans la section ``||basic:base||``, trouver le bloc ``||basic:montrer l'icône||`` et la mettre dans la section ``||logic:sinon||`` du bloc.
-2. Choisir l'image qui montre un crochet de validation.
+1. Dans la section ``||basic:base||``, **trouver** le bloc ``||basic:montrer l'icône||`` et **l'ajouter** dans la section ``||logic:sinon||`` du bloc.
+2. **Choisir** l'image qui montre un crochet de validation.
 
 <img alt="Activité 3 Télescope Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_05.gif" width="80%">
 
@@ -150,8 +150,8 @@ radio.onReceivedString(function (receivedString) {
 
 Finalement, nous voulons nettoyer l'écran une fois l'information reçue.
 
-1. Trouver le bloc ``||basic:pause (ms)||`` et le mettre après et en dehors du multibloc ``||logic:si <> alors||``, puis y inscrire le nombre 200.
-2. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+1. **Trouver** le bloc ``||basic:pause (ms)||`` et **l'ajouter** après et en dehors du multibloc ``||logic:si <> alors||``, puis **y inscrire** le nombre **200**.
+2. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** à la suite.
 
 <img alt="Activité 3 Télescope Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_06.gif" width="80%">
 
@@ -177,9 +177,9 @@ radio.onReceivedString(function (receivedString) {
 
 Il faut maintenant pouvoir transmettre des données qui seront retransmises par le satellite-relais. Puisque nous pouvons envoyer trois types de caractères (0,1 et -1), il faudra faire trois groupes de blocs similaires. Voici comment faire le premier :
 
-1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||``.
-2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
-3. Inscrire "relais" à gauche du "=", et laisser le chiffre à 0.
+1. Dans ``||input:entrée||``, **prendre** le bloc ``||input:lorsque le bouton A est pressé||``.
+2. **Y insérer** le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
+3. **Inscrire** "**relais**" à gauche du "=", et laisser le chiffre à 0.
 
 <img alt="Activité 3 Télescope Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_07.gif" width="80%">
 
@@ -194,9 +194,9 @@ input.onButtonPressed(Button.A, function () {
 Quand nous envoyons une donnée, elle s'affiche à l'écran, puis l'écran est nettoyé. Commençons par "0".
 
 Dans la section ``||basic:base||`` :
-1. Trouver le bloc ``||basic:montrer nombre 0||`` et le mettre sous ``||radio:envoyer la valeur||``.
-2. Trouver le bloc ``||basic:pause (ms)||`` et le mettre à la suite, puis y inscrire le nombre 100.
-3. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+1. **Trouver** le bloc ``||basic:montrer nombre 0||`` et **l'ajouter** sous ``||radio:envoyer la valeur||``.
+2. **Trouver** le bloc ``||basic:pause (ms)||`` et **l'ajouter** à la suite, puis **y inscrire** le nombre **100**.
+3. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** à la suite.
 
 <img alt="Activité 3 Télescope Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_08.gif" width="80%">
 
@@ -213,9 +213,9 @@ input.onButtonPressed(Button.A, function () {
 
 Refaire la même chose qu'à l'étape précédente, mais cette fois pour le "1". La fonction *Dupliquer* va nous aider.
 
-1. Sur le bloc ``||input:lorsque le bouton A est pressé||`` que nous avons créé à l'étape précédente, faire clic droit, puis Dupliquer.
-2. Changer le ``||input:bouton A||`` pour le ``||input:bouton B||``.
-3. Changer le 0 pour 1 aux deux endroits où il apparait.
+1. Sur le bloc ``||input:lorsque le bouton A est pressé||`` que nous avons créé à l'étape précédente, faire clic droit, puis **Dupliquer**.
+2. **Changer** le ``||input:bouton A||`` pour le ``||input:bouton B||``.
+3. **Changer** le 0 pour 1 aux deux endroits où il apparait.
 
 <!-- 1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||`` et changer le "A" pour "B".
 2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
@@ -239,9 +239,9 @@ input.onButtonPressed(Button.B, function () {
 
 Refaire encore la même chose, mais cette fois pour le "-1".
 
-1. Sur le bloc ``||input:lorsque le bouton A est pressé||``, faire clic droit, puis Dupliquer.
-2. Changer le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
-3. Changer le 0 pour -1 aux deux endroits où il apparait.
+1. Sur le bloc ``||input:lorsque le bouton A est pressé||``, faire clic droit, puis **Dupliquer**.
+2. **Changer** le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
+3. **Changer** le 0 pour -1 aux deux endroits où il apparait.
 
 <img alt="Activité 3 Télescope Étape 10" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Telescope_10.gif" width="80%">
 

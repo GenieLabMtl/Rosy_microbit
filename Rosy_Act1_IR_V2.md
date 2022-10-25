@@ -1,4 +1,4 @@
-# Rosy, Activité 1 : télescope infrarouge v2
+# Rosy, Activité 1 : télescope infrarouge 
 
 ## Objectif 
 

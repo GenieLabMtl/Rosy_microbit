@@ -33,8 +33,8 @@ Bonne chance!
 
 La première chose à faire est d'initialiser la radio.
 
-1. Aller dans la section ``||radio:radio||`` pour trouver le bloc ``||radio:définir groupe||``, puis le mettre dans le bloc ``||basic:au démarrage||``.
-2. Attribuer la valeur de votre numéro de groupe au bloc ``||radio:définir groupe||``. Si une autre équipe a la même valeur de groupe, vos messages seront mélangés, se qui va nuire à votre mission.
+1. Aller dans la section ``||radio:radio||`` pour **trouver** le bloc ``||radio:définir groupe||``, puis **l'ajouter** dans le bloc ``||basic:au démarrage||``.
+2. **Attribuer** la valeur de votre numéro de groupe au bloc ``||radio:définir groupe||``. Si une autre équipe a la même valeur de groupe, vos messages seront mélangés, se qui va nuire à votre mission.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème! Il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer.**
 
@@ -48,8 +48,8 @@ radio.setGroup(0)
 
 Lorsqu'une donnée est reçue du satellite-relais, nous voulons la voir affichée.
 
-1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio name value||`` et le glisser dans la page de programmation.
-2. Aller dans ``||logic:logique||`` pour trouver le bloc ``||logic:si <vrai> alors||`` et le mettre dans le bloc radio que l'on vient de prendre.
+1. Toujours dans la section ``||radio:radio||``, **trouver** le bloc ``||radio:quand une donnée est reçue par radio name value||`` et **l'ajouter** à la page de programmation.
+2. Aller dans ``||logic:logique||`` pour **trouver** le bloc ``||logic:si <vrai> alors||`` et **l'ajouter** dans le bloc radio que l'on vient de prendre.
 
 <img alt="Activité 3 Terre Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_02.gif" width="80%">
 
@@ -64,9 +64,9 @@ radio.onReceivedValue(function (name, value) {
 
 Il faut afficher la bonne image selon les données reçues, qui peuvent être 0, 1 ou -1. Commençons par recevoir les bons messages, qui sont sous forme de [chaînes de caractères](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res).
 
-1. Aller dans la section ``||logic:logique||``, y trouver ``||logic: " " = " "||``, et le glisser à la place de ``||logic:<vrai>||``.
-2. Dans le cercle de gauche, glisser la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
-3. Dans le cercle de droite, inscrire "terre".
+1. Aller dans la section ``||logic:logique||``, **y trouver** ``||logic: " " = " "||``, et **l'ajouter** à la place de ``||logic:<vrai>||``.
+2. Dans le cercle de gauche, **glisser** la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
+3. Dans le cercle de droite, **inscrire** "terre".
 
 <img alt="Activité 3 Terre Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_03.gif" width="80%">
 
@@ -82,10 +82,10 @@ radio.onReceivedValue(function (name, value) {
 
 Affichons maintenant les données reçues, puis nettoyons ensuite l'écran.
 
-1. Dans la section ``||basic:base||``, trouver le bloc ``||basic:montrer nombre||`` et la mettre dans notre bloc ``||logic:si...alors||``.
-2. Glisser la variable ``||variables:value||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||`` dans le cercle à droite dans ``||basic:montrer nombre||``.
-3. Dans la section ``||basic:base||``, trouver le bloc ``||basic:pause (ms)||`` et le mettre à la suite.
-4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+1. Dans la section ``||basic:base||``, **trouver** le bloc ``||basic:montrer nombre||`` et **l'ajouter** dans notre bloc ``||logic:si...alors||``.
+2. **Glisser** la variable ``||variables:value||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||`` dans le cercle à droite dans ``||basic:montrer nombre||``.
+3. Dans la section ``||basic:base||``, **trouver** le bloc ``||basic:pause (ms)||`` et **l'ajouter** à la suite.
+4. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** à la suite.
 
 <img alt="Activité 3 Terre Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_04.gif" width="80%">
 
@@ -105,10 +105,10 @@ radio.onReceivedValue(function (name, value) {
 Nous voulons maintenant pouvoir envoyer des messages de confirmation. Ils peuvent être : *flèche à gauche* (ouest), *flèche à droite* (est), *flèche en haut* (nord), *flèche en bas* (sud), et *crochet de validation*.
 Pour sélectionner le message à envoyer, nous allons utiliser l'[accéléromètre](https://fr.wikipedia.org/wiki/Acc%C3%A9l%C3%A9rom%C3%A8tre) du micro:bit.
 
-1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||``.
-2. Y insérer le double bloc ``||logic:si <vrai> alors...sinon||`` de la section ``||logic:logique||``
-3. Aller dans la section ``||logic:logique||``, y trouver l'hexagone ``||logic:plus petit que||``, et le glisser dans le premier ``||logic:si <vrai> alors||``.
-4. Dans la section ``||input:entrée||``, trouver ``||input:accélération (mg)||`` et le mettre dans le cercle à gauche du ``||logic:plus petit que||``.
+1. Dans ``||input:entrée||``, **prendre** le bloc ``||input:lorsque le bouton A est pressé||``.
+2. **Y insérer** le double bloc ``||logic:si <vrai> alors...sinon||`` de la section ``||logic:logique||``
+3. **Aller** dans la section ``||logic:logique||``, y trouver l'hexagone ``||logic:plus petit que||``, et le **glisser** dans le premier ``||logic:si <vrai> alors||``.
+4. Dans la section ``||input:entrée||``, **trouver** ``||input:accélération (mg)||`` et **l'ajouter** dans le cercle à gauche du ``||logic:plus petit que||``.
 
 <img alt="Activité 3 Terre Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_05.gif" width="80%">
 
@@ -127,10 +127,10 @@ input.onButtonPressed(Button.A, function () {
 
 Lorsque le micro:bit penche vers la gauche et que l'on appuie sur le ``||input:bouton A||``, nous allons envoyer "o" pour Ouest. Ensuite, affichons ce que nous avons envoyé.
 
-1. Insérer le bloc ``||radio:envoyer la chaîne "" par radio||`` de la section ``||radio:radio||`` sous le "si", et inscrire la lettre "o" dans ce bloc.
-2. Dans la section ``||basic:base||``, trouver le bloc ``||basic:montrer la flèche||``, la mettre dans ce bloc et choisir "Ouest".
-3. Trouver le bloc ``||basic:pause (ms)||`` et le mettre à la suite, puis y inscrire le nombre 100.
-4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+1. **Insérer** le bloc ``||radio:envoyer la chaîne "" par radio||`` de la section ``||radio:radio||`` sous le "si", et inscrire la lettre "o" dans ce bloc.
+2. Dans la section ``||basic:base||``, **trouver** le bloc ``||basic:montrer la flèche||``, **l'ajouter** dans ce bloc et choisir "Ouest".
+3. **Trouver** le bloc ``||basic:pause (ms)||`` et **l'ajouter** à la suite, puis **y inscrire** le nombre **100**.
+4. **Trouver** le bloc ``||basic:effacer l'écran||`` et **l'ajouter** à la suite.
 
 <img alt="Activité 3 Terre Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Terre_06.gif" width="80%">
 
