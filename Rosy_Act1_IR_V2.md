@@ -24,14 +24,16 @@ Voici le matériel dont nous aurons besoin :
 
 Le capteur infrarouge [MLX90614](https://www.melexis.com/en/product/mlx90614/digital-plug-play-infrared-thermometer-to-can) permet de **lire la température** ambiante et la température d'un objet en face du capteur. La version que nous utilisons a **une portée utile d'environ 30 cm**.
 
-Insérer les 4 pattes du capteur infrarouge MLX90614 dans 4 rangées numérotées différentes de la platine de prototypage.
+**Insérer** les 4 pattes du capteur infrarouge MLX90614 dans l'emplacement réservé du circuit imprimé.
+
+***Astuce*** *: Aidez-vous de l'image.* 
 
 <img alt="Le micro:bit s'insère dans la carte de développement de façon à ce que les boutons A et B du micro:bit soient du même côté que les connecteurs de la carte." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1pict3IR_v2_600px.jpg" width="300px">
 
 
 ## Étape 2 
 
-Insérer le micro:bit dans la carte de développement.
+**Insérer** le micro:bit dans le circuit imprimé.
 
 <img alt="Les pattes du capteur s'insèrent dans la platine de prototypage de sorte à ce que le capteur soit du côté extérieure de la platine, dégageant ainsi les autres trous des 4 rangées où il est connecté." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict2IR_v3.jpg" width="300px">
 
@@ -69,8 +71,8 @@ basic.forever(function(){
 
 Ensuite, nous allons **lire le capteur** au moyen d'une [librairie sur mesure](https://github.com/GenieLabMtl/pxt-mlx90614-microbit) que nous avons déjà importée pour vous dans l'éditeur.
 
-1. Trouver le bloc ``||Control:mesure temperature||`` dans la section ``||Control:MLX90614||`` et le glisser n'importe où dans la surface de programmation.
-2. Refaire la même étape pour avoir 2 fois ce bloc de disponible.
+1. **Trouver** le bloc ``||Control:mesure temperature||`` dans la section ``||Control:MLX90614||`` et le **glisser** n'importe où dans la surface de programmation.
+2. **Refaire** la même étape pour avoir 2 fois ce bloc de disponible.
 
 > ***Astuce*** *: Au fil des étapes, vous pouvez cliquer sur l'ampoule bleue à droite de cette case pour voir le résultat de l'étape en cours, ainsi qu'une animation de ce qu'il faut faire.*
 
@@ -82,9 +84,9 @@ Ensuite, nous allons **lire le capteur** au moyen d'une [librairie sur mesure](h
 Afin de représenter de façon significative la lecture de température sur l'écran du micro:bit, nous allons **établir la portée de la lecture** en fonction de l'affichage.
 La valeur minimale de lecture est la température ambiante de la salle où vous vous trouvez.
 
-1. Trouver le bloc ``||Math:projeter||`` dans la section ``||Math:Maths||`` et le glisser sur la surface de programmation.
-2. Glisser ``||Control:mesure temperature||`` dans le premier cercle de ``||Math:projeter||`` et lui attribuer "Object" avec le menu déroulant.
-3. Glisser l'autre ``||Control:mesure temperature||`` dans le second cercle de ``||Math:projeter||`` et lui attribuer "Ambient" avec le menu déroulant.
+1. **Trouver** le bloc ``||Math:projeter||`` dans la section ``||Math:Maths||`` et le **glisser** sur la surface de programmation.
+2. **Glisser** ``||Control:mesure temperature||`` dans le premier cercle de ``||Math:projeter||`` et **lui attribuer** "Object" avec le menu déroulant.
+3. **Glisser** l'autre ``||Control:mesure temperature||`` dans le second cercle de ``||Math:projeter||`` et **lui attribuer** "Ambient" avec le menu déroulant.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_03.gif" width="80%">
 
@@ -94,16 +96,16 @@ La valeur minimale de lecture est la température ambiante de la salle où vous 
 Puisque le capteur retourne les températures en degrés Celsius, établissons la valeur maximale de captation à 35, ce qui est environ **la température de la paume d'une main**.
 Pour illuminer l'écran du micro:bit, les valeurs de **0 à 50 nous donneront une bonne résolution**.
 
-1. Dans le troisième cercle, inscrire le nombre 35.
-2. Dans le quatrième cercle, inscrire le nombre 0.
-3. Dans le dernier cercle, inscrire le nombre 50.
+1. Dans le troisième cercle, **inscrire** le nombre **35**.
+2. Dans le quatrième cercle, **inscrire** le nombre **0**.
+3. Dans le dernier cercle, **inscrire** le nombre **50**.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_04.gif" width="80%">
 
 
 ## Étape 10
 
-Nous pouvons maintenant mettre ``||Math:projeter||`` dans le bloc ``||variables:définir||``.
+Nous pouvons maintenant **ajouter** ``||Math:projeter||`` dans le bloc ``||variables:définir||``.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_05.gif" width="80%">
 
@@ -120,10 +122,10 @@ Nous voulons que notre télescope **détecte une source de chaleur dans son axe*
 
 Nous avons donc besoin d'un bloc conditionnel pour détecter **si le bouton est pressé ou non**.
 
-1. Trouver le bloc ``||logic:si <vrai>...sinon||`` dans la section ``||logic:Logique||``.
-2. Le glisser sous le bloc ``||variables:définir||``.
-3. Trouver le bloc hexagonal ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
-4. Le glisser à la place de ``||logic:<vrai>||`` de ``||logic:si <vrai>...sinon||``.
+1. **Trouver** le bloc ``||logic:si <vrai>...sinon||`` dans la section ``||logic:Logique||``.
+2. Le **glisser** sous le bloc ``||variables:définir||``.
+3. **Trouver** le bloc hexagonal ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
+4. Le **glisser** à la place de ``||logic:<vrai>||`` de ``||logic:si <vrai>...sinon||``.
 
 > ***Astuce*** *: Si vous manquez de place pour avoir une bonne vue d'ensemble de votre code, vous pouvez appuyer sur le bouton "-" en bas à droite de l'écran pour dézoomer.*
 
@@ -146,11 +148,11 @@ basic.forever(function () {
 
 **Lorsque le bouton A est pressé**, affichons la visualisation de température.
 
-1. Trouver le bloc ``||led:tracer le graphe||`` dans la section ``||led:LED||``.
-2. Le glisser dans le crochet "si" de ``||logic:si <vrai>...sinon||``.
-3. Trouver la variable ``||variables:Source||`` dans la section ``||variables:variable||``.
-4. La mettre dans le premier cercle du bloc ``||led:tracer le graphe||``.
-5. Inscrire le nombre 50 dans l'autre cercle.
+1. **Trouver** le bloc ``||led:tracer le graphe||`` dans la section ``||led:LED||``.
+2. Le **glisser** dans le crochet "si" de ``||logic:si <vrai>...sinon||``.
+3. **Trouver** la variable ``||variables:Source||`` dans la section ``||variables:variable||``.
+4. **L'ajouter** dans le premier cercle du bloc ``||led:tracer le graphe||``.
+5. **Inscrire** le nombre **50** dans l'autre cercle.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 12." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_07.gif" width="80%">
 
@@ -174,10 +176,10 @@ basic.forever(function () {
 
 Nous voulons **afficher** une image de planète **seulement quand une source de chaleur est détectée**.
 
-1. Ajouter un autre bloc ``||logic:si <vrai>...sinon||`` à partir de la section ``||logic:Logique||`` et le glisser dans le crochet "sinon" du premier.
-2. Glisser un bloc ``||logic:<||`` (plus petit que) à partir de la section ``||logic:Logique||`` et le placer à côté du nouveau "si".
-3. À gauche du symbole "<", inscrire le nombre 1.
-4. À droite du symbole, mettre la ``||variables:variable||`` "Source".
+1. **Ajouter** un autre bloc ``||logic:si <vrai>...sinon||`` à partir de la section ``||logic:Logique||`` et **l'ajouter** dans le crochet ``||logic:sinon||`` du premier.
+2. **Glisser** un bloc ``||logic:<||`` (plus petit que) à partir de la section ``||logic:Logique||`` et **l'ajouter** à côté du nouveau ``||logicsi:si||``.
+3. À gauche du symbole ``||logic:<||``, **inscrire** le nombre *1*.
+4. À droite du symbole, **ajouter** la ``||variables:variable||`` "**Source**".
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 13." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_08.gif" width="80%">
 
@@ -205,9 +207,9 @@ basic.forever(function () {
 
 Affichons une image de planète **lorsque de la chaleur est détectée**.
 
-1. Dans la section ``||basic:Base||``, trouver le bloc ``||basic:montrer LEDs||`` et le glisser dans le crochet "si".
-2. Dessiner l'image qui vous convient dans la matrice.
-3. Dans le crochet "sinon", insérer le bloc ``||basic:effacer l'écran||`` de la section ``||basic:Base||``.
+1. Dans la section ``||basic:Base||``, **trouver** le bloc ``||basic:montrer LEDs||`` et **l'ajouter** dans le crochet ``|logic:si||``.
+2. **Dessiner** l'image qui vous convient dans la matrice.
+3. Dans le crochet ``||logic:sinon||``, **insérer** le bloc ``||basic:effacer l'écran||`` de la section ``||basic:Base||``.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_09.gif" width="80%">
 
