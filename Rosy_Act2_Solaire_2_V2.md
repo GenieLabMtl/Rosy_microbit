@@ -27,7 +27,7 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3
@@ -51,7 +51,7 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3
@@ -79,7 +79,7 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3
@@ -109,14 +109,14 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3
     )
     if (volts > 2.1) {
-        pins.digitalWritePin(digitalPin.P8, 1)
-        pins.digitalWritePin(digitalPin.P2, 0)
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        pins.digitalWritePin(DigitalPin.P2, 0)
     } else {
 
     }
@@ -141,14 +141,14 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3
     )
     if (volts > 2.1) {
-        pins.digitalWritePin(digitalPin.P8, 1)
-        pins.digitalWritePin(digitalPin.P2, 0)
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        pins.digitalWritePin(DigitalPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
 
     } else {
@@ -172,17 +172,17 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3
     )
     if (volts > 2.1) {
-        pins.digitalWritePin(digitalPin.P8, 1)
-        pins.digitalWritePin(digitalPin.P2, 0)
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        pins.digitalWritePin(DigitalPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
-        pins.digitalWritePin(digitalPin.P2, 1)
-        pins.digitalWritePin(digitalPin.P8, 0)
+        pins.digitalWritePin(DigitalPin.P2, 1)
+        pins.digitalWritePin(DigitalPin.P8, 0)
     } else {
 
     }
@@ -203,20 +203,20 @@ let solaire = 0
 let volts = 0
 basic.forever(function () {
     solaire = pins.analogReadPin(AnalogPin.P1)
-    volts = solaire / 1023 * 3
+    volts = solaire / 303
     led.plotBarGraph(
     volts,
     3.3
     )
     if (volts > 2.1) {
-        pins.adigitalWritePin(digitalPin.P8, 1)
-        pins.digitalWritePin(digitalPin.P2, 0)
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        pins.digitalWritePin(DigitalPin.P2, 0)
     } else if (volts <= 2.1 && volts > 1.2) {
-        pins.digitalWritePin(digitalPin.P2, 1)
-        pins.digitalWritePin(digitalPin.P8, 0)
+        pins.digitalWritePin(DigitalPin.P2, 1)
+        pins.digitalWritePin(DigitalPin.P8, 0)
     } else {
-        pins.digitalWritePin(digitalPin.P8, 0)
-        pins.digitalWritePin(digitalPin.P2, 0)
+        pins.digitalWritePin(DigitalPin.P8, 0)
+        pins.digitalWritePin(DigitalPin.P2, 0)
     }
 })
 ```

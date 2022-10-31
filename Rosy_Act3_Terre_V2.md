@@ -1,4 +1,4 @@
-# Rosy, Activité 3 : Communication Radio : Terre V2
+# Rosy, Activité 3 : Communication Radio : Terre 
 
 ## Présentation 1 @showdialog
 

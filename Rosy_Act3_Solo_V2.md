@@ -1,4 +1,4 @@
-# Rosy, Activité 3 : Communication - Activité à faire en solo V2
+# Rosy, Activité 3 : Communication - Activité à faire en solo 
 
 ## Présentation 1 @showdialog
 
