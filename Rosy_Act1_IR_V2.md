@@ -6,7 +6,7 @@ Dans ce premier défi, nous allons créer un **modèle réduit de télescope à 
 
 Nous serons en mesure de **détecter la présence d'une source de chaleur** dans l'axe du télescope, et de représenter visuellement la température observée afin de **détecter la présence d'exoplanètes**.
 
-<img alt="Résultat attendu de l'activité : le micro:bit affiche la valeur lue par le capteur infrarouge." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/gifactivite1_v3.gif" width="300px">
+<img alt="Résultat attendu de l'activité : le micro:bit affiche la valeur lue par le capteur infrarouge." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/DemoActivite.gif" width="300px">
 
 
 ## Matériel 
@@ -16,7 +16,7 @@ Voici le matériel dont nous aurons besoin :
     - Un câble USB
     - Le circuit imprimé
     - Le capteur infrarouge MLX90614
-<img alt="microcontrôleur micro:bit, câble USB, circuit imprimé, capteur infrarouge MLX90614" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1PictMatos.jpg" width="300px">
+<img alt="microcontrôleur micro:bit, câble USB, circuit imprimé, capteur infrarouge MLX90614" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Etape2.jpg" width="300px">
 
 
 ## Étape 1
@@ -28,14 +28,14 @@ Le capteur infrarouge [MLX90614](https://www.melexis.com/en/product/mlx90614/dig
 
 ***Astuce*** *: Aidez-vous de l'image.* 
 
-<img alt="Le micro:bit s'insère dans la carte de développement de façon à ce que les boutons A et B du micro:bit soient du même côté que les connecteurs de la carte." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1pict3IR_v2_600px.jpg" width="300px">
+<img alt="Le micro:bit s'insère dans la carte de développement de façon à ce que les boutons A et B du micro:bit soient du même côté que les connecteurs de la carte." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Etape3.jpg" width="300px">
 
 
 ## Étape 2 
 
 **Insérer** le micro:bit dans le circuit imprimé.
 
-<img alt="Les pattes du capteur s'insèrent dans la platine de prototypage de sorte à ce que le capteur soit du côté extérieure de la platine, dégageant ainsi les autres trous des 4 rangées où il est connecté." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict2IR_v3.jpg" width="300px">
+<img alt="Les pattes du capteur s'insèrent dans la platine de prototypage de sorte à ce que le capteur soit du côté extérieure de la platine, dégageant ainsi les autres trous des 4 rangées où il est connecté." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Etape4.jpg" width="300px">
 
 
 ## Étape 5 
