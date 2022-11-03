@@ -91,7 +91,7 @@ Ou plus simplement **diviser par 303**.
 4. **Diviser** ``||variables:solaire||`` par ``||math:303||``.
 5. **Ajouter le tout** dans la case à droite dans le bloc ``||variables:définir volts à <0>||``.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 7." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_04.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 7." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gif1Act2aV2.gif" width="80%">
 
 ```blocks
 let solaire = 0
@@ -109,7 +109,7 @@ Finalement, il ne reste qu'à **afficher** la valeur :
 2. **Assigner** la variable ``||variables:volts||`` comme **minimum**.
 3. **Assigner** la valeur 3.3 comme **maximum**.
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_05.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 8." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gif2Act2aV2.gif" width="80%">
 
 ```blocks
 let solaire = 0
