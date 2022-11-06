@@ -27,7 +27,8 @@ Commencer par **connecter** le panneau solaire au circuit imprimé :
     - Connecter le fil **rouge** (positif) du panneau solaire avec la broche **VCC**.
     - Connecter le fil **noir** (négatif) du panneau solaire avec la broche **GND** du circuit imprimé.
 
-<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et le circuit imprimé." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict4V2.jpg" width="300px">
+<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et le circuit imprimé." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Cable_Solaire.jpg" width="300px">
+<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et le circuit imprimé." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/ConnexionPCB.jpg" width="300px">
 
 
 ### Étape 4
