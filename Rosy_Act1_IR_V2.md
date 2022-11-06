@@ -6,7 +6,7 @@ Dans ce premier défi, nous allons créer un **modèle réduit de télescope à 
 
 Nous serons en mesure de **détecter la présence d'une source de chaleur** dans l'axe du télescope, et de représenter visuellement la température observée afin de **détecter la présence d'exoplanètes**.
 
-<img alt="Résultat attendu de l'activité : le micro:bit affiche la valeur lue par le capteur infrarouge." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/DemoActivite.gif" width="300px">
+<img alt="Résultat attendu de l'activité : le micro:bit affiche la valeur lue par le capteur infrarouge." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Demo_Activite1.gif" width="300px">
 
 
 ## Matériel 
