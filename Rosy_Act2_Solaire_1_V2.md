@@ -75,16 +75,7 @@ basic.forever(function () {
 ```
 
 
-### Étape 7a
-
-**Transformer** des valeurs numériques **en volts** :
-
-Les **broches analogiques** du micro:bit peuvent lire des valeurs allant jusqu'à 3.3 volts et les représentent avec **des valeurs allant de 0 à 1023**.
-Puisque le panneau solaire génère jusqu'à 3 volts d'électricité, il faut **diviser par 1023** la valeur lue, puis la **multiplier par 3**. 
-Ou plus simplement **diviser par 303**.
-
-
-### Étape 7b
+### Étape 7
 
 1. **Ajouter** un autre bloc ``||variables:définir||`` à partir de ``||variables:Variables||`` dans ``||basic:toujours||``.
 2. **Lui attribuer** la variable ``||variables:volts||``.
