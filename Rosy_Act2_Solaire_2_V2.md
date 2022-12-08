@@ -100,7 +100,6 @@ Pour la plage **plus grand que 2.1 volts**, nous allons faire allumer la DEL ver
 2. Dans le premier, **choisir** la broche ``||pins:P8||``, et **inscrire** le nombre **1**.
 3. Dans le second, **choisir** la broche ``||pins:P2||``, et **inscrire** le nombre **0**.
 
-//changer le gif
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 11." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/gif3Act2b.gif" width="80%">
 

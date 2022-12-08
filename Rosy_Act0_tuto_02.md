@@ -64,8 +64,8 @@ function animationDEL (num: number) {
 
 À chaque boucle, changer de DEL à illuminer. Aussi, faire en sorte qu'on peut controller le temps entre chaque cycle de la boucle. 
 
-1. **glisser** la variable ``||variable:index||`` de la boucle et **l'ajouter** dans la case ``"x" du bloc ``||led:allumer x 0 y 0||``.
-2. **glisser** la variable ``||variable:num||`` de la fonction et **l'ajouter** dans le bloc ``||basic:pause (ms)||``.
+1. **glisser** la variable ``||variable:index||`` de la boucle et **l'ajouter** dans la case "x" du bloc ``||led:allumer x 0 y 0||``.
+2. **glisser** la variable ``||variable:num||``  qui se trouve à droite dans le bloc fonction animationDEL et **l'ajouter** dans le bloc ``||basic:pause (ms)||``.
 
 
 ```blocks
