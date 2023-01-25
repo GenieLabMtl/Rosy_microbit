@@ -1,4 +1,4 @@
-# Rosy, Activité 3 Multiplayer: Communication Radio :
+# Rosy, Activité 3 Multiplayer: Communication Radio
 
 ## Présentation 1 @showdialog
 Le but de l’activité est de se familiariser avec la communication radio.
