@@ -2,10 +2,29 @@
 
 ## Présentation 1 @showdialog
 
-Le but de l'activité est de se familiariser avec la communication radio. 
-Cette activité se fait en équipe de deux, cependant il y a la possibilité de le faire à plus mais il faudrait adapter un peu l'activité. 
-Le fonctionnement général de l'activité est de créer un canal radio qui permettra aux utilisateurs de s'échanger des messages qui pourront être affichés sur le Micro:bit.
+> -> Ce tutoriel s'adresse à la ou aux personnes qui feront la partie ***Satellite-relais*** de l'activité. Les parties ***Terre*** et ***Télescope spatial*** doivent également être faites pour que l'activité puisse avoir lieu.
 
+![Rosy transmet un message](https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Relais.png)
+
+Le télescope spatial veut transmettre une série de données qu'il a reçue en provenance d'une étoile lointaine au centre de commandement sur Terre pour qu'ils puissent être interprétés par une équipe de scientifiques.
+
+Le problème est que le télescope a terminé sa mission il y a maintenant quelques années, et que plus personne n'écoute dans sa direction.
+
+
+## Présentation 2 @showdialog
+
+Votre rôle dans cette mission est de recevoir des messages provenant du télescope spatial et les transmettre au centre de commandement sur Terre. C'est une tâche en apparence simple, mais absolument critique à la réussite de la mission.
+
+Pour réussir votre mission, vous devrez :
+
+1. ***Choisir en équipe un numéro de groupe entre 0 et 255*** qui sera unique à votre équipe. Assurez-vous que les autres équipes de la classe ne prennent pas le même numéro.
+2. ***Concevoir en équipe un [protocole de communication](https://fr.wikipedia.org/wiki/Protocole_de_communication)*** qui utilise seulement les chiffre 0, 1 et -1. Ce sera cette méthode de communication qui va permettre à la Terre de trouver l'emplacement de l'étoile sur un plan. Pour ce faire, vous devrez discuter de vos codes micro:bit respectifs afin de voir ce que chacun·e peut recevoir, envoyer et voir.
+3. ***Recevoir les messages du satellite-télescope***, qui peuvent être 0, 1 ou -1.
+4. ***Retransmettre ces données vers la Terre*** sans faire d'erreurs. Si le message n'est pas bien reçu par la Terre, les coordonnées de l'étoile d'où provient le signal extraterrestre ne seront pas connues et cette découverte n'aura jamais lieu! Les détails du défi se trouvent à la dernière étape de cette activité.
+
+Les détails du défi se trouvent à la dernière étape de cette activité.
+
+Bonne chance!
 
 ## Étape 1
 
@@ -21,17 +40,16 @@ La première chose à faire est d'initialiser la radio.
 <img alt="Activité 3 Relais Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_01.gif" width="80%">
 
 ```blocks
-radio.setGroup(3)
+radio.setGroup(0)
 ```
 
 ## Étape 2
 
 Lorsqu'une donnée est reçue du satellite-télescope, nous voulons la voir affichée.
 
-1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio receivedString||`` et le glisser dans la page de programmation.
-2. Ensuite, aller dans ``||basic:base||`` pour trouver le bloc ``||basic:Afficher texte||``, et le mettre dans le bloc radio que l'on vient de prendre.
+1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio name value||`` et le glisser dans la page de programmation.
+2. Ensuite, aller dans ``||logic:logique||`` pour trouver le bloc ``||logic:si <vrai> alors||``, et le mettre dans le bloc radio que l'on vient de prendre.
 
-refaire le gif
 <img alt="Activité 3 Relais Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_02.gif" width="80%">
 
 ```blocks

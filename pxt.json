@@ -26,7 +26,8 @@
         "Rosy_Act3_Solo_V2.md",
         "Rosy_Act3_Relais_V2.md",
         "Rosy_Act3_Telescope_V2.md",
-        "Rosy_Act3_Terre_V2.md"
+        "Rosy_Act3_Terre_V2.md",
+        "_locales/fr-FR/Rosy_Act3_Relais.md"
     ],
     "testFiles": [
         "test.ts"
