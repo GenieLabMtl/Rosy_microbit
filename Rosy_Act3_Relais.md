@@ -74,8 +74,6 @@ Si ça fonctionne, alors nous allons pouvoir passer à l'étape suivante
 
 Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
-<img alt="Activité 3 Relais Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_04.gif" width="80%">
-
 ```blocks
 input.onButtonPressed(Button.A, function () {
     radio.sendString("Message 1")
@@ -87,20 +85,19 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 5
 
-Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoyer un message à un autre microbit s'il fait soleil
+Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoyer un message à un autre microbit s'il fait soleil.
 1. Dans la section ``||variable:variables||`` cliquer sur créer une variable, créer les variables ``||variable:Solaire||`` et ``||variable:Volt||``.
 2. Glisser-deposer ``||variable:définir 'Solaire' à '0'||`` dans le crochet ``basic:toujours||``.
+3. Faire la même chose pour la variable ``||variable:Volt||``.
 
-**Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la bage de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.**
-1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||``.
-2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
-3. Inscrire "terre" à gauche du "=", et laisser le chiffre à 0.
+*Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la bage de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.*
 
 <img alt="Activité 3 Relais Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_05.gif" width="80%">
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    radio.sendValue("terre", 0)
+basic.forever(function () {
+    Solaire = 0
+    Volt = 0
 })
 ```
 
