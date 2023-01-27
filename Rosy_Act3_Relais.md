@@ -26,62 +26,72 @@ radio.setGroup(3)
 
 ## Étape 2
 
-Lorsqu'une donnée est reçue du satellite-télescope, nous voulons la voir affichée.
+Lorsqu'une donnée est reçue, nous voulons la voir affichée.
 
-1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio receivedString||`` et le glisser dans la page de programmation.
-2. Ensuite, aller dans ``||basic:base||`` pour trouver le bloc ``||basic:Afficher texte||``, et le mettre dans le bloc radio que l'on vient de prendre.
+1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio||`` et le glisser dans la page de programmation.
+2. Ensuite, aller dans ``||basic:base||`` pour trouver le bloc ``||basic:Afficher texte||``, et le mettre dans le bloc ``||radio:radio||`` que l'on vient d'ajouter.
+3. Puis, glisser-déposer receivedString dans ``||basic:afficher texte||``.
 
 refaire le gif
 <img alt="Activité 3 Relais Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_02.gif" width="80%">
 
 ```blocks
-radio.onReceivedValue(function (name, value) {
-    if (True) {
-    }
+radio.onReceivedValue(function (receivedString) {
+    basic.showString(receivedString)
 })
 ```
 
 ## Étape 3
 
-Nous voulons seulement voir les données qui nous sont adressées. Nous devons donc vérifier que la [chaîne de caractères](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res) que nous recevons est bien "relais".
+Nous allons maintenant programmer les messages à envoyer
 
-1. Aller dans la section ``||logic:logique||``, y trouver ``||logic:" " = " "||``, et le glisser à la place de ``||logic:<vrai>||``.
-2. Dans le cercle de gauche, glisser la variable ``||variables:name||`` qui se trouve dans ``||radio:quand une donnée est reçue par radio||``.
-3. Dans le cercle de droite, inscrire "relais".
+1. Dans la section ``||input:entrée||``, selectionner ``||input:Lorsque le bouton A est pressé||`` et glisser le dans la page de programmation.
+2. Dupliquer le bloc et changer ``||input:A||`` par ``||input:B||``.
+3. Dans la section ``||radio:radio||``, glisser-déposer ``||radio:envoyer la chaine "" par radio||`` dans le crochet ``||input:losrque le bouton A est pressé||``
+4. Reperter cette action pour le deuxième crochet ``||input:losrque le bouton B est pressé||``
+
 
 <img alt="Activité 3 Relais Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_03.gif" width="80%">
 
 ```blocks
-radio.onReceivedValue(function (name, value) {
-    if (name == "relais") {
-    }
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("")
 })
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("")
+})
+
 ```
 
 ## Étape 4
 
-Maintenant, affichons ces données et un point en haut de l'écran du micro:bit pour indiquer que nous n'avons pas encore agi après les avoir reçus.
+À vous de choisir quels messages envoyer à vos amis
 
-1. Dans la section ``||basic:base||``, trouver ``||basic:montrer nombre||``, le mettre dans le bloc ``||logic:si <vrai> alors||``.
-2. Glisser la variable ``||variables:value||`` de ``||radio:quand une donnée est reçue par radio||`` et la mettre dans le cercle de cet objet.
-3. Aller dans la section ``||led:LED||``, prendre ``||led:allumer x y||`` et le mettre sous ``||basic:montrer nombre||``.
-4. Y inscrire le chiffre 4 dans le cercle à côté de "x".
+1. Inscrir le message que vous désirez envoyer par radio
+2. Faites un premier test en téléversant le code une premiere fois sur le microbit.
+
+Si ça fonctionne, alors nous allons pouvoir passer à l'étape suivante
+
+Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
 <img alt="Activité 3 Relais Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_04.gif" width="80%">
 
 ```blocks
-radio.onReceivedValue(function (name, value) {
-    if (name == "relais") {
-        basic.showNumber(value)
-        led.plot(4, 0)
-    }
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("Message 1")
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("Message 2")
 })
 ```
 
 ## Étape 5
 
-Une fois que les données sont reçues, il faut les retransmettre à la Terre. Puisque nous pouvons recevoir et envoyer 3 types de caractères (0,1 et -1), il faudra faire 3 groupes de blocs similaires.
+Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoyer un message à un autre microbit s'il fait soleil
+1. Dans la section ``||variable:variables||`` cliquer sur créer une variable, créer les variables ``||variable:Solaire||`` et ``||variable:Volt||``.
+2. Glisser-deposer ``||variable:définir 'Solaire' à '0'||`` dans le crochet ``basic:toujours||``.
 
+**Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la bage de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.**
 1. Dans ``||input:entrée||``, prendre le bloc ``||input:lorsque le bouton A est pressé||``.
 2. Y insérer le bloc ``||radio:envoyer la valeur "" = 0 par radio||``.
 3. Inscrire "terre" à gauche du "=", et laisser le chiffre à 0.
