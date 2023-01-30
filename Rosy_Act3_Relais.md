@@ -1,4 +1,4 @@
-# Rosy, Activité 3 : Communication Radio : Relais
+# Rosy, Activité 3 : Communication Radio : Multiplayer
 
 ## Présentation 1 @showdialog
 
@@ -87,7 +87,7 @@ input.onButtonPressed(Button.B, function () {
 
 Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoyer un message à un autre microbit s'il fait soleil.
 1. Dans la section ``||variable:variables||`` cliquer sur créer une variable, créer les variables ``||variable:Solaire||`` et ``||variable:Volt||``.
-2. Glisser-deposer ``||variable:définir 'Solaire' à '0'||`` dans le crochet ``basic:toujours||``.
+2. Glisser-deposer ``||variable:définir 'Solaire' à '0'||`` dans le crochet ``||basic:toujours||``.
 3. Faire la même chose pour la variable ``||variable:Volt||``.
 
 *Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la bage de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.*
