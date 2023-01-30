@@ -102,64 +102,66 @@ basic.forever(function () {
 ```
 
 ## Étape 6
+Nous récupérons les données du paneau solaire. 
 
-Quand nous envoyons une donnée, elle est affichée à l'écran, puis l'écran est nettoyé. Commençons par "0".
+1. Cliquer sur avancé, puis dans la section ``||pins:broches||``, glisser-déposer ``||pins:lire la broche analogique P0||`` dans ``||variable:définir 'Solaire' à '0'||`` à la place du 0.
 
-Dans la section ``||basic:base||`` :
-1. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre sous ``||radio:envoyer la valeur||``.
-2. Trouver le bloc ``||basic:montrer nombre 0||`` et le mettre à la suite.
-3. Trouver le bloc ``||basic:pause (ms)||``, le mettre à la suite, et y inscrire le nombre 100.
-4. Trouver le bloc ``||basic:effacer l'écran||`` et le mettre à la suite.
+2. Dans la section ``||maths:Maths||``, glisser-déposer ``||math:'0'/'0'||`` dans l'espace de programmation.
+3. Nous allons diviser ``||variable:Solaire||`` par 303 et attribuer la valeur à ``||variable:Volt||``
+4. Dans la section ``||variable:variables||`` glisser-déposer ``||variable:Solaire||`` à gauche du calcul ``||math:'0'/'0'||``
+3. Remplacer le ``||math:'0'||`` de gauche par ``||math:303||``
+4. Glisser le calcul à la place du '0' dans ``||variable:définir Volt à '0'||``
 
 <img alt="Activité 3 Relais Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_06.gif" width="80%">
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    radio.sendValue("terre", 0)
-    basic.clearScreen()
-    basic.showNumber(0)
-    basic.pause(100)
-    basic.clearScreen()
+basic.forever(function () {
+    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Volt = Solaire / 303
 })
 ```
 
 ## Étape 7
 
-Refaire la même chose que pour l'étape précédente, mais cette fois pour le "1". La fonction *Dupliquer* va nous aider.
+Nous allons envoyer un message si il y a du soleil
 
-1. Sur le bloc ``||input:lorsque le bouton A est pressé||`` que nous avons créé, faire clic droit, puis Dupliquer.
-2. Changer le ``||input:bouton A||`` pour le ``||input:bouton B||``.
-3. Changer le 0 pour 1 aux deux endroits où il apparait.
+1. Dans la section ``||logic:logique||`` selectionner ``||logic:si vrai alors||`` et le glisser sous la définition des deux ``||variable:variables||`` dans le crochet ``||basic:toujours||``
+2. Dans le crochet ``||logic:si vrai alors||``, y glisser ``||radio:envoyer la chaine " " par radio||`` que vous trouverez sous la section ``||radio:radio||``
+3. Inscrire "Soleil" dans ``||radio:envoyer la chaine "Soleil" par radio||``
 
 <img alt="Activité 3 Relais Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_07.gif" width="80%">
 
 ```blocks
-input.onButtonPressed(Button.B, function () {
-    radio.sendValue("terre", 1)
-    basic.clearScreen()
-    basic.showNumber(1)
-    basic.pause(100)
-    basic.clearScreen()
+basic.forever(function () {
+    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Volt = Solaire / 303
+    if (true) {
+        radio.sendString("Soleil")
+    }
 })
 ```
 
-## Étape 8 @showhint
+## Étape 8 
 
-Refaire la même chose que pour l'étape précédente, mais cette fois pour le "-1".
+Nous allons maintenant ajouté la condition pour envoyer le message "soleil".
 
-1. Sur le bloc ``||input:lorsque le bouton A est pressé||``, faire clic droit, puis Dupliquer.
-2. Changer le ``||input:bouton A||`` pour le ``||input:bouton A+B||``.
-3. Changer le 0 pour -1 aux deux endroits où il apparait.
+1. Dans la section ``||logic:logique||``, glisser-déposer ``||logic:"0"<"0"||`` à la place de ``||logic:vrai||``.
+2. Dans la condition, remplacer le "0" de gauche par la variable ``||variable:Volt||`` que vous trouverez dans la section ``||variable:variables||``
+3. Remplacer le "0" de droite par "2"
+4. Changer le signe ``||logic:<||`` par ``||logic:>||``.
+
+5. Ajouter une ``||basic:pause||`` de 100ms à la fin du crochet ``||basic:toujours||`` que vous trouverez dans la section ``||basic:base||``.
 
 <img alt="Activité 3 Relais Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_08.gif" width="80%">
 
 ```blocks
-input.onButtonPressed(Button.AB, function () {
-    radio.sendValue("terre", -1)
-    basic.clearScreen()
-    basic.showNumber(-1)
+basic.forever(function () {
+    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Volt = Solaire / 303
+    if (Volt > 2) {
+        radio.sendString("Soleil")
+    }
     basic.pause(100)
-    basic.clearScreen()
 })
 ```
 
@@ -168,34 +170,25 @@ input.onButtonPressed(Button.AB, function () {
 Voilà, le code est maintenant prêt! Le voici au complet. N'oubliez pas de faire dérouler l'image d'aide vers le bas pour le voir au complet.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    radio.sendValue("terre", 0)
-    basic.clearScreen()
-    basic.showNumber(0)
+radio.setGroup(1)
+
+basic.forever(function () {
+    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Volt = Solaire / 303
+    if (Volt > 2) {
+        radio.sendString("Soleil")
+    }
     basic.pause(100)
-    basic.clearScreen()
 })
-input.onButtonPressed(Button.AB, function () {
-    radio.sendValue("terre", -1)
-    basic.clearScreen()
-    basic.showNumber(-1)
-    basic.pause(100)
-    basic.clearScreen()
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("Message 1")
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendValue("terre", 1)
-    basic.clearScreen()
-    basic.showNumber(1)
-    basic.pause(100)
-    basic.clearScreen()
+    radio.sendString("Message 2")
 })
-radio.onReceivedValue(function (name, value) {
-    if (name == "relais") {
-        basic.showNumber(value)
-        led.plot(4, 0)
-    }
+radio.onReceivedString(function (receivedString) {
+    basic.showString(receivedString)
 })
-radio.setGroup(0)
 ```
 
 ## Étape 10
@@ -204,34 +197,3 @@ Il ne reste qu'à téléverser le code sur le micro:bit, et vous êtes prêt·e.
 
 Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
-
-## Étape 11 @showdialog
-
-Lorsque vos coéquipiers et coéquipières seront prêtes, vous pourrez commencer à retransmettre les données critiques à la mission.
-En attendant, vous pouvez :
-
-1. Vous pratiquer pour maitriser les boutons.
-2. Élaborer un protocole de communication pour l'équipe. En effet, comment transmettre des messages comme "oui", "non", etc. avec seulement les caractères 0, 1 et -1?
-3. Pouvez-vous trouver une façon d'améliorer l'affichage à l'écran du micro:bit?
-
-Lorsque tout le monde est prêt, aller à la prochaine étape.
-
-## Étape 12 @showdialog
-
-Votre défi : guider l'équipe sur Terre pour qu'elle trouve la bonne étoile d'où provient le message, à l'aide de la carte suivante.
-
-Voici le protocole de communication :
-
-A) -1 veut dire une case vers la gauche
-B) 1 veut dire une case vers la droite
-C) Quand 0 est envoyé, ça veut dire que le déplacement horizontal est terminé, et qu'on commence le déplacement vertical
-D) -1 veut alors dire une case vers le bas
-E) 1 veut alors dire une case vers le haut
-F) Pour vous assurer que les informations sont bien reçues, la Terre envoie un message de confirmation à chaque fois qu'elle reçoit un message : N pour vers le haut, S pour vers le bas, O pour vers la gauche, et E pour vers la droite.
-
-1. La personne qui joue le rôle du satellite-relais (vous) doit retransmettre à la Terre les informations que vous recevez du télescope spatial... sans faire d'erreurs!
-2. En partant du centre de l'image, la Terre devra correctement identifier l'étoile, que seul le télescope spatial connait.
-
-Bonne chance!
-
-![Charte des étoiles](https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/ciel_etoiles_v3.jpg)
