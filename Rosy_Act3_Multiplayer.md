@@ -13,8 +13,8 @@ Le fonctionnement général de l'activité est de créer un canal radio qui perm
 
 La première chose à faire est d'initialiser la radio.
 
-1. Aller dans la section ``||radio:radio||`` pour trouver le bloc ``||radio:définir groupe||``, puis le mettre dans le bloc ``||basic:au démarrage||``.
-2. Attribuer la valeur de votre numéro de groupe au bloc ``||radio:définir groupe||``. Si une autre équipe a la même valeur de groupe, vos messages seront mélangés, ce qui va nuire à votre mission.
+1. Aller dans la section ``||radio:radio||`` pour trouver le bloc ``||radio:radio définir groupe '1'||``, puis le mettre dans le crochet ``||basic:au démarrage||``.
+2. Attribuer la valeur de votre numéro de groupe au bloc ``||radio:radio définir groupe '1'||``. Si une autre équipe a la même valeur de groupe, vos messages seront mélangés, ce qui va nuire à votre mission.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer.**
 
@@ -28,15 +28,15 @@ radio.setGroup(3)
 
 Lorsqu'une donnée est reçue, nous voulons la voir affichée.
 
-1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio||`` et le glisser dans la page de programmation.
-2. Ensuite, aller dans ``||basic:base||`` pour trouver le bloc ``||basic:Afficher texte||``, et le mettre dans le bloc ``||radio:radio||`` que l'on vient d'ajouter.
-3. Puis, glisser-déposer receivedString dans ``||basic:afficher texte||``.
+1. Toujours dans la section ``||radio:radio||``, trouver le bloc ``||radio:quand une donnée est reçue par radio 'receivedString'||`` et le glisser dans la page de programmation.
+2. Ensuite, aller dans ``||basic:base||`` pour trouver le bloc ``||basic:Afficher texte||``, et le mettre dans le crochet du bloc ``||radio:quand une donnée est reçue par radio 'receivedString'||`` que l'on vient d'ajouter.
+3. Puis, glisser-déposer ``||radio:receivedString||`` dans ``||basic:afficher texte||``.
 
 refaire le gif
 <img alt="Activité 3 Relais Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_02.gif" width="80%">
 
 ```blocks
-radio.onReceivedValue(function (receivedString) {
+radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
 })
 ```
@@ -67,7 +67,7 @@ input.onButtonPressed(Button.B, function () {
 
 À vous de choisir quels messages envoyer à vos amis
 
-1. Inscrir le message que vous désirez envoyer par radio
+1. Inscrire le message que vous désirez envoyer par radio
 2. Faites un premier test en téléversant le code une premiere fois sur le microbit.
 
 Si ça fonctionne, alors nous allons pouvoir passer à l'étape suivante
@@ -86,7 +86,7 @@ input.onButtonPressed(Button.B, function () {
 ## Étape 5
 
 Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoyer un message à un autre microbit s'il fait soleil.
-1. Dans la section ``||variable:variables||`` cliquer sur créer une variable, créer les variables ``||variable:Solaire||`` et ``||variable:Volt||``.
+1. Dans la section ``||variable:variables||`` cliquer sur créer une variable, créer les variables ``||variable:Volt||`` et ``||variable:Solaire||``.
 2. Glisser-deposer ``||variable:définir 'Solaire' à '0'||`` dans le crochet ``||basic:toujours||``.
 3. Faire la même chose pour la variable ``||variable:Volt||``.
 
@@ -106,10 +106,10 @@ Nous récupérons les données du paneau solaire.
 
 1. Cliquer sur avancé, puis dans la section ``||pins:broches||``, glisser-déposer ``||pins:lire la broche analogique P0||`` dans ``||variable:définir 'Solaire' à '0'||`` à la place du 0.
 
-2. Dans la section ``||maths:Maths||``, glisser-déposer ``||math:'0'/'0'||`` dans l'espace de programmation.
+2. Dans la section ``||Maths:Maths||``, glisser-déposer ``||Math:'0'/'0'||`` dans l'espace de programmation.
 3. Nous allons diviser ``||variable:Solaire||`` par 303 et attribuer la valeur à ``||variable:Volt||``
-4. Dans la section ``||variable:variables||`` glisser-déposer ``||variable:Solaire||`` à gauche du calcul ``||math:'0'/'0'||``
-3. Remplacer le ``||math:'0'||`` de gauche par ``||math:303||``
+4. Dans la section ``||variable:variables||`` glisser-déposer ``||variable:Solaire||`` à gauche du calcul ``||Math:'0'/'0'||``
+3. Remplacer le ``||Math:'0'||`` de gauche par ``||Math:303||``
 4. Glisser le calcul à la place du '0' dans ``||variable:définir Volt à '0'||``
 
 <img alt="Activité 3 Relais Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_06.gif" width="80%">
@@ -164,8 +164,40 @@ basic.forever(function () {
     basic.pause(100)
 })
 ```
+## Étape 9 
 
-## Étape 9 @showhint
+Nous allons rendre ça plus jolie en affichant un soleil plutôt que de faire defiler le mot au complet.
+
+Je te laisse trouver la solution!!
+
+*Ps: la réponse se trouve à la prochaine étape.*
+
+## Étape 10
+
+L'une des solutions possible est la suivante:
+
+1. Dans la section ``||logic:logique||``, glisser-déposer ``||logic:si vrai alors sinon||`` dans le crochet ``||radio:quand une donnée est reçue par radio||`` 
+2. Glisser-déposer ``||basic:afficher texte||`` dans le crochet ``||logic:sinon||``
+3. Glisser-déposer ``||basic:montrer LEDs||`` dans le crochet ``||logic:si vrai alors||`` et y dessiner un soleil.
+4. Dans la section ``||logic:logique||`` glisser-déposer ``||logic:"" = ""||`` à la place de ``||logic:vrai||`` dans la condition ``||logic:si vrai alors||``
+5. Glisser-déposer ``||radio:receivedString||`` à gauche de ``||logic:"" = ""||`` et ecrire Soleil à droite de ``||logic:"" = ""||``
+
+```blocks
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "Soleil") {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . # # # .
+            . . # . .
+            `)
+    } else {
+        basic.showString(receivedString)
+    }
+})
+```
+## Étape 11 @showhint
 
 Voilà, le code est maintenant prêt! Le voici au complet. N'oubliez pas de faire dérouler l'image d'aide vers le bas pour le voir au complet.
 
@@ -187,11 +219,21 @@ input.onButtonPressed(Button.B, function () {
     radio.sendString("Message 2")
 })
 radio.onReceivedString(function (receivedString) {
-    basic.showString(receivedString)
+    if (receivedString == "Soleil") {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . # # # .
+            . . # . .
+            `)
+    } else {
+        basic.showString(receivedString)
+    }
 })
 ```
 
-## Étape 10
+## Étape 12
 
 Il ne reste qu'à téléverser le code sur le micro:bit, et vous êtes prêt·e.
 
