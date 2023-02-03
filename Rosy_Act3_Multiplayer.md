@@ -18,7 +18,6 @@ La première chose à faire est d'initialiser la radio.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer.**
 
-<img alt="Activité 3 Relais Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_01.gif" width="80%">
 
 ```blocks
 radio.setGroup(3)
@@ -33,7 +32,6 @@ Lorsqu'une donnée est reçue, nous voulons la voir affichée.
 3. Puis, glisser-déposer ``||radio:receivedString||`` dans ``||basic:afficher texte||``.
 
 refaire le gif
-<img alt="Activité 3 Relais Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_02.gif" width="80%">
 
 ```blocks
 radio.onReceivedString(function (receivedString) {
@@ -51,7 +49,6 @@ Nous allons maintenant programmer les messages à envoyer
 4. Reperter cette action pour le deuxième crochet ``||input:losrque le bouton B est pressé||``
 
 
-<img alt="Activité 3 Relais Étape 3" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_03.gif" width="80%">
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -92,7 +89,6 @@ Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoye
 
 *Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la bage de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.*
 
-<img alt="Activité 3 Relais Étape 5" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_05.gif" width="80%">
 
 ```blocks
 basic.forever(function () {
@@ -112,7 +108,6 @@ Nous récupérons les données du paneau solaire.
 3. Remplacer le ``||Math:'0'||`` de gauche par ``||Math:303||``
 4. Glisser le calcul à la place du '0' dans ``||variable:définir Volt à '0'||``
 
-<img alt="Activité 3 Relais Étape 6" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_06.gif" width="80%">
 
 ```blocks
 basic.forever(function () {
@@ -128,8 +123,6 @@ Nous allons envoyer un message si il y a du soleil
 1. Dans la section ``||logic:logique||`` selectionner ``||logic:si vrai alors||`` et le glisser sous la définition des deux ``||variable:variables||`` dans le crochet ``||basic:toujours||``
 2. Dans le crochet ``||logic:si vrai alors||``, y glisser ``||radio:envoyer la chaine " " par radio||`` que vous trouverez sous la section ``||radio:radio||``
 3. Inscrire "Soleil" dans ``||radio:envoyer la chaine "Soleil" par radio||``
-
-<img alt="Activité 3 Relais Étape 7" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_07.gif" width="80%">
 
 ```blocks
 basic.forever(function () {
@@ -152,7 +145,6 @@ Nous allons maintenant ajouté la condition pour envoyer le message "soleil".
 
 5. Ajouter une ``||basic:pause||`` de 100ms à la fin du crochet ``||basic:toujours||`` que vous trouverez dans la section ``||basic:base||``.
 
-<img alt="Activité 3 Relais Étape 8" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Relais_08.gif" width="80%">
 
 ```blocks
 basic.forever(function () {
