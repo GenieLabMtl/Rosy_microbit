@@ -308,7 +308,7 @@ Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **L
 
 1. **Connecter le micro:bit** à votre ordinateur avec le câble USB fourni dans la trousse.
 2. **Télécharger votre code** avec le bouton Télécharger en bas à gauche de l'écran.
-3. Dans le gestionnaire de fichiers de votre ordinateur, **glisser le fichier téléchargé** vers le micro:bit.
+3. Dans **le gestionnaire de fichiers** de votre ordinateur, **glisser le fichier téléchargé** vers le micro:bit que vous trouverez dans le gestionnaire de fichiers, comme une clé usb.
 4. Durant le transfert, la DEL orange au dos du micro:bit va clignoter rapidement. Une fois que c'est terminé, **votre code est sur l'appareil**.
 
 [Voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
