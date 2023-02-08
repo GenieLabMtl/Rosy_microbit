@@ -100,7 +100,7 @@ basic.forever(function () {
 ## Étape 6
 Nous récupérons les données du paneau solaire. 
 
-1. Cliquer sur avancé, puis dans la section ``||pins:broches||``, glisser-déposer ``||pins:lire la broche analogique P0||`` dans ``||variable:définir 'Solaire' à '0'||`` à la place du 0.
+1. Cliquer sur avancé, puis dans la section ``||pins:broches||``, glisser-déposer ``||pins:lire la broche analogique P1||`` dans ``||variable:définir 'Solaire' à '0'||`` à la place du 0.
 
 2. Dans la section ``||Maths:Maths||``, glisser-déposer ``||Math:'0'/'0'||`` dans l'espace de programmation.
 3. Nous allons diviser ``||variable:Solaire||`` par 303 et attribuer la valeur à ``||variable:Volt||``
@@ -111,7 +111,7 @@ Nous récupérons les données du paneau solaire.
 
 ```blocks
 basic.forever(function () {
-    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Solaire = pins.analogReadPin(AnalogPin.P1)
     Volt = Solaire / 303
 })
 ```
@@ -126,7 +126,7 @@ Nous allons envoyer un message si il y a du soleil
 
 ```blocks
 basic.forever(function () {
-    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Solaire = pins.analogReadPin(AnalogPin.P1)
     Volt = Solaire / 303
     if (true) {
         radio.sendString("Soleil")
@@ -148,7 +148,7 @@ Nous allons maintenant ajouté la condition pour envoyer le message "soleil".
 
 ```blocks
 basic.forever(function () {
-    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Solaire = pins.analogReadPin(AnalogPin.P1)
     Volt = Solaire / 303
     if (Volt > 2) {
         radio.sendString("Soleil")
@@ -197,7 +197,7 @@ Voilà, le code est maintenant prêt! Le voici au complet. N'oubliez pas de fair
 radio.setGroup(1)
 
 basic.forever(function () {
-    Solaire = pins.analogReadPin(AnalogPin.P0)
+    Solaire = pins.analogReadPin(AnalogPin.P1)
     Volt = Solaire / 303
     if (Volt > 2) {
         radio.sendString("Soleil")
