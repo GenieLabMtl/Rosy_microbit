@@ -18,6 +18,7 @@ La première chose à faire est d'initialiser la radio.
 
 >**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer.**
 
+<img alt="Définir le groupe radio" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_1E2.gif" width="600px">
 
 ```blocks
 radio.setGroup(3)
@@ -31,7 +32,8 @@ Lorsqu'une donnée est reçue, nous voulons la voir affichée.
 2. Ensuite, aller dans ``||basic:base||`` pour trouver le bloc ``||basic:Afficher texte||``, et le mettre dans le crochet du bloc ``||radio:quand une donnée est reçue par radio 'receivedString'||`` que l'on vient d'ajouter.
 3. Puis, glisser-déposer ``||radio:receivedString||`` dans ``||basic:afficher texte||``.
 
-refaire le gif
+<img alt="Afficher la donnée reçue" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_2E3.gif" width="600px">
+
 
 ```blocks
 radio.onReceivedString(function (receivedString) {
@@ -48,7 +50,7 @@ Nous allons maintenant programmer les messages à envoyer
 3. Dans la section ``||radio:radio||``, glisser-déposer ``||radio:envoyer la chaine "" par radio||`` dans le crochet ``||input:losrque le bouton A est pressé||``
 4. Reperter cette action pour le deuxième crochet ``||input:losrque le bouton B est pressé||``
 
-
+<img alt="Envoyer un message" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_3E4.gif" width="600px">
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -89,6 +91,7 @@ Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoye
 
 *Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la bage de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.*
 
+<img alt="Utilisons le paneau solaire pour envoyer un message" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_4E6.gif" width="600px">
 
 ```blocks
 basic.forever(function () {
@@ -108,6 +111,7 @@ Nous récupérons les données du paneau solaire.
 3. Remplacer le ``||Math:'0'||`` de gauche par ``||Math:303||``
 4. Glisser le calcul à la place du '0' dans ``||variable:définir Volt à '0'||``
 
+<img alt="Récupérer les données du paneau solaire" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_5E7.gif" width="600px">
 
 ```blocks
 basic.forever(function () {
@@ -123,6 +127,8 @@ Nous allons envoyer un message si il y a du soleil
 1. Dans la section ``||logic:logique||`` selectionner ``||logic:si vrai alors||`` et le glisser sous la définition des deux ``||variable:variables||`` dans le crochet ``||basic:toujours||``
 2. Dans le crochet ``||logic:si vrai alors||``, y glisser ``||radio:envoyer la chaine " " par radio||`` que vous trouverez sous la section ``||radio:radio||``
 3. Inscrire "Soleil" dans ``||radio:envoyer la chaine "Soleil" par radio||``
+
+<img alt="Envoyer un message s'il y a du soleil" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_6E8.gif" width="600px">
 
 ```blocks
 basic.forever(function () {
@@ -145,6 +151,7 @@ Nous allons maintenant ajouté la condition pour envoyer le message "soleil".
 
 5. Ajouter une ``||basic:pause||`` de 100ms à la fin du crochet ``||basic:toujours||`` que vous trouverez dans la section ``||basic:base||``.
 
+<img alt="ajouter la condition s'il y a du soleil" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_7E9.gif" width="600px">
 
 ```blocks
 basic.forever(function () {
@@ -173,6 +180,8 @@ L'une des solutions possible est la suivante:
 3. Glisser-déposer ``||basic:montrer LEDs||`` dans le crochet ``||logic:si vrai alors||`` et y dessiner un soleil.
 4. Dans la section ``||logic:logique||`` glisser-déposer ``||logic:"" = ""||`` à la place de ``||logic:vrai||`` dans la condition ``||logic:si vrai alors||``
 5. Glisser-déposer ``||radio:receivedString||`` à gauche de ``||logic:"" = ""||`` et ecrire Soleil à droite de ``||logic:"" = ""||``
+
+<img alt="Solution au problème" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_8E11.gif" width="600px">
 
 ```blocks
 radio.onReceivedString(function (receivedString) {
