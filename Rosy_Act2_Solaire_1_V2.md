@@ -1,4 +1,4 @@
-# Rosy, Activité 2a : Panneau solaire
+# Rosy, Activité 2.1 : Panneau solaire
 
 ### Étape 1 @showdialog
 
@@ -11,27 +11,12 @@ Dans cette activité, nous allons **apprendre à mesurer** la [tension électriq
 
 Dans cette activité nous avons besoin de :
     - Le circuit imprimé.
-    - un panneau solaire.
     - un micro:bit.
     - un cable usb.
 
 <img alt="Le circuit imprimé, un panneua solaire, un microbit, un cable USB." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict3_v3.jpg" width="300px">
 
-
-### Étape 3 
-
-Commencer par **connecter** le panneau solaire au circuit imprimé :
-
-1. **Insérer** le micro:bit dans le ciruit imprimé.
-2. À l'aide des fils du panneau solaire :
-    - Connecter le fil **rouge** (positif) du panneau solaire avec la broche **VCC**.
-    - Connecter le fil **noir** (négatif) du panneau solaire avec la broche **GND** du circuit imprimé.
-
-<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et le circuit imprimé." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Cable_Solaire.jpg" width="300px">
-<img alt="Les fils femelle-femelle font le lien entre le connecteur du panneau solaire et le circuit imprimé." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/ConnexionPCB.jpg" width="300px">
-
-
-### Étape 4
+### Étape 3
 
 > ***Astuce*** : Si les instructions prennent trop de place à l'écran, simplement cliquer sur le bouton "Moins..." en gris au centre entre la fenêtre d'instruction et l'espace de programmation.
 
@@ -43,7 +28,7 @@ Il faut maintenant **programmer** le micro:bit. Commencer par aller dans la sect
 <img alt="Animation de la création des variables de l'étape 4." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Rosy_Act2_01.gif" width="80%">
 
 
-### Étape 5
+### Étape 4
 
 1. **Ajouter** le bloc ``||variables: définir||`` de la section ``||Variables:Variables||`` et **l'ajouter** à ``||basic:toujours||``.
 2. **Lui attribuer** la variable ``||variables:solaire||``.
@@ -58,7 +43,7 @@ basic.forever(function () {
 }
 ```
 
-### Étape 6
+### Étape 5
 
 Nous allons **lire la tension électrique** avec la broche **1** du micro:bit.
 
@@ -75,7 +60,7 @@ basic.forever(function () {
 ```
 
 
-### Étape 7
+### Étape 6
 
 1. **Ajouter** un autre bloc ``||variables:définir||`` à partir de ``||variables:Variables||`` dans ``||basic:toujours||``.
 2. **Lui attribuer** la variable ``||variables:volts||``.
@@ -94,7 +79,7 @@ basic.forever(function () {
     )
 ```
 
-### Étape 8
+### Étape 7
 
 Finalement, il ne reste qu'à **afficher** la valeur :
 1. **Ajouter** ``||led:tracer le graphe de 'MIN à 'MAX'||`` de la section ``||led:LED||``.
@@ -116,14 +101,14 @@ basic.forever(function () {
     )
 ```
 
-### Étape 9
+### Étape 8
 
 Il ne reste qu'à **téléverser** le code sur le micro:bit. **Les instructions** de notre simulateur de télescope **sont à la prochaine étape**.
 
 Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
 
-### Étape 10
+### Étape 9
 
 Voilà! Vous pouvez maintenant **visualiser l'énergie générée par le panneau solaire** directement sur le micro:bit!
 
