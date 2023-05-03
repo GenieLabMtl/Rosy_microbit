@@ -221,13 +221,48 @@ basic.forever(function () {
 ```
 
 ## Étape 10
+Il faut maintenant activer la broche 1 ou les dels ne s'allumeront pas.  
+
+1. Dans le bloc ``||basic:au démarrage|| `` y glisser ``||pins:écrire sur la broche||``.
+2. **Choisir** la broche ``||pins:P1||``, et **inscrire** le nombre **0**.
+
+<!---  IL faut rajouter un gif de l'action--> 
+
+```blocks
+let solaire = 0
+let volts = 0
+
+pins.digitalWritePin(DigitalPin.P1, 1)
+
+basic.forever(function () {
+    solaire = pins.analogReadPin(AnalogPin.P1)
+    volts = solaire / 303
+    led.plotBarGraph(
+    volts,
+    3.3
+    )
+    if (volts > 2.1) {
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        pins.digitalWritePin(DigitalPin.P2, 0)
+    } else if (volts <= 2.1 && volts > 1.2) {
+        pins.digitalWritePin(DigitalPin.P2, 1)
+        pins.digitalWritePin(DigitalPin.P8, 0)
+    } else {
+        pins.digitalWritePin(DigitalPin.P8, 0)
+        pins.digitalWritePin(DigitalPin.P2, 0)
+    }
+})
+
+```
+
+## Étape 11
 
 Il ne reste qu'à **téléverser** le code sur le micro:bit, et vous êtes prêt·e.
 
 Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
 
-## Étape 11
+## Étape 12
 
 Voilà! Nous avons maintenant un système qui **réagit en fonction du courant disponible** fourni par le panneau solaire!
 
