@@ -93,12 +93,14 @@ La valeur minimale de lecture est la température ambiante de la salle où vous 
 
 ## Étape 9
 
-Puisque le capteur retourne les températures en degrés Celsius, établissons la valeur maximale de captation à 35, ce qui est environ **la température de la paume d'une main**.
+Puisque le capteur retourne les températures en degrés Celsius, établissons la valeur maximale de captation à 35, ce qui est environ **la température maximale de la paume d'une main**. 
 Pour illuminer l'écran du micro:bit, les valeurs de **0 à 50 nous donneront une bonne résolution**.
 
 1. Dans le troisième cercle, **inscrire** le nombre **35**.
 2. Dans le quatrième cercle, **inscrire** le nombre **0**.
 3. Dans le dernier cercle, **inscrire** le nombre **50**.
+
+Adaptez la troisième valeur à la temperature de la paume de votre main, elle peut descendre jusqu'à 25 degrés Celsius.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_04.gif" width="80%">
 
@@ -107,12 +109,19 @@ Pour illuminer l'écran du micro:bit, les valeurs de **0 à 50 nous donneront un
 
 Nous pouvons maintenant **ajouter** ``||Math:projeter||`` dans le bloc ``||variables:définir||``.
 
+Le capteur doit faire une pause entre chaque lecture afin de ne pas surchauffer.
+
+1. Trouver le bloc ``||Base:pause||``dans la section ``||Base||``
+2. Le **glisser** sous le bloc ``||variables:définir||``.
+2. Dans le cercle, **inscrire** la valeur **500**
+
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_05.gif" width="80%">
 
 ```blocks
 let source = 0
 basic.forever(function () {
     source = Math.map(MLX90614.temperature(Environment.Object), MLX90614.temperature(Environment.Ambient), 35, 0, 50)
+    basic.pause(500)
 ```
 
 
@@ -123,7 +132,7 @@ Nous voulons que notre télescope **détecte une source de chaleur dans son axe*
 Nous avons donc besoin d'un bloc conditionnel pour détecter **si le bouton est pressé ou non**.
 
 1. **Trouver** le bloc ``||logic:si <vrai>...sinon||`` dans la section ``||logic:Logique||``.
-2. Le **glisser** sous le bloc ``||variables:définir||``.
+2. Le **glisser** entre le bloc ``||variables:définir||`` et le bloc ``||Base:pause||``.
 3. **Trouver** le bloc hexagonal ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
 4. Le **glisser** à la place de ``||logic:<vrai>||`` de ``||logic:si <vrai>...sinon||``.
 
@@ -140,6 +149,7 @@ basic.forever(function () {
     } else {
         
     }
+    basic.pause(500)
 })
 ```
 
@@ -168,6 +178,7 @@ basic.forever(function () {
     } else {
         
     }
+    basic.pause(500)
 })
 ```
 
@@ -199,6 +210,7 @@ basic.forever(function () {
 
         }
     }
+    basic.pause(500)
 })
 ```
 
@@ -235,9 +247,9 @@ basic.forever(function () {
             basic.clearScreen()
         }
     }
+    basic.pause(500)
 })
 ```
-
 
 ## Étape 15 
 

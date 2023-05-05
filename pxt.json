@@ -4,7 +4,7 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "mlx90614-microbit": "github:genielabmtl/pxt-mlx90614-microbit#f33a75b4c40cc577c152fa5f7a2cd76ecdc9da0c"
+        "mlx90614-microbit": "github:genielabmtl/pxt-mlx90614-microbit#6684571919cf96610016a707623482b9997f3a0a"
     },
     "files": [
         "main.blocks",
