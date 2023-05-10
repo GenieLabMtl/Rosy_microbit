@@ -22,6 +22,8 @@ Nous voulons faire **allumer** les DEL en fonction de la **lumière reçue** par
 Nous allons repatir du code précédent.
 Vous pouvez le revoir **en cliquant** sur **l'ampoule** dans le cercle bleu.
 
+***Assurez-vous*** que le capteur infrarouge ne soit pas insérer.
+
 ```blocks
 let solaire = 0
 let volts = 0

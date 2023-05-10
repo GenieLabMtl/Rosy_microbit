@@ -14,6 +14,8 @@ Dans cette activité nous avons besoin de :
     - un micro:bit.
     - un cable usb.
 
+***Assurez-vous*** que le capteur infrarouge ne soit pas insérer.
+
 <img alt="Le circuit imprimé, un panneua solaire, un microbit, un cable USB." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict3_v3.jpg" width="300px">
 
 ### Étape 3
