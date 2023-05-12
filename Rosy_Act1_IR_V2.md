@@ -111,7 +111,7 @@ Nous pouvons maintenant **ajouter** ``||Math:projeter||`` dans le bloc ``||varia
 
 Le capteur doit faire une pause entre chaque lecture afin de ne pas surchauffer.
 
-1. Trouver le bloc ``||Base:pause||``dans la section ``||Base||``
+1. Trouver le bloc ``||basic:pause||``dans la section ``||basic:base||``
 2. Le **glisser** sous le bloc ``||variables:définir||``.
 2. Dans le cercle, **inscrire** la valeur **500**
 
@@ -132,7 +132,7 @@ Nous voulons que notre télescope **détecte une source de chaleur dans son axe*
 Nous avons donc besoin d'un bloc conditionnel pour détecter **si le bouton est pressé ou non**.
 
 1. **Trouver** le bloc ``||logic:si <vrai>...sinon||`` dans la section ``||logic:Logique||``.
-2. Le **glisser** entre le bloc ``||variables:définir||`` et le bloc ``||Base:pause||``.
+2. Le **glisser** entre le bloc ``||variables:définir||`` et le bloc ``||basic:pause||``.
 3. **Trouver** le bloc hexagonal ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
 4. Le **glisser** à la place de ``||logic:<vrai>||`` de ``||logic:si <vrai>...sinon||``.
 
@@ -221,7 +221,7 @@ Affichons une image de planète **lorsque de la chaleur est détectée**.
 
 1. Dans la section ``||basic:Base||``, **trouver** le bloc ``||basic:montrer LEDs||`` et **l'ajouter** dans le crochet ``|logic:si||``.
 2. **Dessiner** l'image qui vous convient dans la matrice.
-3. Dans le crochet ``||logic:sinon||``, **insérer** le bloc ``||basic:effacer l'écran||`` de la section ``||basic:Base||``.
+3. Dans le crochet ``||logic:sinon||``, **insérer** le bloc ``||basic:effacer l'écran||`` de la section ``||basic:base||``.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_09.gif" width="80%">
 
