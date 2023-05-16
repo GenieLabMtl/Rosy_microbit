@@ -180,7 +180,7 @@ basic.forever(function () {
 Nous voulons **afficher** une image de planète **seulement quand une source de chaleur est détectée**.
 
 1. **Ajouter** un autre bloc ``||logic:si <vrai>...sinon||`` à partir de la section ``||logic:Logique||`` et **l'ajouter** dans le crochet ``||logic:sinon||`` du premier.
-2. **Glisser** un bloc ``||logic:<||`` (plus petit que) à partir de la section ``||logic:Logique||`` et **l'ajouter** à côté du nouveau ``||logicsi:si||``.
+2. **Glisser** un bloc ``||logic:<||`` (plus petit que) à partir de la section ``||logic:Logique||`` et **l'ajouter** à côté du nouveau ``||logic:si||``.
 3. À gauche du symbole ``||logic:<||``, **inscrire** le nombre *1*.
 4. À droite du symbole, **ajouter** la ``||variables:variable||`` "**Source**".
 
@@ -210,7 +210,7 @@ basic.forever(function () {
 
 Affichons une image de planète **lorsque de la chaleur est détectée**.
 
-1. Dans la section ``||basic:Base||``, **trouver** le bloc ``||basic:montrer LEDs||`` et **l'ajouter** dans le crochet ``|logic:si||``.
+1. Dans la section ``||basic:Base||``, **trouver** le bloc ``||basic:montrer LEDs||`` et **l'ajouter** dans le crochet ``||logic:si||``.
 2. **Dessiner** l'image qui vous convient dans la matrice.
 3. Dans le crochet ``||logic:sinon||``, **insérer** le bloc ``||basic:effacer l'écran||`` de la section ``||basic:base||``.
 
