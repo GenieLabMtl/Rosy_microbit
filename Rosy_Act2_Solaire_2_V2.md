@@ -229,7 +229,7 @@ Il faut maintenant activer la broche 1 ou les dels ne s'allumeront pas.
 2. **Choisir** la broche ``||pins:P1||``, et **inscrire** le nombre **1**.
 
 
-<img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/RosyAct2_2E9.gif" width="80%">
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/RosyAct2_2E9_2.gif" width="80%">
 
 ```blocks
 let solaire = 0
