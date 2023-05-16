@@ -109,11 +109,6 @@ Adaptez la troisième valeur à la temperature de la paume de votre main, elle p
 
 Nous pouvons maintenant **ajouter** ``||Math:projeter||`` dans le bloc ``||variables:définir||``.
 
-Le capteur doit faire une pause entre chaque lecture afin de ne pas surchauffer.
-
-1. Trouver le bloc ``||basic:pause||``dans la section ``||basic:base||``
-2. Le **glisser** sous le bloc ``||variables:définir||``.
-2. Dans le cercle, **inscrire** la valeur **500**
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 10." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_05.gif" width="80%">
 
@@ -121,7 +116,6 @@ Le capteur doit faire une pause entre chaque lecture afin de ne pas surchauffer.
 let source = 0
 basic.forever(function () {
     source = Math.map(MLX90614.temperature(Environment.Object), MLX90614.temperature(Environment.Ambient), 35, 0, 50)
-    basic.pause(500)
 ```
 
 
@@ -149,7 +143,6 @@ basic.forever(function () {
     } else {
         
     }
-    basic.pause(500)
 })
 ```
 
@@ -178,7 +171,6 @@ basic.forever(function () {
     } else {
         
     }
-    basic.pause(500)
 })
 ```
 
@@ -210,7 +202,6 @@ basic.forever(function () {
 
         }
     }
-    basic.pause(500)
 })
 ```
 
@@ -247,11 +238,45 @@ basic.forever(function () {
             basic.clearScreen()
         }
     }
+})
+```
+## Étape 15
+
+Le capteur doit faire une pause entre chaque lecture afin de ne pas surchauffer.
+
+1. Trouver le bloc ``||basic:pause||``dans la section ``||basic:base||``
+2. Le **glisser** sous le bloc ``||variables:définir||``.
+2. Dans le cercle, **inscrire** la valeur **500**
+
+<img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_09.gif" width="80%">
+
+```blocks
+let source = 0
+basic.forever(function () {
+    source = Math.map(MLX90614.temperature(Environment.Object), MLX90614.temperature(Environment.Ambient), 35, 0, 50)
+    if (input.buttonIsPressed(Button.A)) {
+        led.plotBarGraph(
+            source,
+        50
+        )
+    } else {
+        if (1 < source) {
+            basic.showLeds(`
+                . . # . .
+                . # # # .
+                # # # # #
+                . # # # .
+                . . # . .
+                `)
+        } else {
+            basic.clearScreen()
+        }
+    }
     basic.pause(500)
 })
 ```
 
-## Étape 15 
+## Étape 16 
 
 Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **Les instructions** de notre simulateur de télescope **sont à la prochaine étape**.
 
@@ -263,7 +288,7 @@ Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **L
 [Voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
 
-## Étape 16 @showdialog
+## Étape 17 @showdialog
 
 Vous pouvez maintenant **simuler** comment les télescopes à infrarouge peuvent **détecter des exoplanètes** en orbite autour d'étoiles lointaines :
 
