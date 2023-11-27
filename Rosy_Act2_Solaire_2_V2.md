@@ -13,16 +13,16 @@ Selon l'énergie générée par le panneau solaire, nous pourrons faire **allume
 
 Il ne reste qu'à **programmer** le micro:bit.
 
-Nous voulons faire **allumer** les DEL en fonction de la **lumière reçue** par le panneau solaire :
+Nous voulons faire **allumer** les DELs en fonction de la **lumière reçue** par le panneau solaire :
 
-- Très peu de lumière : **aucune** lumière d'allumée
+- Très peu de lumière : **aucune** lumière allumée
 - Peu de lumière : lumière **rouge** allumée
 - Beaucoup de lumière : lumière **verte** allumée
 
-Nous allons repatir du code précédent.
+Nous allons repartir du code précédent.
 Vous pouvez le revoir **en cliquant** sur **l'ampoule** dans le cercle bleu.
 
-***Assurez-vous*** que le capteur infrarouge ne soit pas insérer.
+***Assurez-vous*** que le capteur infrarouge ne soit pas inséré.
 
 ```blocks
 let solaire = 0
@@ -96,7 +96,7 @@ basic.forever(function () {
 
 ## Étape 6
 
-Pour la plage **plus grand que 2.1 volts**, nous allons faire allumer la DEL verte et nous assurer que la DEL rouge est éteinte.
+Pour la plage **plus grande que 2.1 volts**, nous allons faire allumer la DEL verte et nous assurer que la DEL rouge est éteinte.
 
 1. Dans le crochet directement sous ``||logic:si||``, **Ajouter** 2 fois ``||pins:écrire sur la broche||``qui se trouve dans la section ``||pins:Broches||`` du menu "**Avancé**".
 2. Dans le premier, **choisir** la broche ``||pins:P8||``, et **inscrire** le nombre **1**.
@@ -126,9 +126,9 @@ basic.forever(function () {
 
 ## Étape 7
 
-Nous voulons maintenant **déterminer** ce qui va se passer si le courant est plus petit ou égale à 2.1v, mais plus grand que 1.2v.
+Nous voulons maintenant **déterminer** ce qui va se passer si le courant est plus petit ou égal à 2.1v, mais plus grand que 1.2v.
 
-> ***Astuce*** *: Faire clic droit sur un bloc et sélectionner **Dupliquer** permet de gagner beaucoup de temps!*
+> ***Astuce*** *: Faire clic droit sur un bloc et sélectionner **Dupliquer** permet de gagner beaucoup de temps !*
 
 1. **Cliquer** sur le symbole ``||logic:+||`` en bas du bloc ``||logic:si < >...sinon||`` pour ajouter un ``||logic:sinon...si||``.
 2. **Lui ajouter** un bloc ``||logic:<> et <>||``.
@@ -160,7 +160,7 @@ basic.forever(function () {
 
 ## Étape 8
 
-Si la tension électrique détectée est entre 2.1v et 1.2v, seule la DEL rouge s'allumera
+Si la tension électrique détectée est entre 2.1v et 1.2v, seule la DEL rouge s'allumera.
 
 1. Dans le crochet directement sous ``||logic:si||``, **ajouter** 2 fois ``||pins:écrire sur la broche||``.
 2. Dans le premier, **choisir** la broche ``||pins:P8||``, et **inscrire** le nombre **0**.
@@ -223,7 +223,7 @@ basic.forever(function () {
 ```
 
 ## Étape 10
-Il faut maintenant activer la broche 1 ou les dels ne s'allumeront pas.  
+Il faut maintenant activer la broche 1 ou les DELs ne s'allumeront pas.  
 
 1. Dans le bloc ``||basic:au démarrage|| `` y glisser ``||pins:écrire sur la broche||``.
 2. **Choisir** la broche ``||pins:P1||``, et **inscrire** le nombre **1**.
@@ -267,7 +267,7 @@ Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement 
 
 ## Étape 12
 
-Voilà! Nous avons maintenant un système qui **réagit en fonction du courant disponible** fourni par le panneau solaire!
+Voilà ! Nous avons maintenant un système qui **réagit en fonction du courant disponible** fourni par le panneau solaire !
 
 Pour aller plus loin, vous pouvez cliquer sur le bouton **Terminer** à droite de ce texte pour avoir accès à tous les blocs. Voici quelques idées :
 
