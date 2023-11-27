@@ -40,7 +40,7 @@ Le capteur infrarouge [MLX90614](https://www.melexis.com/en/product/mlx90614/dig
 
 ## Étape 5 
 
-Voilà! Le circuit est aussi simple que ça! **Maintenant, allons programmer** le micro:bit pour qu'il puisse communiquer avec le capteur.
+Voilà ! Le circuit est aussi simple que ça ! **Maintenant, allons programmer** le micro:bit pour qu'il puisse communiquer avec le capteur.
 
 <img alt="Les connexions entre le capteur infrarouge et la carte de développement complète ce circuit simple." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Act1Pict5IR_v2.jpg" width="300px">
 
@@ -56,7 +56,7 @@ Commençons par **définir une variable** pour stocker la température de l'obje
 > ***Rappel 3*** : En cliquant sur l'ampoule dans le cercle bleu à droite de ce texte, vous pouvez voir le résultat de l'étape en cours.
 
 Aller dans la section ``||variables:Variables||`` et créer la variable "source".
-Ensuite, glisser le bloc ``||variables:définir||`` dans le crochet ``||basic:Toujours||``
+Ensuite, glisser le bloc ``||variables:définir||`` dans le crochet ``||basic:Toujours||``.
 
 <img alt="Animation de la création d'une variable et de l'assemblage des blocs de programmation de l'étape 6." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_01.gif" width="80%">
 
@@ -100,7 +100,7 @@ Pour illuminer l'écran du micro:bit, les valeurs de **0 à 50 nous donneront un
 2. Dans le quatrième cercle, **inscrire** le nombre **0**.
 3. Dans le dernier cercle, **inscrire** le nombre **50**.
 
-Adaptez la troisième valeur à la temperature de la paume de votre main, elle peut descendre jusqu'à 25 degrés Celsius.
+Adaptez la troisième valeur à la température de la paume de votre main, elle peut descendre jusqu'à 25 degrés Celsius.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 9." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_04.gif" width="80%">
 
@@ -246,7 +246,7 @@ Le capteur doit faire une pause entre chaque lecture afin de ne pas surchauffer.
 
 1. Trouver le bloc ``||basic:pause||``dans la section ``||basic:base||``
 2. Le **glisser** à la toute fin du crochet ``||basic:toujours||``.
-2. Dans le cercle, **inscrire** la valeur **500**
+2. Dans le cercle, **inscrire** la valeur **500**.
 
 <img alt="Animation de l'assemblage des blocs de programmation de l'étape 14." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_01/Rosy_Act1_15.gif" width="80%">
 
@@ -278,7 +278,7 @@ basic.forever(function () {
 
 ## Étape 16 
 
-Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **Les instructions** de notre simulateur de télescope **sont à la prochaine étape**.
+Et voilà ! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **Les instructions** de notre simulateur de télescope **sont à la prochaine étape**.
 
 1. **Connecter le micro:bit** à votre ordinateur avec le câble USB fourni dans la trousse.
 2. **Télécharger votre code** avec le bouton Télécharger en bas à gauche de l'écran.
