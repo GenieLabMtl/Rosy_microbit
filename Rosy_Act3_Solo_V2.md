@@ -29,7 +29,7 @@ Plusieurs concepts de programmation très utiles seront présentés lors de cett
 
 >***IMPORTANT : Pour que cette activité fonctionne bien, vous allez avoir besoin d'utiliser le navigateur Google Chrome ou Microsoft Edge.***
 
-Bonne chance!
+Bonne chance !
 
 
 ## Étape 1
@@ -40,9 +40,9 @@ Pour commencer, nous allons créer une fonction. Les fonctions servent à encaps
 
 1. **Ouvrir** le menu déroulant de la section ``||advanced:Avancé||`` au bas de la liste des catégories, puis aller dans la section ``||functions:Fonctions||``.
 2. **Cliquer** sur le bouton "**Créer une fonction...**". Dans la fenêtre qui va s'ouvrir, **cliquer** sur le texte "**faireQuelqueChose**" dans le bloc ``||functions:fonction||``, et le **renommer** "TrouverUneEtoile".
-3. Votre fonction devrait maintenant apparaitre dans la surface de programmation.
+3. Votre fonction devrait maintenant apparaître dans la surface de programmation.
 
->**À noter! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer. 😄**
+>**À noter ! Il arrive que les images de la bulle d'aide soient différentes de ce que l'on retrouve dans l'espace de programmation : couleurs différentes, noms en anglais, noms de variables différents des instructions, etc. Pas de problème, il s'agit simplement d'un caprice d'affichage de la plateforme MakeCode que vous pouvez ignorer. 😄**
 
 <img alt="Activité 3 Solo Étape 1" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_01.gif" width="80%">
 
@@ -59,7 +59,7 @@ Nous allons maintenant avoir besoin de deux variables pour garder en mémoire le
 1. Dans la section ``||variables:Variables||``, **cliquer** sur le bouton "**Créer une variable...**". Nommer-là "**coord_x**", pour *coordonnée X*.
 2. **Cliquer** à nouveau sur le bouton "**Créer une variable...**", et cette fois la nommer "**coord_y**", pour *coordonnée Y*.
 3. **Glisser 2 fois** le bloc ``||variables:définir [nom de la variable] à 0||`` dans le bloc de notre fonction.
-4. Assurez-vous qu'un des bloc de ``||variables:variables||`` indique "**coord_x**", et l'autre "**coord_y**".
+4. Assurez-vous qu'un des blocs de ``||variables:variables||`` indique "**coord_x**", et l'autre "**coord_y**".
 
 <img alt="Activité 3 Solo Étape 2" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_02.gif" width="80%">
 
@@ -93,7 +93,7 @@ Maintenant que notre fonction est prête, nous voulons que des coordonnées soie
 
 1. Dans la section ``||functions:Fonctions||`` – qui se trouve toujours sous **Avancé** –, **glisser** le bloc ``||functions:appel TrouverUneEtoile||`` dans le bloc ``||basic:au démarrage||``.
 
-C'est tout! Les 2 variables auront des chiffres aléatoires attribués quand notre programme sera lancé.
+C'est tout ! Les 2 variables auront des chiffres aléatoires attribués quand notre programme sera lancé.
 
 <img alt="Activité 3 Solo Étape 4" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_04.gif" width="80%">
 
@@ -137,7 +137,7 @@ basic.forever(function () {
 
 ## Étape 7
 
-Il faut maintenant déterminer si notre valeur X est proche de celle de la coordonnée que nous recherchons. Puisqu'il est difficile et très long de tester toutes les 2047 valeurs allant de -1023 à 1023 et répéter ça 2047 fois pour chaque valeur de Y (pour un total de plus de 4.1 millions de possibilités!), vous allons utiliser une plage plus large.
+Il faut maintenant déterminer si notre valeur X est proche de celle de la coordonnée que nous recherchons. Puisqu'il est difficile et très long de tester toutes les 2047 valeurs allant de -1023 à 1023 et de répéter cela 2047 fois pour chaque valeur de Y (pour un total de plus de 4.1 millions de possibilités !), vous allez utiliser une plage plus large.
 En vérifiant si notre valeur X est à plus ou moins 200 de la valeur de la coordonnée mystère, on pourra la trouver beaucoup plus rapidement.
 
 1. **Glisser** un bloc ``||logic:si <vrai> alors...sinon||`` de la section ``||logic:Logique||``, et **l'ajouter** à la suite de notre code.
@@ -163,9 +163,9 @@ basic.forever(function () {
 
 Nous allons maintenant comparer la lecture du gyroscope en X avec la variable coord_x.
 
->**Attention! Lorsqu'il y a beaucoup de blocs l'un dans l'autre, il est facile de se tromper et de mettre un bloc au mauvais endroit. Il y a une fonction "revenir en arrière" fort utile, située en bas à droite de l'écran, que l'on peut utiliser en appuyant sur la flèche courbée vers la gauche.**
+>**Attention ! Lorsqu'il y a beaucoup de blocs l'un dans l'autre, il est facile de se tromper et de mettre un bloc au mauvais endroit. Il y a une fonction "revenir en arrière" fort utile, située en bas à droite de l'écran, que l'on peut utiliser en appuyant sur la flèche courbée vers la gauche.**
 
-1. Faire un **clic droit** sur ``||input:accélération (mg) X||`` et sélectionner **Dupliquer**. (Si vous ne pouvez pas faire de clic droit, aller le retrouver dans le menu comme à l'étape précédente).
+1. Faire un **clic droit** sur ``||input:accélération (mg) X||`` et sélectionner **Dupliquer**. (Si vous ne pouvez pas faire de clic droit, allez le retrouver dans le menu comme à l'étape précédente).
 2. **Glisser** ce nouveau bloc dans le cercle de gauche du premier ``||logic:0 < 0||``.
 3. **Répéter cette manoeuvre** pour mettre un autre bloc ``||input:accélération (mg) X||`` dans le cercle de gauche du second ``||logic:0 < 0||``.
 4. Dans le cercle de gauche de chacun des blocs ``||math:0 - 0||``, **ajouter** la variable ``||variables:coord_x||``, que vous pouvez trouver dans la section ``||variables:Variables||``.
@@ -216,7 +216,7 @@ basic.forever(function () {
 
 Maintenant que nous pouvons vérifier si nous avons trouvé la valeur en X des coordonnées de l'étoile, nous devons maintenant refaire la même chose pour l'axe des Y.
 
-> ***Astuce*** *: Si vous pouvez vous en servir, utiliser clic droit->Dupliquer sur les blocs dans l'espace de programmation va vous sauver beaucoup de temps. Sinon, refaire les 6 à 9 en remplaçant toutes les mentions de "X" par "Y".*
+> ***Astuce*** *: Si vous pouvez vous en servir, utilisez clic droit->Dupliquer sur les blocs dans l'espace de programmation va vous sauver beaucoup de temps. Sinon, refaire les 6 à 9 en remplaçant toutes les mentions de "X" par "Y".*
 
 1. **Dupliquer** le bloc ``||serial:série écrire valeur "x"||`` et mettre le nouveau à la suite de notre bloc ``||logic:si...alors...sinon||``.
 2. **Changer** dans ce bloc les 2 mentions de "**x**" pour "**y**".
@@ -252,7 +252,7 @@ Finalement, si les 2 conditions (X et Y) sont vraies, nous pourrons envoyer un m
 2. **Prendre** le bloc logique ``||logic:<> et <>||`` et **l'ajouter** à la place du "**vrai**" de notre bloc conditionnel.
 3. **Prendre** 2 fois le bloc logique ``||logic:0 = 0||`` et **les ajouter** dans chacun des hexagones du bloc précédent.
 4. Dans chacun des cercles à gauche des symboles "=", **ajouter** les variables "**etoile_x**" et "**etoile_y**", que vous pouvez trouver dans la section ``||variables:Variables||``.
-5. Dans les cercles de droite, **Ajouter** ``||logic:<vrai>||``, qui se trouve dans la section ``||logic:Logique||``.
+5. Dans les cercles de droite, **ajouter** ``||logic:<vrai>||``, qui se trouve dans la section ``||logic:Logique||``.
 
 <img alt="Activité 3 Solo Étape 11" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Act3_Solo_11.gif" width="80%">
 
@@ -353,7 +353,7 @@ basic.forever(function () {
 
 ## Étape 14 @showhint
 
-Voilà, le code est maintenant prêt! Le voici au complet.
+Voilà, le code est maintenant prêt ! Le voici au complet.
 
 ```blocks
 function TrouverUneEtoile () {
@@ -396,15 +396,15 @@ Il ne reste qu'à téléverser le code sur le micro:bit, et vous êtes prêt·e.
 
 Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
-> **Attention! Une fois le code installé, le micro:bit va redémarrer. Il faudra alors calibrer le gyroscope en faisant pivoter l'appareil dans tous les sens selon les instructions qui défileront à l'écran (en anglais). Lorsque toutes les DELs sont allumées, la calibration est terminée. Il faut la faire à chaque fois que le micro:bit redémarre quand le gyroscope est utilisé.**
+> **Attention ! Une fois le code installé, le micro:bit va redémarrer. Il faudra alors calibrer le gyroscope en faisant pivoter l'appareil dans tous les sens selon les instructions qui défileront à l'écran (en anglais). Lorsque toutes les DELs sont allumées, la calibration est terminée. Il faut la faire à chaque fois que le micro:bit redémarre quand le gyroscope est utilisé.**
 
 
 ## Étape 16
 
 Deux boutons s'affichent maintenant sous le micro:bit virtuel : *Afficher la console Simulateur*, *Afficher la console Appareil*.
 
-1. Cliquer sur *Afficher la console Appareil*. L'espace de programmation disparait pour faire place à un visualisateur de données provenant du micro:bit. 
-2. Essayez maintenant de détecter des étoiles inconnues. Bonne chance!
+1. Cliquer sur *Afficher la console Appareil*. L'espace de programmation disparaît pour faire place à un visualisateur de données provenant du micro:bit. 
+2. Essayez maintenant de détecter des étoiles inconnues. Bonne chance !
 
 ![Activité 3 Solo Étape 13](https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Microbit_Console.png)
 
@@ -413,11 +413,11 @@ Deux boutons s'affichent maintenant sous le micro:bit virtuel : *Afficher la con
 
 Pour aller plus loin, voici quelques idées pour modifier le code :
 
-1. Est-ce que vous pourriez utiliser d'autres capteurs au lieu du gyroscope?
+1. Est-ce que vous pourriez utiliser d'autres capteurs au lieu du gyroscope ?
 2. Ajouter un indicateur sonore qui varie en fonction de la distance entre votre point d'observation et les coordonnées de l'étoile.
-3. Quelles autres informations pourraient être envoyées pour être affichées à l'écran?
-4. Est-ce qu'il y aurait d'autres façon d'écrire ce code pour arriver au même résultat?
+3. Quelles autres informations pourraient être envoyées pour être affichées à l'écran ?
+4. Est-ce qu'il y aurait d'autres façon d'écrire ce code pour arriver au même résultat ?
 
-Pour ceux et celles qui s'intéressent particulièrement à la programmation, allez explorer la version JavaScript de votre code. Simplement importer le fichier .hex de votre code dans une session régulière de MakeCode (pas le tutoriel), et vous pourrez basculer en JavaScript et même Python avec le bouton qui se trouve en haut de l'écran. Vous pourrez ainsi allez beaucoup plus loin beaucoup plus rapidement qu'avec l'interface de programmation visuelle.
+Pour ceux et celles qui s'intéressent particulièrement à la programmation, allez explorer la version JavaScript de votre code. Simplement importer le fichier .hex de votre code dans une session régulière de MakeCode (pas le tutoriel), et vous pourrez basculer en JavaScript et même Python avec le bouton qui se trouve en haut de l'écran. Vous pourrez ainsi aller beaucoup plus loin, beaucoup plus rapidement qu'avec l'interface de programmation visuelle.
 
 Merci beaucoup pour votre participation !
