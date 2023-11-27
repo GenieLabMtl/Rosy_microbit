@@ -9,12 +9,12 @@ Dans cette activité, nous allons **apprendre à mesurer** la [tension électriq
 
 ### Matériels
 
-Dans cette activité nous avons besoin de :
+Dans cette activité, nous avons besoin de :
     - Le circuit imprimé.
-    - un micro:bit.
-    - un cable usb.
+    - Un micro:bit.
+    - Un câble USB.
 
-***Assurez-vous*** que le capteur infrarouge ne soit pas insérer.
+***Assurez-vous*** que le capteur infrarouge ne soit pas inséré.
 
 <img alt="Le circuit imprimé, un panneua solaire, un microbit, un cable USB." src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_02/Act2Pict3_v3.jpg" width="300px">
 
@@ -112,6 +112,6 @@ Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement 
 
 ### Étape 9
 
-Voilà! Vous pouvez maintenant **visualiser l'énergie générée par le panneau solaire** directement sur le micro:bit!
+Voilà ! Vous pouvez maintenant **visualiser l'énergie générée par le panneau solaire** directement sur le micro:bit !
 
 Essayez de varier l'intensité lumineuse qui atteint le panneau solaire : l'écran du micro:bit allumera peu de DEL si le panneau solaire est peu éclairé, et toutes les DEL seront illuminées si beaucoup de lumière est fournie.
