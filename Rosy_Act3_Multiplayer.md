@@ -43,12 +43,12 @@ radio.onReceivedString(function (receivedString) {
 
 ## Étape 3
 
-Nous allons maintenant programmer les messages à envoyer
+Nous allons maintenant programmer les messages à envoyer.
 
-1. Dans la section ``||input:entrée||``, selectionner ``||input:Lorsque le bouton A est pressé||`` et glisser le dans la page de programmation.
+1. Dans la section ``||input:entrée||``, sélectionner ``||input:Lorsque le bouton A est pressé||`` et glisser le dans la page de programmation.
 2. Dupliquer le bloc et changer ``||input:A||`` par ``||input:B||``.
 3. Dans la section ``||radio:radio||``, glisser-déposer ``||radio:envoyer la chaine "" par radio||`` dans le crochet ``||input:losrque le bouton A est pressé||``
-4. Reperter cette action pour le deuxième crochet ``||input:losrque le bouton B est pressé||``
+4. Répéter cette action pour le deuxième crochet ``||input:losrque le bouton B est pressé||``
 
 <img alt="Envoyer un message" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_3E4.gif" width="600px">
 
@@ -64,12 +64,12 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 4
 
-À vous de choisir quels messages envoyer à vos amis
+À vous de choisir quels messages envoyer à vos amis.
 
 1. Inscrire le message que vous désirez envoyer par radio
-2. Faites un premier test en téléversant le code une premiere fois sur le microbit.
+2. Faites un premier test en téléversant le code une première fois sur le microbit.
 
-Si ça fonctionne, alors nous allons pouvoir passer à l'étape suivante
+Si ça fonctionne, alors nous allons pouvoir passer à l'étape suivante.
 
 Si vous avez besoin de vous rafraîchir la mémoire au sujet du téléversement du code, [voyez ici la vidéo aide-mémoire](https://youtu.be/H8utNPE3sJo) par GénieLab, et [voici la procédure détaillée](https://makecode.microbit.org/device/usb) dans la documentation de MakeCode (en anglais seulement).
 
@@ -84,12 +84,12 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 5
 
-Dans cette deuxième partie nous allons Utiliser le panneau solaire  pour envoyer un message à un autre microbit s'il fait soleil.
+Dans cette deuxième partie, nous allons utiliser le panneau solaire  pour envoyer un message à un autre microbit s'il fait soleil.
 1. Dans la section ``||variable:variables||`` cliquer sur créer une variable, créer les variables ``||variable:Volt||`` et ``||variable:Solaire||``.
 2. Glisser-deposer ``||variable:définir 'Solaire' à '0'||`` dans le crochet ``||basic:toujours||``.
 3. Faire la même chose pour la variable ``||variable:Volt||``.
 
-*Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la bage de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.*
+*Note: si le crochet ``||basic:toujours||`` ne se trouve pas dans la base de programmation, vous pouvez le trouver dans la section ``||basic:Base||``.*
 
 <img alt="Utilisons le paneau solaire pour envoyer un message" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_4E6.gif" width="600px">
 
@@ -101,7 +101,7 @@ basic.forever(function () {
 ```
 
 ## Étape 6
-Nous récupérons les données du paneau solaire. 
+Nous récupérons les données du panneau solaire. 
 
 1. Cliquer sur avancé, puis dans la section ``||pins:broches||``, glisser-déposer ``||pins:lire la broche analogique P1||`` dans ``||variable:définir 'Solaire' à '0'||`` à la place du 0.
 
@@ -122,9 +122,9 @@ basic.forever(function () {
 
 ## Étape 7
 
-Nous allons envoyer un message si il y a du soleil
+Nous allons envoyer un message s'il y a du soleil.
 
-1. Dans la section ``||logic:logique||`` selectionner ``||logic:si vrai alors||`` et le glisser sous la définition des deux ``||variable:variables||`` dans le crochet ``||basic:toujours||``
+1. Dans la section ``||logic:logique||`` sélectionner ``||logic:si vrai alors||`` et le glisser sous la définition des deux ``||variable:variables||`` dans le crochet ``||basic:toujours||``
 2. Dans le crochet ``||logic:si vrai alors||``, y glisser ``||radio:envoyer la chaine " " par radio||`` que vous trouverez sous la section ``||radio:radio||``
 3. Inscrire "Soleil" dans ``||radio:envoyer la chaine "Soleil" par radio||``
 
@@ -142,7 +142,7 @@ basic.forever(function () {
 
 ## Étape 8 
 
-Nous allons maintenant ajouté la condition pour envoyer le message "soleil".
+Nous allons maintenant ajouter la condition pour envoyer le message "soleil".
 
 1. Dans la section ``||logic:logique||``, glisser-déposer ``||logic:"0"<"0"||`` à la place de ``||logic:vrai||``.
 2. Dans la condition, remplacer le "0" de gauche par la variable ``||variable:Volt||`` que vous trouverez dans la section ``||variable:variables||``
@@ -165,21 +165,21 @@ basic.forever(function () {
 ```
 ## Étape 9 
 
-Nous allons rendre ça plus jolie en affichant un soleil plutôt que de faire defiler le mot au complet.
+Nous allons rendre ça plus joli en affichant un soleil plutôt que de faire défiler le mot au complet.
 
-Je te laisse trouver la solution!!
+Je te laisse trouver la solution !
 
 *Ps: la réponse se trouve à la prochaine étape.*
 
 ## Étape 10
 
-L'une des solutions possible est la suivante:
+L'une des solutions possibles est la suivante :
 
 1. Dans la section ``||logic:logique||``, glisser-déposer ``||logic:si vrai alors sinon||`` dans le crochet ``||radio:quand une donnée est reçue par radio||`` 
 2. Glisser-déposer ``||basic:afficher texte||`` dans le crochet ``||logic:sinon||``
 3. Glisser-déposer ``||basic:montrer LEDs||`` dans le crochet ``||logic:si vrai alors||`` et y dessiner un soleil.
 4. Dans la section ``||logic:logique||`` glisser-déposer ``||logic:"" = ""||`` à la place de ``||logic:vrai||`` dans la condition ``||logic:si vrai alors||``
-5. Glisser-déposer ``||radio:receivedString||`` à gauche de ``||logic:"" = ""||`` et ecrire Soleil à droite de ``||logic:"" = ""||``
+5. Glisser-déposer ``||radio:receivedString||`` à gauche de ``||logic:"" = ""||`` et écrire Soleil à droite de ``||logic:"" = ""||``
 
 <img alt="Solution au problème" src="https://raw.githubusercontent.com/GenieLabMtl/Rosy_microbit/master/static/images/Activity_03/Rosy_Activite3_8E11.gif" width="600px">
 
@@ -200,7 +200,7 @@ radio.onReceivedString(function (receivedString) {
 ```
 ## Étape 11 @showhint
 
-Voilà, le code est maintenant prêt! Le voici au complet. N'oubliez pas de faire dérouler l'image d'aide vers le bas pour le voir au complet.
+Voilà, le code est maintenant prêt ! Le voici au complet. N'oubliez pas de faire dérouler l'image d'aide vers le bas pour le voir au complet.
 
 ```blocks
 radio.setGroup(1)
