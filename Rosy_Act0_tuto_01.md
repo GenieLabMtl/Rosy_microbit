@@ -54,7 +54,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-La première condition ve être déclenchée si le micro:bit est **secoué**.
+La première condition va être déclenchée si le micro:bit est **secoué**.
 
 1. **Trouver** le bloc ``||input:geste secouer est actif||`` dans la section ``||input:Entrée||``.
 2. Le **glisser** à la place du premier ``||logic:vrai||``.
@@ -178,7 +178,7 @@ basic.forever(function () {
 
 ## Étape 7
 
-La troisième condition ve être déclenchée lorsque le **bouton A est pressé**.
+La troisième condition va être déclenchée lorsque le **bouton A est pressé**.
 
 1. **Trouver** le bloc ``||input:bouton A est pressé||`` dans la section ``||input:Entrée||``.
 2. **Glisser** le bloc à la troisième condition.
@@ -265,7 +265,7 @@ basic.forever(function () {
 La dernière condition est toujours déclenchée lorsqu'**aucune des conditions précédentes** n'est remplie.
 
 1. **Dupliquer** le bloc ``||basic:montrer l'icône||`` et le déplacer sous ``||logic:sinon||``.
-2. **Choisir** l'image du du visage endormi.
+2. **Choisir** l'image du visage endormi.
 
 ```blocks
 basic.forever(function () {
@@ -322,4 +322,4 @@ Vous pouvez maintenant **faire réagir Rosy** à l'aide du programme que nous av
 2. Changer le type d'affichage.
 3. Explorer les différents types de capteurs embarqués sur le micro:bit dans la section ``||input:Entrée||``.
 
-Cliquez sur "Terminé à droite de cette barre pour avoir accès à tous les blocs de programmation.
+Cliquez sur "Terminé" à droite de cette barre pour avoir accès à tous les blocs de programmation.
