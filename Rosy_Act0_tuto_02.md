@@ -11,7 +11,7 @@ Commençons par **créer une fonction**, qui est un bloc de code que l'on peut f
 
 1. **Cliquer** sur la section **Avancé**.
 2. Dans la section ``||functions:Fonctions||``, **cliquer** sur "**Créer une fonction...**".
-3. Dans le panneau qui apparait, **nommer** votre fonction "**animationDEL**".
+3. Dans le panneau qui apparaît, **nommer** votre fonction "**animationDEL**".
 4. **Cliquer** sur "**Nombres**".
 5. **Cliquer** sur le bouton vert "**Terminé**".
 
@@ -62,10 +62,10 @@ function animationDEL (num: number) {
 
 ## Étape 4
 
-À chaque boucle, changer de DEL à illuminer. Aussi, faire en sorte qu'on peut controller le temps entre chaque cycle de la boucle. 
+À chaque boucle, changer de DEL à illuminer. Aussi, faire en sorte qu'on peut contrôler le temps entre chaque cycle de la boucle. 
 
-1. **glisser** la variable ``||variable:index||`` de la boucle et **l'ajouter** dans la case "x" du bloc ``||led:allumer x 0 y 0||``.
-2. **glisser** la variable ``||variable:num||``  qui se trouve à droite dans le bloc fonction animationDEL et **l'ajouter** dans le bloc ``||basic:pause (ms)||``.
+1. **Glisser** la variable ``||variable:index||`` de la boucle et **l'ajouter** dans la case "x" du bloc ``||led:allumer x 0 y 0||``.
+2. **Glisser** la variable ``||variable:num||``  qui se trouve à droite dans le bloc fonction animationDEL et **l'ajouter** dans le bloc ``||basic:pause (ms)||``.
 
 
 ```blocks
@@ -81,7 +81,7 @@ function animationDEL (num: number) {
 
 ## Étape 5
 
-La **vitesse de défilement** des DEL va varier en fonction de l'éclairage détecté par le micro:bit. Le niveau d'éclairage détecté est rapporté par le micro:bit comme un nombre entre 0 (noir complet) et 255 (très lumineux).
+La **vitesse de défilement** des DELs va varier en fonction de l'éclairage détecté par le micro:bit. Le niveau d'éclairage détecté est rapporté par le micro:bit comme un nombre entre 0 (noir complet) et 255 (très lumineux).
 
 1. Dans la section ``||logic:Logique||``, **choisir** ``||logic:si <vrai> alors ... sinon||`` et le **glisser** dans ``||basic:toujours||``.
 2. Toujours dans la section ``||logic:Logique||``, **choisir** ``||logic:<0> < <0>||`` (plus petit que) et le **glisser** à la place du ``||logic:vrai||``.
@@ -102,7 +102,7 @@ basic.forever(function () {
 
 ## Étape 6
 
-Utilisons notre fonction ``||functions:animationDEL||`` pour faire **afficher les DEL en fonction de la luminosité**.
+Utilisons notre fonction ``||functions:animationDEL||`` pour faire **afficher les DELs en fonction de la luminosité**.
 
 1. Dans la section ``||functions:Fonctions||``, **choisir** ``||functions:appel animationDEL 1||`` et le **glisser** dans la portion ``||logic:si||`` de notre condition.
 2. **Remplacer** le "1" par "300" dans le cercle blanc de la ``||functions:fonction||``.
@@ -123,7 +123,7 @@ basic.forever(function () {
 
 ## Étape 7 @showdialog
 
-Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **Les instructions pour la suite sont à la prochaine étape de l'activité**.
+Et voilà ! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **Les instructions pour la suite sont à la prochaine étape de l'activité**.
 
 1. **Connecter le micro:bit** à votre ordinateur avec le câble USB fourni dans la trousse.
 2. **Télécharger votre code** avec le bouton Télécharger en bas à gauche de l'écran.
@@ -135,11 +135,11 @@ Et voilà! Il ne reste plus qu'à **téléverser** le code sur le micro:bit. **L
 
 ## Étape 8 @showdialog
 
-L'animation sur l'écran du micro:bit va changer de vitesse en fonction de la luminosité détectée. Il est important de savoir que les DEL servent à la fois à émettre de la lumière, et à détecter la lumière ambiante! Faites varier la lumière dirigée sur les DEL pour voir le résultat. Pour aller plus loin, vous pouvez :
+L'animation sur l'écran du micro:bit va changer de vitesse en fonction de la luminosité détectée. Il est important de savoir que les DEL servent à la fois à émettre de la lumière, et à détecter la lumière ambiante ! Faites varier la lumière dirigée sur les DEL pour voir le résultat. Pour aller plus loin, vous pouvez :
 
 1. Modifier les valeurs du seuil de luminosité et de vitesse d'affichage dans nos conditions.
 2. Faire varier l'animation en modifiant où la ``||variable:variable index||`` de la boucle est placée.
 3. Ajouter d'autres conditions au bloc ``||logic:si ... sinon||`` pour ajouter plus de variété.
 4. Combiner les différents senseurs et boutons dans les conditions avec le bloc ``||logic:<> et <>||``.
 
-Cliquez sur "Terminé à droite de cette barre pour avoir accès à tous les blocs de programmation.
+Cliquez sur "Terminé" à droite de cette barre pour avoir accès à tous les blocs de programmation.
